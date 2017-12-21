@@ -23,9 +23,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="CourseraTraining\ImportingData.py" />
+    <Compile Include="MBTI\BuildTFDataset.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="MBTI\DatabaseManager.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="MBTI\ExtractedTweets\ImportDataToFiles.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MBTI\ExtractedTweets\ImportingDataIntoFiles.py" />
     <Compile Include="MBTI\TensorflowWorkflow.py">
       <SubType>Code</SubType>
     </Compile>
@@ -69,6 +76,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="OtherTraining\TwoNeuronesTwoInputs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ReinforcementLearning.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="SingleNeurone.py" />
