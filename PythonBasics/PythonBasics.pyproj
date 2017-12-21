@@ -22,105 +22,30 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="CourseraTraining\ImportingData.py" />
-    <Compile Include="MBTI\BuildTFDataset.py">
+    <Compile Include="BuildTFDataset.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MBTI\DatabaseManager.py">
+    <Compile Include="DatabaseManager.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MBTI\ExtractedTweets\ImportDataToFiles.py">
+    <Compile Include="ImportingDataIntoFiles.py" />
+    <Compile Include="TensorflowWorkflow.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MBTI\ExtractedTweets\ImportingDataIntoFiles.py" />
-    <Compile Include="MBTI\TensorflowWorkflow.py">
+    <Compile Include="TwitterManager.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="MBTI\TwitterManager.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\BourseNN.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\classifier.py" />
-    <Compile Include="OtherTraining\CNNMnist.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="MBTI\CNNTensorboard.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\CVImageGenerator.py" />
-    <Compile Include="OtherTraining\CVMLPR.py" />
-    <Compile Include="OtherTraining\ModifiedCVMLPR.py" />
-    <Compile Include="OtherTraining\oneNeurone.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\OpenCVFirstTest.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\Pretensorboard.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\Tensorboard.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\TestingNN.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\TFGradientDescentOptimizer.py" />
-    <Compile Include="OtherTraining\TFSimpleNeuron.py" />
-    <Compile Include="OtherTraining\Threeneurones.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\TwoNeuronesOneInput.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="OtherTraining\TwoNeuronesTwoInputs.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ReinforcementLearning.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SingleNeurone.py" />
-    <Compile Include="TensorFlowAdvancedTraining\FunctionApproximator.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TensorFlowAdvancedTraining\MultilayerPerceptron.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TensorFlowAdvancedTraining\RNN.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="test1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="TestCoursera.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UdacityCourseTraining\CodingSoftMax.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UdacityCourseTraining\NoMnist.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UdacityCourseTraining\PriorNumpyTests.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="UdacityCourseTraining\UdacityTraining.py">
+    <Compile Include="CNNTensorboard.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="CourseraTraining\" />
-    <Folder Include="DataVisualisation\" />
-    <Folder Include="MBTI\" />
-    <Folder Include="MBTI\ExtractedTweets\" />
-    <Folder Include="UdacityCourseTraining\" />
-    <Folder Include="TensorFlowAdvancedTraining\" />
-    <Folder Include="OtherTraining\" />
+    <Folder Include="ExtractedTweets\" />
+    <Folder Include="ExtractedTweets\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="MBTI\JsonDescription.txt" />
+    <Content Include="JsonDescription.txt" />
+    <Content Include="TwiSty-FR.json" />
     <Content Include="Tweets.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
