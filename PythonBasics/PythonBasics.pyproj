@@ -22,19 +22,17 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BuildTFDataset.py" />
     <Compile Include="DatabaseManager.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="ImportingDataIntoFiles.py" />
     <Compile Include="TensorflowWorkflow.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TwitterManager.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="CNNTensorboard.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="SingleNeurone.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtractedTweets\" />
@@ -42,6 +40,7 @@
   <ItemGroup>
     <Content Include="JsonDescription.txt" />
     <Content Include="Tweets.txt" />
+    <Content Include="TwiSty-FR.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
