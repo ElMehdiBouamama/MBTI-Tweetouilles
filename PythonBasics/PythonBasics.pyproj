@@ -1,0 +1,125 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>7c2ca9de-f93d-46a2-954c-18d0f30efb27</ProjectGuid>
+    <ProjectTypeGuids>{a41c8ea1-112a-4a2d-9f91-29557995525f};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>MBTI\CNNTensorboard.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonBasics</Name>
+    <RootNamespace>PythonBasics</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="CourseraTraining\ImportingData.py" />
+    <Compile Include="MBTI\DatabaseManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MBTI\TensorflowWorkflow.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MBTI\TwitterManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\BourseNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\classifier.py" />
+    <Compile Include="OtherTraining\CNNMnist.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MBTI\CNNTensorboard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\CVImageGenerator.py" />
+    <Compile Include="OtherTraining\CVMLPR.py" />
+    <Compile Include="OtherTraining\ModifiedCVMLPR.py" />
+    <Compile Include="OtherTraining\oneNeurone.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\OpenCVFirstTest.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\Pretensorboard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\Tensorboard.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\TestingNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\TFGradientDescentOptimizer.py" />
+    <Compile Include="OtherTraining\TFSimpleNeuron.py" />
+    <Compile Include="OtherTraining\Threeneurones.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\TwoNeuronesOneInput.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="OtherTraining\TwoNeuronesTwoInputs.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SingleNeurone.py" />
+    <Compile Include="TensorFlowAdvancedTraining\FunctionApproximator.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TensorFlowAdvancedTraining\MultilayerPerceptron.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TensorFlowAdvancedTraining\RNN.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="test1.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestCoursera.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UdacityCourseTraining\CodingSoftMax.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UdacityCourseTraining\NoMnist.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UdacityCourseTraining\PriorNumpyTests.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="UdacityCourseTraining\UdacityTraining.py">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CourseraTraining\" />
+    <Folder Include="DataVisualisation\" />
+    <Folder Include="MBTI\" />
+    <Folder Include="MBTI\ExtractedTweets\" />
+    <Folder Include="UdacityCourseTraining\" />
+    <Folder Include="TensorFlowAdvancedTraining\" />
+    <Folder Include="OtherTraining\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MBTI\JsonDescription.txt" />
+    <Content Include="Tweets.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>

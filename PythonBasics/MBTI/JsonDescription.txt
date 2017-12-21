@@ -1,0 +1,8 @@
+User is composed of :
+	- Unnamed : float[?]
+		- user_id : float
+		- confirmed_tweet_ids : float[]
+		- mbti : string
+		- other_tweet_ids : float[]
+		- gender : char
+
