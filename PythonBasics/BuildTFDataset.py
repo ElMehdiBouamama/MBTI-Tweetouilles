@@ -6,6 +6,10 @@ import matplotlib.pyplot as plt
 from multiprocessing import Pool
 import collections
 import os
+import pandas as pd
+
+os.exi
+pd.read_csv()
 
 ProjectFolder = "C:/Users/BOUÂMAMAElMehdi/Documents/Visual Studio 2017/Projects/PythonBasics/PythonBasics/"
 DataFolder = ProjectFolder + "ExtractedTweets/"
@@ -30,7 +34,7 @@ len(vocabulary)
 
 
 
-vocabulary_Size = len(vocabulary)/1405
+vocabulary_Size = 100000
 
 def build_dataset(words, n_words):
     count = [['UNK', -1]]
