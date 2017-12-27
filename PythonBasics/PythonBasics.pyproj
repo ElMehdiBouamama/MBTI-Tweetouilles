@@ -30,6 +30,9 @@
     <Compile Include="TensorflowWorkflow.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="text_helper.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="TwitterManager.py">
       <SubType>Code</SubType>
     </Compile>

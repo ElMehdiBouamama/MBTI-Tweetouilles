@@ -1,131 +1,154 @@
+#%% cell 0
 import sys
 sys.path.append('C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/')
 import numpy as np
 from DatabaseManager import *
-import matplotlib.pyplot as plt
+import multiprocessing
 from multiprocessing import Pool
+from text_helper import *
+import random
 import collections
 import os
 import pandas as pd
+import tensorflow as tf
 
-os.exi
-pd.read_csv()
 
-ProjectFolder = "C:/Users/BOUÂMAMAElMehdi/Documents/Visual Studio 2017/Projects/PythonBasics/PythonBasics/"
-DataFolder = ProjectFolder + "ExtractedTweets/"
-datas = ReadJsonFile(ProjectFolder + "TwiSty-FR.json")
-userIds = np.loadtxt(ProjectFolder + 'ValidUserIds.txt' ,dtype=np.str)
-
-vocabulary = []
+project_folder = "C:/Users/BOUÂMAMAElMehdi/Documents/Visual Studio 2017/Projects/PythonBasics/PythonBasics/"
+save_data_folder = project_folder + "SaveFolder/"
+extracted_tweet_folder = project_folder + "ExtractedTweets/"
+datas = ReadJsonFile(project_folder + "TwiSty-FR.json")
+userIds = np.loadtxt(project_folder + 'ValidUserIds.txt' ,dtype=np.str)
 
 def ReadFiles(fileName):
-    TempTweets = [];
-    with open(DataFolder + fileName + ".txt", "r", encoding="UTF-8") as f:
+    TempTweets = []
+    with open(extracted_tweet_folder + fileName + ".txt", "r", encoding="UTF-8") as f:
         Tweets = f.readlines()
         for Tweet in Tweets:
-            TempTweets = TempTweets + Tweets.split(" ")
+            TempTweets = TempTweets + Tweet.split(" ")
     return TempTweets
 
+#%% cell 1
 with Pool(150) as p:
-    spareVocabulary = p.map(ReadFiles,userIds)
-for UserVocab in spareVocabulary:
-    vocabulary = vocabulary + UserVocab
-len(vocabulary)
+    users_vocab = p.map(ReadFiles,userIds)
 
+sess = tf.Session()
 
+#Declare model parameters
+batch_size = 1000
+vocabulary_size = 200000
+generations = 500000
+model_learning_rate = 0.001
 
-vocabulary_Size = 100000
+embedding_size = 400     # Word embedding size
+doc_embedding_size = 300
+concatenated_size = embedding_size + doc_embedding_size
 
-def build_dataset(words, n_words):
-    count = [['UNK', -1]]
-    count.extend(collections.Counter(words).most_common(n_words - 1))
-    dictionary = dict()
-    for word, _ in count:
-        dictionary[word] = len(dictionary)
-    data = list()
-    unk_count = 0
-    for word in words:
-        index = dictionary.get(word, 0)
-        if index == 0:
-            unk_count += 1
-        data.append(index)
-    count[0][1] = unk_count
-    reversed_dictionary = dict(zip(dictionary.values(), dictionary.keys()))
-    return data, count, dictionary, reversed_dictionary
+num_sampled = int(batch_size/2) # Number of negative examples to samples
+window_size = 3 # Numbers to consider to the left
 
-data,count,dictionnary,reversed_dictionnary = build_dataset(vocabulary,vocabulary_Size)
+#Add checkpoint to training
+save_embeddings_every = 5000
+print_valid_every = 5000
+print_loss_every = 100
 
-#Reduce memory
-del vocabulary
-print('Most common words (+UNK)', count[:5])
-print('Sample data', data[:10], [reverse_dictionary[i] for i in data[:10]])
+#Validation words
+valid_words = ["il","elle","grand","petit","homme","femme"]
 
-data_index = 0
+#Creating the dictionnaries
+print('Creating Dictionary')
+word_dictionary = build_dictionary(users_vocab, vocabulary_size)
+word_dictionary_rev = dict(zip(word_dictionary.values(), word_dictionary.keys()))
+texts = split_tweets_into_sentences(users_vocab)
+text_data = text_to_numbers(texts, word_dictionary)
 
-#TODO : Modify this function to only scrap and verify windows for each user
-def generate_batch(batch_size, num_skips, skip_window):
-    global data_index
-    assert batch_size % num_skips == 0
-    assert num_skips <= 2 * skip_window
-    batch = np.ndarray(shape=(batch_size), dtype=np.int32)
-    labels = np.ndarray(shape=(batch_size, 1), dtype=np.int32)
-    span = 2 * skip_window + 1  # [ skip_window target skip_window ]
-    buffer = collections.deque(maxlen=span)
-    if data_index + span > len(data):
-        data_index = 0
-    buffer.extend(data[data_index:data_index + span])
-    data_index += span
-    for i in range(batch_size // num_skips):
-        context_words = [w for w in range(span) if w != skip_window]
-        words_to_use = random.sample(context_words, num_skips)
-        for j, context_word in enumerate(words_to_use):
-            batch[i * num_skips + j] = buffer[skip_window]
-            labels[i * num_skips + j, 0] = buffer[context_word]
-            if data_index == len(data):
-                buffer[:] = data[:span]
-                data_index = span
-            else:
-                buffer.append(data[data_index])
-                data_index += 1
-    #Backtrack to avoid missing a word at the end of the batch
-    data_index = (data_index + len(data) - span) % len(data)
-    return batch, labels
+#Get Validation word Keys declared above
+valid_examples = [word_dictionary[x] for x in valid_words] 
 
-batch, labels = generate_batch(batch_size=8, num_skips=2, skip_window=1)
-#Display some batches and their reverse dictionnaries to see them
-for i in range(8):
-    print(batch[i], reverse_dictionary[batch[i]],
-    '->', labels[i, 0], reverse_dictionary[labels[i, 0]])
+print('Creating Model')
+# Define Embeddings:
+embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
+doc_embeddings = tf.Variable(tf.random_uniform([len(texts), doc_embedding_size], -1.0, 1.0))
 
-#Variables for training
-batch_size = 128
-embeding_size = 512
-skip_window = 5
-num_skips = 2
-num_samples = 64
-#Variables for Verification
-valid_size = 16 
-valid_window = 100
-valid_examples = np.random.choice(valid_window, valid_size, replace=False)
+# NCE loss parameters
+nce_weights = tf.Variable(tf.truncated_normal([vocabulary_size, concatenated_size], stddev=1.0 / np.sqrt(concatenated_size)))
+nce_biases = tf.Variable(tf.zeros([vocabulary_size]))
 
+# Create data/target placeholders
+x_inputs = tf.placeholder(tf.int32, shape=[None, window_size + 1]) # plus 1 for doc index
+y_target = tf.placeholder(tf.int32, shape=[None, 1])
+valid_dataset = tf.constant(valid_examples, dtype=tf.int32)
 
-'''
-# Building dictionnary of types
-MBTI = [GetMbtiOfUser(datas,x) for x in userIds]
-MBTITypes = []
-#Initialize the dictionnary with 16 keys
-typesCount = collections.Counter(MBTI).most_common()
-for k in typesCount:
-    MBTITypes.append(k[0])
-del typesCount
-#Initialize the keys with 16 arrays
-MbtiDict = dict({MBTITypes[x]:[] for x in range(len(MBTITypes))})
-#Fill the keys with respective values
-for i,j in enumerate(MBTI):
-    MbtiDict[j].append(userIds[i])
+# Lookup the word embedding
+# Add together element embeddings in window:
+embed = tf.zeros([batch_size, embedding_size])
+for element in range(window_size):
+    embed += tf.nn.embedding_lookup(embeddings, x_inputs[:, element])
 
-z = [len(MbtiDict[MBTITypes[x]])/len(userIds) for x in range(16)]
-plt.bar(MBTITypes,z)
-plt.show()
-'''
-len(result)
+doc_indices = tf.slice(x_inputs, [0,window_size],[batch_size,1])
+doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
+
+# concatenate embeddings
+final_embed = tf.concat(1, [embed, tf.squeeze(doc_embed)])
+
+# Get loss from prediction
+loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed, y_target, num_sampled, vocabulary_size))
+
+# Create optimizer
+optimizer = tf.train.GradientDescentOptimizer(learning_rate=model_learning_rate)
+train_step = optimizer.minimize(loss)
+
+# Cosine similarity between words
+norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
+normalized_embeddings = embeddings / norm
+valid_embeddings = tf.nn.embedding_lookup(normalized_embeddings, valid_dataset)
+similarity = tf.matmul(valid_embeddings, normalized_embeddings, transpose_b=True)
+
+# Create model saving operation
+saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings})
+
+#Add variable initializer.
+init = tf.initialize_all_variables()
+sess.run(init)
+
+# Run the skip gram model.
+print('Starting Training')
+loss_vec = []
+loss_x_vec = []
+for i in range(generations):
+    batch_inputs, batch_labels = text_helpers.generate_batch_data(text_data, batch_size, window_size)
+    feed_dict = {x_inputs : batch_inputs, y_target : batch_labels}
+
+    # Run the train step
+    sess.run(train_step, feed_dict=feed_dict)
+
+    # Return the loss
+    if (i+1) % print_loss_every == 0:
+        loss_val = sess.run(loss, feed_dict=feed_dict)
+        loss_vec.append(loss_val)
+        loss_x_vec.append(i+1)
+        print('Loss at step {} : {}'.format(i+1, loss_val))
+      
+    # Validation: Print some random words and top 5 related words
+    if (i+1) % print_valid_every == 0:
+        sim = sess.run(similarity, feed_dict=feed_dict)
+        for j in range(len(valid_words)):
+            valid_word = word_dictionary_rev[valid_examples[j]]
+            top_k = 5 # number of nearest neighbors
+            nearest = (-sim[j, :]).argsort()[1:top_k+1]
+            log_str = "Nearest to {}:".format(valid_word)
+            for k in range(top_k):
+                close_word = word_dictionary_rev[nearest[k]]
+                log_str = '{} {},'.format(log_str, close_word)
+            print(log_str)
+            
+    # Save dictionary + embeddings
+    if (i+1) % save_embeddings_every == 0:
+        # Save vocabulary dictionary
+        with open(os.path.join(save_data_folder,'tweet_vocab.pkl'), 'wb') as f:
+            pickle.dump(word_dictionary, f)
+        
+        # Save embeddings
+        model_checkpoint_path = os.path.join(os.getcwd(),save_data_folder,'doc2vec_mbti_tweets.ckpt')
+        save_path = saver.save(sess, model_checkpoint_path)
+        print('Model saved in file: {}'.format(save_path))
+
