@@ -11,8 +11,9 @@ def normalize_text(texts):
 
     #Remove Carriage Return and Singletons
     for x in texts:
-        if(x in "\n"):
-            texts.remove(x)
+        if(x == "\n"):
+            print("lol")
+            texts.remove("\n")
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
