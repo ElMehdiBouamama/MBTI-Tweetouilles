@@ -10,10 +10,17 @@ def normalize_text(texts):
     texts = [x.lower() for x in texts]
 
     #Remove Carriage Return and Singletons
-    for x in texts:
+    print("suppression of \\n started")
+    positions=[]
+    for position,x in enumerate(texts):
         if(x == "\n"):
-            print("lol")
-            texts.remove("\n")
+            positions.append(position)
+    print("finished determining positions")
+    print("nombre de \\n est :" + str(len(positions)))
+    for dec,contenue in enumerate(positions):
+        del texts[ contenue - dec ]
+	print( str( contenue - dec ) )
+    print("suppresion ended")
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
@@ -55,7 +62,7 @@ def split_tweets_into_sentences(user_Tweets):
         for word in user_Tweets:
             if(word != "\n"):
                 temp.append(x)
-            else
+            else:
                 sentences.append(temp)
                 temp = []
     return(sentences)
