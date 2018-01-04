@@ -1,5 +1,6 @@
 #%% cell 0
 import sys
+sys.path.append('C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/')
 import numpy as np
 from DatabaseManager import *
 import multiprocessing
@@ -12,7 +13,7 @@ import pandas as pd
 import tensorflow as tf
 
 
-project_folder = "./"
+project_folder = "C:/Users/BOUÂMAMAElMehdi/Documents/Visual Studio 2017/Projects/PythonBasics/PythonBasics/"
 save_data_folder = project_folder + "SaveFolder/"
 extracted_tweet_folder = project_folder + "ExtractedTweets/"
 datas = ReadJsonFile(project_folder + "TwiSty-FR.json")
