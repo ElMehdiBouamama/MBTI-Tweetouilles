@@ -29,7 +29,7 @@ def ReadFiles(fileName):
 
 #%% cell 1
 with Pool(150) as p:
-    users_vocab = p.map(ReadFiles,userIds[:5])
+    users_vocab = p.map(ReadFiles,userIds)
 
 sess = tf.Session()
 
@@ -67,7 +67,7 @@ valid_examples = [word_dictionary[x] for x in valid_words]
 print('Creating Model')
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
-doc_embeddings = tf.Variable(tf.random_uniform([len(texts_data), doc_embedding_size], -1.0, 1.0))
+doc_embeddings = tf.Variable(tf.random_uniform([len(texts), doc_embedding_size], -1.0, 1.0))
 
 # NCE loss parameters
 nce_weights = tf.Variable(tf.truncated_normal([vocabulary_size, concatenated_size], stddev=1.0 / np.sqrt(concatenated_size)))
@@ -88,10 +88,11 @@ doc_indices = tf.slice(x_inputs, [0,window_size],[batch_size,1])
 doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
 
 # concatenate embeddings
-final_embed = tf.concat([embed, tf.squeeze(doc_embed)], 1)
+final_embed = tf.concat(1, [embed, tf.squeeze(doc_embed)])
 
 # Get loss from prediction
-loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed,tf.cast(y_target,tf.float32), num_sampled, vocabulary_size))
+loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed, y_target, num_sampled, vocabulary_size))
+
 # Create optimizer
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=model_learning_rate)
 train_step = optimizer.minimize(loss)
