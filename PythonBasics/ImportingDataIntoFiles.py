@@ -1,22 +1,22 @@
 #%% cell 0
 from multiprocessing import Pool
 import sys
-import os
-sys.path.append(os.getcwd())
+sys.path.append('C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/MBTI/')
 from DatabaseManager import *
 from TwitterManager import *
 from functools import partial
+import os
 
-TweetFolderPath =  os.getcwd() + "/ExtractedTweets/"
-datas = ReadJsonFile("./TwiSty-FR.json")
+TweetFolderPath = "M:/Datasets/TwitterMBTI/Parallel/"
+datas = ReadJsonFile("M:/Datasets/TwitterMBTI/MBTINotExtracted/twisty-2016-03/TwiSty-FR.json")
 userIds = GetUserIds(datas)
 os.chdir(TweetFolderPath)
 # We need to build a dictionnary of users / tweets first
 
-for x in userIds[61:]:
+for x in userIds[40:]:
     print("Processing user : " + x)
     stringToSave = ""
-    with Pool(150) as p:
+    with Pool(100) as p:
         UserTweets = GetConfirmedTweetIdsOfUser(datas,x)
         checker = GetPostFromTwitter(UserTweets[0],x)
         print(checker)
