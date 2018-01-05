@@ -2,7 +2,17 @@
 import string
 import collections
 import numpy as np
+from multiprocessing import Pool
+from multiprocessing import Manager
 
+
+manager = Manager()
+cleared_texts = manager.list([])
+
+#TODO: Parallelize this task
+def remove_carriage_return(word):
+    if(word != "\n"):
+        cleared_texts.append(word)
 
 #Normalize text
 def normalize_text(texts):
@@ -10,17 +20,9 @@ def normalize_text(texts):
     texts = [x.lower() for x in texts]
 
     #Remove Carriage Return and Singletons
-    print("suppression of \\n started")
-    positions=[]
-    for position,x in enumerate(texts):
-        if(x == "\n"):
-            positions.append(position)
-    print("finished determining positions")
-    print("nombre de \\n est :" + str(len(positions)))
-    for dec,contenue in enumerate(positions):
-        del texts[ contenue - dec ]
-	print( str( contenue - dec ) )
-    print("suppresion ended")
+    with Pool(25) as p:
+        lol = p.map(remove_carriage_return,texts)
+    print(cleared_texts[:100])
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
