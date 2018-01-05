@@ -18,11 +18,10 @@ def remove_carriage_return(word):
 def normalize_text(texts):
     #Lower Case
     texts = [x.lower() for x in texts]
-
-    #Remove Carriage Return and Singletons
+    #Remove Carriage Return
     with Pool(25) as p:
         lol = p.map(remove_carriage_return,texts)
-    print(cleared_texts[:100])
+    print(cleared_texts[:50])
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
@@ -32,8 +31,8 @@ def normalize_text(texts):
                 punction_count = punction_count + 1
             elif(c not in string.digits and c not in string.ascii_letters):
                 emoji_count = emoji_count + 1
-
-    return texts, punction_count, emoji_count
+    del texts
+    return cleared_texts, punction_count, emoji_count
 
 # Build dictionary of words
 def build_dictionary(users_Tweets, vocabulary_size):

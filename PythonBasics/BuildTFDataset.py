@@ -28,7 +28,7 @@ def ReadFiles(fileName):
 
 #%% cell 1
 with Pool(150) as p:
-    users_vocab = p.map(ReadFiles,userIds)
+    users_vocab = p.map(ReadFiles,userIds[:10])
 
 sess = tf.Session()
 
@@ -87,10 +87,10 @@ doc_indices = tf.slice(x_inputs, [0,window_size],[batch_size,1])
 doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
 
 # concatenate embeddings
-final_embed = tf.concat(1, [embed, tf.squeeze(doc_embed)])
+final_embed = tf.concat([embed, tf.squeeze(doc_embed)],1)
 
 # Get loss from prediction
-loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed, y_target, num_sampled, vocabulary_size))
+loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed,tf.cast(y_target,tf.float32), num_sampled, vocabulary_size))
 
 # Create optimizer
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=model_learning_rate)
