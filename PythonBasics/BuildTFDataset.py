@@ -58,11 +58,17 @@ print('Creating Dictionary')
 word_dictionary = build_dictionary(users_vocab, vocabulary_size)
 word_dictionary_rev = dict(zip(word_dictionary.values(), word_dictionary.keys()))
 texts = split_tweets_into_sentences(users_vocab)
+print('Printing first 2 tweets:')
+for x in texts[:2]:
+    print(x)
 text_data = text_to_numbers(texts, word_dictionary)
+print('Printing first tweet vectors:')
+print(text_data[0])
 
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
-
+print('Printing valid example:')
+print(valid_examples)
 print('Creating Model')
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
@@ -88,7 +94,7 @@ doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
 
 # concatenate embeddings
 final_embed = tf.concat([embed, tf.squeeze(doc_embed)],1)
-final_embed = tf.reshape(final_embed,-1)
+
 # Get loss from prediction
 loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed,tf.cast(y_target,tf.float32), num_sampled, vocabulary_size))
 
@@ -114,7 +120,9 @@ print('Starting Training')
 loss_vec = []
 loss_x_vec = []
 for i in range(generations):
-    batch_inputs, batch_labels = text_helpers.generate_batch_data(text_data, batch_size, window_size)
+    batch_inputs, batch_labels = generate_batch_data(text_data, batch_size, window_size)
+    print(batch_inputs)
+    print(batch_labels)
     feed_dict = {x_inputs : batch_inputs, y_target : batch_labels}
 
     # Run the train step
