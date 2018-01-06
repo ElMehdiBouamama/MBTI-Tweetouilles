@@ -58,12 +58,14 @@ print('Creating Dictionary')
 word_dictionary = build_dictionary(users_vocab, vocabulary_size)
 word_dictionary_rev = dict(zip(word_dictionary.values(), word_dictionary.keys()))
 texts = split_tweets_into_sentences(users_vocab)
-print('Printing first 2 tweets:')
+print('First 2 tweets:')
 for x in texts[:2]:
     print(x)
 text_data = text_to_numbers(texts, word_dictionary)
-print('Printing first tweet vectors:')
+print('First tweet vectors:')
 print(text_data[0])
+print('Tweet Number:')
+print(len(texts))
 
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
