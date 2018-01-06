@@ -57,12 +57,12 @@ def build_dictionary(users_Tweets, vocabulary_size):
 
 # Turn tweets per user list to sentences list
 def split_tweets_into_sentences(user_Tweets):
-    for user_Tweets in users_Tweets:
-        sentences = []
+    sentences = []
+    for tweets in user_Tweets:
         temp = []
-        for word in user_Tweets:
+        for word in tweets:
             if(word != "\n"):
-                temp.append(x)
+                temp.append(word)
             else:
                 sentences.append(temp)
                 temp = []

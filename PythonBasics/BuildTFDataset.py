@@ -88,7 +88,7 @@ doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
 
 # concatenate embeddings
 final_embed = tf.concat([embed, tf.squeeze(doc_embed)],1)
-
+final_embed = tf.reshape(final_embed,-1)
 # Get loss from prediction
 loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, final_embed,tf.cast(y_target,tf.float32), num_sampled, vocabulary_size))
 
