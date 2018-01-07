@@ -100,7 +100,7 @@ final_embed = tf.concat([embed, tf.squeeze(doc_embed)],1)
 ffinal_embed = tf.matmul(final_embed,compressed_embed)
 
 # Get loss from prediction
-loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, ffinal_embed, y_target, num_sampled, vocabulary_size))
+loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, ffinal_embed, tf.cast(y_target,tf.float32), num_sampled, vocabulary_size))
 
 # Create optimizer
 optimizer = tf.train.GradientDescentOptimizer(learning_rate=model_learning_rate)
