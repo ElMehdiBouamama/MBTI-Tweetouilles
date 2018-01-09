@@ -10,6 +10,7 @@ import collections
 import os
 import pandas as pd
 import tensorflow as tf
+import pickle
 
 
 project_folder = "./"
