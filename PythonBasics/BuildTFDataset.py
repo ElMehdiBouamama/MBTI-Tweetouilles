@@ -114,7 +114,7 @@ similarity = tf.matmul(valid_embeddings, normalized_embeddings, transpose_b=True
 saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings})
 
 #Add variable initializer.
-init = tf.initialize_all_variables()
+init = tf.global_variables_initializer()
 sess.run(init)
 
 # Run the skip gram model.
