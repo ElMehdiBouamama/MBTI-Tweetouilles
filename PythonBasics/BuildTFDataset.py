@@ -35,7 +35,7 @@ sess = tf.Session()
 #Declare model parameters
 batch_size = 1000
 vocabulary_size = 200000
-generations = 500000
+generations = 150000
 model_learning_rate = 0.001
 
 embedding_size = 400     # Word embedding size

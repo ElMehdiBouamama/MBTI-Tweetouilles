@@ -103,18 +103,16 @@ def generate_batch_data(sentences, batch_size, window_size):
         # Pull out center word of interest for each window and create a tuple for each window
         # For doc2vec we keep LHS window only to predict target word
         batch_and_labels = [(rand_sentence[i:i+window_size], rand_sentence[i+window_size]) for i in range(0, len(rand_sentence)-window_size)]
-        print(batch_and_labels[:5])
-        batch, labels = [list(x) for x in zip(*batch_and_labels)]
+        batch, labels = [list(x) for x in zip(batch_and_labels)]
         # Add document index to batch!! Remember that we must extract the last index in batch for the doc-index
         batch = [x + [rand_sentence_ix] for x in batch]
-            
         # extract batch and labels
         batch_data.extend(batch[:batch_size])
         label_data.extend(labels[:batch_size])
     # Trim batch and label at the end
+    print(batch_data[:2])
     batch_data = batch_data[:batch_size]
     label_data = label_data[:batch_size]
-    
     # Convert to numpy array
     batch_data = np.array(batch_data)
     label_data = np.transpose(np.array([label_data]))
