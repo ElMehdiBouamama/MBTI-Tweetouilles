@@ -21,7 +21,6 @@ def normalize_text(texts):
     #Remove Carriage Return
     with Pool(25) as p:
         lol = p.map(remove_carriage_return,texts)
-    print(cleared_texts[:50])
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
@@ -112,7 +111,6 @@ def generate_batch_data(sentences, batch_size, window_size):
         batch_data.extend(batch[:batch_size])
         label_data.extend(labels[:batch_size])
     # Trim batch and label at the end
-    print(batch_data[:2])
     batch_data = batch_data[:batch_size]
     label_data = label_data[:batch_size]
     # Convert to numpy array

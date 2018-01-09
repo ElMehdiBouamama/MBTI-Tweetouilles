@@ -28,7 +28,7 @@ def ReadFiles(fileName):
 
 #%% cell 1
 with Pool(150) as p:
-    users_vocab = p.map(ReadFiles,userIds[:10])
+    users_vocab = p.map(ReadFiles,userIds)
 
 sess = tf.Session()
 
@@ -123,8 +123,6 @@ loss_vec = []
 loss_x_vec = []
 for i in range(generations):
     batch_inputs, batch_labels = generate_batch_data(text_data, batch_size, window_size)
-    print(batch_inputs)
-    print(batch_labels)
     feed_dict = {x_inputs : batch_inputs, y_target : batch_labels}
 
     # Run the train step
