@@ -43,7 +43,7 @@ doc_embedding_size = 300
 concatenated_size = embedding_size + doc_embedding_size
 
 num_sampled = int(batch_size/2) # Number of negative examples to samples
-window_size = 3 # Numbers to consider to the left
+window_size = 2 # Numbers to consider to the left
 
 #Add checkpoint to training
 save_embeddings_every = 5000
