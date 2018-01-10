@@ -30,6 +30,7 @@
     <Compile Include="TensorflowWorkflow.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="TestingFile.py" />
     <Compile Include="text_helper.py">
       <SubType>Code</SubType>
     </Compile>
@@ -39,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="ExtractedTweets\" />
+    <Folder Include="SaveFolder\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="ExtractedTweets\100852870.txt" />
@@ -1178,6 +1180,10 @@
     <Content Include="ExtractedTweets\998244200.txt" />
     <Content Include="ExtractedTweets\998819870.txt" />
     <Content Include="JsonDescription.txt" />
+    <Content Include="nohup.out" />
+    <Content Include="SaveFolder\checkpoint" />
+    <Content Include="SaveFolder\doc2vec_mbti_tweets.ckpt.index" />
+    <Content Include="SaveFolder\tweet_vocab.pkl" />
     <Content Include="Tweets.txt" />
     <Content Include="TwiSty-FR.json" />
     <Content Include="ValidUserIds.txt" />
