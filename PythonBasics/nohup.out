@@ -1,0 +1,1723 @@
+2018-01-09 22:48:15.654794: I tensorflow/core/platform/cpu_feature_guard.cc:137] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX
+Creating Dictionary
+First 2 tweets:
+["t'es", 'cool', '🙌', '🏻', 'mais', "j'pense", 'il', 'a', 'vu', 'mais', 'il', 'répondra', 'pas', '😂']
+['wow', 'le', 'chantage', "c'est", 'pas', 'joli']
+First tweet vectors:
+[169, 205, 2941, 1201, 22, 2080, 36, 26, 108, 22, 36, 19448, 8, 159]
+Tweet Number:
+1586307
+Printing valid example:
+[36, 71, 271, 183, 661, 482]
+Creating Model
+Starting Training
+Loss at step 100 : 1999.2235107421875
+Loss at step 200 : 2046.880126953125
+Loss at step 300 : 1991.564697265625
+Loss at step 400 : 1976.625732421875
+Loss at step 500 : 1960.339111328125
+Loss at step 600 : 1969.8505859375
+Loss at step 700 : 1881.5093994140625
+Loss at step 800 : 1885.4517822265625
+Loss at step 900 : 1832.2432861328125
+Loss at step 1000 : 1877.83154296875
+Loss at step 1100 : 1920.00341796875
+Loss at step 1200 : 1973.476806640625
+Loss at step 1300 : 1817.869873046875
+Loss at step 1400 : 1823.7607421875
+Loss at step 1500 : 1943.89794921875
+Loss at step 1600 : 1847.217041015625
+Loss at step 1700 : 1840.6231689453125
+Loss at step 1800 : 1818.1822509765625
+Loss at step 1900 : 1742.9947509765625
+Loss at step 2000 : 1830.9481201171875
+Loss at step 2100 : 1757.7252197265625
+Loss at step 2200 : 1770.907470703125
+Loss at step 2300 : 1788.8778076171875
+Loss at step 2400 : 1610.5069580078125
+Loss at step 2500 : 1783.3800048828125
+Loss at step 2600 : 1704.56982421875
+Loss at step 2700 : 1743.552734375
+Loss at step 2800 : 1717.3587646484375
+Loss at step 2900 : 1649.376708984375
+Loss at step 3000 : 1666.7950439453125
+Loss at step 3100 : 1691.0152587890625
+Loss at step 3200 : 1635.6685791015625
+Loss at step 3300 : 1693.767578125
+Loss at step 3400 : 1662.324462890625
+Loss at step 3500 : 1679.1572265625
+Loss at step 3600 : 1564.873779296875
+Loss at step 3700 : 1598.0382080078125
+Loss at step 3800 : 1558.2647705078125
+Loss at step 3900 : 1706.2283935546875
+Loss at step 4000 : 1681.087646484375
+Loss at step 4100 : 1613.908203125
+Loss at step 4200 : 1620.5875244140625
+Loss at step 4300 : 1569.64453125
+Loss at step 4400 : 1503.8192138671875
+Loss at step 4500 : 1580.375732421875
+Loss at step 4600 : 1560.8699951171875
+Loss at step 4700 : 1526.026123046875
+Loss at step 4800 : 1607.9718017578125
+Loss at step 4900 : 1522.8333740234375
+Loss at step 5000 : 1463.41748046875
+Nearest to il: 1024, idbsixjisbwisbwinsixnsiwnlsbwks, muppies, hahahahhaa, dupe,
+Nearest to elle: deputee, chargeant, #notgorafi, waabitte, laurel,
+Nearest to grand: #guerlain, froutchfroutch, #grandpublic, d'idealtypen, stationnée,
+Nearest to petit: #esra, apnéiste, s09e05, stp, lance-flammes,
+Nearest to homme: #braquo, bigoudi, #écoles2commerce, khalfaoui, manaa,
+Nearest to femme: lessons, enculez, 18.423, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 5100 : 1499.353759765625
+Loss at step 5200 : 1495.7432861328125
+Loss at step 5300 : 1521.58935546875
+Loss at step 5400 : 1500.2939453125
+Loss at step 5500 : 1415.71044921875
+Loss at step 5600 : 1478.968017578125
+Loss at step 5700 : 1590.970947265625
+Loss at step 5800 : 1480.6060791015625
+Loss at step 5900 : 1476.82470703125
+Loss at step 6000 : 1467.532470703125
+Loss at step 6100 : 1500.5389404296875
+Loss at step 6200 : 1565.785888671875
+Loss at step 6300 : 1483.913330078125
+Loss at step 6400 : 1371.5360107421875
+Loss at step 6500 : 1447.0634765625
+Loss at step 6600 : 1413.4842529296875
+Loss at step 6700 : 1338.8555908203125
+Loss at step 6800 : 1505.23779296875
+Loss at step 6900 : 1440.4234619140625
+Loss at step 7000 : 1403.3427734375
+Loss at step 7100 : 1328.0072021484375
+Loss at step 7200 : 1399.543212890625
+Loss at step 7300 : 1341.693359375
+Loss at step 7400 : 1389.4549560546875
+Loss at step 7500 : 1349.154541015625
+Loss at step 7600 : 1346.5634765625
+Loss at step 7700 : 1372.23193359375
+Loss at step 7800 : 1297.0462646484375
+Loss at step 7900 : 1246.872802734375
+Loss at step 8000 : 1291.75146484375
+Loss at step 8100 : 1356.5213623046875
+Loss at step 8200 : 1373.2640380859375
+Loss at step 8300 : 1220.39404296875
+Loss at step 8400 : 1312.7364501953125
+Loss at step 8500 : 1290.978515625
+Loss at step 8600 : 1261.974853515625
+Loss at step 8700 : 1285.7679443359375
+Loss at step 8800 : 1272.1468505859375
+Loss at step 8900 : 1299.561767578125
+Loss at step 9000 : 1246.168701171875
+Loss at step 9100 : 1326.6595458984375
+Loss at step 9200 : 1169.279052734375
+Loss at step 9300 : 1237.34619140625
+Loss at step 9400 : 1273.6141357421875
+Loss at step 9500 : 1079.8499755859375
+Loss at step 9600 : 1371.395263671875
+Loss at step 9700 : 1169.6905517578125
+Loss at step 9800 : 1229.3115234375
+Loss at step 9900 : 1089.1407470703125
+Loss at step 10000 : 1272.9271240234375
+Nearest to il: de, je, à, un, !,
+Nearest to elle: deputee, chargeant, waabitte, #notgorafi, .,
+Nearest to grand: #guerlain, froutchfroutch, stationnée, #grandpublic, posterait,
+Nearest to petit: #esra, stp, apnéiste, s09e05, lance-flammes,
+Nearest to homme: #braquo, bigoudi, #écoles2commerce, khalfaoui, manaa,
+Nearest to femme: lessons, enculez, 18.423, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 10100 : 1249.7879638671875
+Loss at step 10200 : 1258.768310546875
+Loss at step 10300 : 1159.869140625
+Loss at step 10400 : 1160.562744140625
+Loss at step 10500 : 1146.4207763671875
+Loss at step 10600 : 1219.498779296875
+Loss at step 10700 : 1234.4786376953125
+Loss at step 10800 : 1215.3905029296875
+Loss at step 10900 : 1161.0238037109375
+Loss at step 11000 : 1187.8883056640625
+Loss at step 11100 : 1009.0818481445312
+Loss at step 11200 : 1163.2598876953125
+Loss at step 11300 : 1190.2303466796875
+Loss at step 11400 : 1122.709716796875
+Loss at step 11500 : 1182.853271484375
+Loss at step 11600 : 1197.215087890625
+Loss at step 11700 : 1162.51904296875
+Loss at step 11800 : 1146.6522216796875
+Loss at step 11900 : 1102.145751953125
+Loss at step 12000 : 1123.3958740234375
+Loss at step 12100 : 1064.2325439453125
+Loss at step 12200 : 1059.9837646484375
+Loss at step 12300 : 1050.82861328125
+Loss at step 12400 : 993.129150390625
+Loss at step 12500 : 1128.0244140625
+Loss at step 12600 : 1089.68603515625
+Loss at step 12700 : 1020.7870483398438
+Loss at step 12800 : 948.2313232421875
+Loss at step 12900 : 1068.6192626953125
+Loss at step 13000 : 1051.6396484375
+Loss at step 13100 : 1085.2769775390625
+Loss at step 13200 : 922.0792846679688
+Loss at step 13300 : 966.1083984375
+Loss at step 13400 : 1038.89111328125
+Loss at step 13500 : 1084.9232177734375
+Loss at step 13600 : 1060.040771484375
+Loss at step 13700 : 973.1216430664062
+Loss at step 13800 : 1000.4475708007812
+Loss at step 13900 : 1111.63330078125
+Loss at step 14000 : 985.4086303710938
+Loss at step 14100 : 986.1796264648438
+Loss at step 14200 : 1110.6112060546875
+Loss at step 14300 : 958.4229125976562
+Loss at step 14400 : 1031.810302734375
+Loss at step 14500 : 963.2365112304688
+Loss at step 14600 : 1006.2037353515625
+Loss at step 14700 : 928.072265625
+Loss at step 14800 : 931.4240112304688
+Loss at step 14900 : 964.84326171875
+Loss at step 15000 : 925.1336669921875
+Nearest to il: de, je, à, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: #guerlain, stationnée, froutchfroutch, posterait, #grandpublic,
+Nearest to petit: #esra, stp, s09e05, apnéiste, la,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, khalfaoui, manaa,
+Nearest to femme: enculez, lessons, 18.423, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 15100 : 940.3067626953125
+Loss at step 15200 : 924.1583862304688
+Loss at step 15300 : 1044.2088623046875
+Loss at step 15400 : 1002.18408203125
+Loss at step 15500 : 889.9478759765625
+Loss at step 15600 : 832.505615234375
+Loss at step 15700 : 920.6723022460938
+Loss at step 15800 : 932.9028930664062
+Loss at step 15900 : 940.243896484375
+Loss at step 16000 : 993.9990844726562
+Loss at step 16100 : 937.13916015625
+Loss at step 16200 : 847.4705200195312
+Loss at step 16300 : 1026.290283203125
+Loss at step 16400 : 867.5691528320312
+Loss at step 16500 : 802.0408935546875
+Loss at step 16600 : 922.0519409179688
+Loss at step 16700 : 900.6618041992188
+Loss at step 16800 : 990.51611328125
+Loss at step 16900 : 928.7208862304688
+Loss at step 17000 : 799.9776000976562
+Loss at step 17100 : 938.2061767578125
+Loss at step 17200 : 943.0745239257812
+Loss at step 17300 : 782.9949951171875
+Loss at step 17400 : 863.4864501953125
+Loss at step 17500 : 879.0131225585938
+Loss at step 17600 : 1002.9244995117188
+Loss at step 17700 : 771.947265625
+Loss at step 17800 : 837.39013671875
+Loss at step 17900 : 975.7777709960938
+Loss at step 18000 : 852.4348754882812
+Loss at step 18100 : 865.7127685546875
+Loss at step 18200 : 862.8212280273438
+Loss at step 18300 : 789.33740234375
+Loss at step 18400 : 813.052001953125
+Loss at step 18500 : 841.3255004882812
+Loss at step 18600 : 787.7747802734375
+Loss at step 18700 : 755.7679443359375
+Loss at step 18800 : 860.50634765625
+Loss at step 18900 : 762.3814697265625
+Loss at step 19000 : 789.0809936523438
+Loss at step 19100 : 719.8152465820312
+Loss at step 19200 : 862.904541015625
+Loss at step 19300 : 754.5910034179688
+Loss at step 19400 : 717.05224609375
+Loss at step 19500 : 845.1090087890625
+Loss at step 19600 : 835.0492553710938
+Loss at step 19700 : 802.7120971679688
+Loss at step 19800 : 736.4486083984375
+Loss at step 19900 : 713.3910522460938
+Loss at step 20000 : 803.0154418945312
+Nearest to il: de, je, à, un, ,,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: #guerlain, stationnée, froutchfroutch, posterait, #grandpublic,
+Nearest to petit: la, à, stp, #esra, suis,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, khalfaoui,
+Nearest to femme: enculez, lessons, 18.423, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 20100 : 846.9940185546875
+Loss at step 20200 : 822.4532470703125
+Loss at step 20300 : 831.786376953125
+Loss at step 20400 : 795.6060180664062
+Loss at step 20500 : 801.7550048828125
+Loss at step 20600 : 715.625732421875
+Loss at step 20700 : 637.152587890625
+Loss at step 20800 : 757.2682495117188
+Loss at step 20900 : 784.08740234375
+Loss at step 21000 : 625.5275268554688
+Loss at step 21100 : 693.3123168945312
+Loss at step 21200 : 693.5823364257812
+Loss at step 21300 : 754.8005981445312
+Loss at step 21400 : 773.7468872070312
+Loss at step 21500 : 802.4788818359375
+Loss at step 21600 : 637.1710205078125
+Loss at step 21700 : 666.15771484375
+Loss at step 21800 : 700.2445068359375
+Loss at step 21900 : 754.593505859375
+Loss at step 22000 : 729.0044555664062
+Loss at step 22100 : 675.7186279296875
+Loss at step 22200 : 703.7474365234375
+Loss at step 22300 : 756.1458740234375
+Loss at step 22400 : 727.934326171875
+Loss at step 22500 : 715.6634521484375
+Loss at step 22600 : 687.0127563476562
+Loss at step 22700 : 679.7284545898438
+Loss at step 22800 : 712.4951782226562
+Loss at step 22900 : 729.4229736328125
+Loss at step 23000 : 648.2923583984375
+Loss at step 23100 : 662.5057983398438
+Loss at step 23200 : 657.9488525390625
+Loss at step 23300 : 710.4561157226562
+Loss at step 23400 : 711.0293579101562
+Loss at step 23500 : 694.156982421875
+Loss at step 23600 : 616.4706420898438
+Loss at step 23700 : 623.7630004882812
+Loss at step 23800 : 688.163330078125
+Loss at step 23900 : 641.765380859375
+Loss at step 24000 : 648.7954711914062
+Loss at step 24100 : 688.2879638671875
+Loss at step 24200 : 641.9970092773438
+Loss at step 24300 : 683.9747314453125
+Loss at step 24400 : 593.9904174804688
+Loss at step 24500 : 676.6036376953125
+Loss at step 24600 : 688.4661254882812
+Loss at step 24700 : 603.1610107421875
+Loss at step 24800 : 589.4630126953125
+Loss at step 24900 : 540.4111328125
+Loss at step 25000 : 628.4170532226562
+Nearest to il: de, je, à, ,, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: #guerlain, stationnée, froutchfroutch, posterait, #ledailymag,
+Nearest to petit: la, à, suis, mais, le,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, khalfaoui,
+Nearest to femme: enculez, lessons, 18.423, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 25100 : 577.3832397460938
+Loss at step 25200 : 589.7194213867188
+Loss at step 25300 : 574.9823608398438
+Loss at step 25400 : 585.9822387695312
+Loss at step 25500 : 633.9791870117188
+Loss at step 25600 : 583.9581298828125
+Loss at step 25700 : 615.1908569335938
+Loss at step 25800 : 598.8905029296875
+Loss at step 25900 : 574.6985473632812
+Loss at step 26000 : 628.0825805664062
+Loss at step 26100 : 602.795166015625
+Loss at step 26200 : 562.3330688476562
+Loss at step 26300 : 588.888671875
+Loss at step 26400 : 646.3324584960938
+Loss at step 26500 : 595.8064575195312
+Loss at step 26600 : 548.5621948242188
+Loss at step 26700 : 593.6932373046875
+Loss at step 26800 : 530.4481811523438
+Loss at step 26900 : 533.391845703125
+Loss at step 27000 : 612.6544189453125
+Loss at step 27100 : 587.7237548828125
+Loss at step 27200 : 560.9951171875
+Loss at step 27300 : 530.18603515625
+Loss at step 27400 : 535.6043701171875
+Loss at step 27500 : 581.41650390625
+Loss at step 27600 : 592.6265258789062
+Loss at step 27700 : 561.414306640625
+Loss at step 27800 : 495.3578796386719
+Loss at step 27900 : 539.3251342773438
+Loss at step 28000 : 609.8556518554688
+Loss at step 28100 : 597.1841430664062
+Loss at step 28200 : 561.2268676757812
+Loss at step 28300 : 539.9810180664062
+Loss at step 28400 : 499.64764404296875
+Loss at step 28500 : 510.67376708984375
+Loss at step 28600 : 544.488525390625
+Loss at step 28700 : 551.2352294921875
+Loss at step 28800 : 457.510498046875
+Loss at step 28900 : 595.3019409179688
+Loss at step 29000 : 543.5919189453125
+Loss at step 29100 : 529.4910278320312
+Loss at step 29200 : 522.3053588867188
+Loss at step 29300 : 539.170654296875
+Loss at step 29400 : 557.52880859375
+Loss at step 29500 : 510.674072265625
+Loss at step 29600 : 530.316650390625
+Loss at step 29700 : 486.10333251953125
+Loss at step 29800 : 528.7360229492188
+Loss at step 29900 : 483.4827575683594
+Loss at step 30000 : 530.5869750976562
+Nearest to il: de, je, à, ,, un,
+Nearest to elle: de, ., ,, pas, un,
+Nearest to grand: stationnée, #guerlain, ne, froutchfroutch, posterait,
+Nearest to petit: la, à, le, de, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, khalfaoui,
+Nearest to femme: enculez, 18.423, lessons, surmultiplication, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 30100 : 578.6160888671875
+Loss at step 30200 : 468.1758728027344
+Loss at step 30300 : 536.9349365234375
+Loss at step 30400 : 436.86212158203125
+Loss at step 30500 : 468.1241760253906
+Loss at step 30600 : 520.5888671875
+Loss at step 30700 : 499.9841613769531
+Loss at step 30800 : 515.1083374023438
+Loss at step 30900 : 487.7374572753906
+Loss at step 31000 : 583.287109375
+Loss at step 31100 : 466.0135498046875
+Loss at step 31200 : 514.5171508789062
+Loss at step 31300 : 515.0861206054688
+Loss at step 31400 : 446.5139465332031
+Loss at step 31500 : 537.488037109375
+Loss at step 31600 : 459.68487548828125
+Loss at step 31700 : 413.1626281738281
+Loss at step 31800 : 483.2672119140625
+Loss at step 31900 : 505.8774108886719
+Loss at step 32000 : 508.8900146484375
+Loss at step 32100 : 489.9402160644531
+Loss at step 32200 : 512.6876831054688
+Loss at step 32300 : 547.4235229492188
+Loss at step 32400 : 515.4869995117188
+Loss at step 32500 : 482.4902038574219
+Loss at step 32600 : 456.77520751953125
+Loss at step 32700 : 468.67547607421875
+Loss at step 32800 : 475.0421142578125
+Loss at step 32900 : 524.6982421875
+Loss at step 33000 : 466.8578186035156
+Loss at step 33100 : 479.05950927734375
+Loss at step 33200 : 442.63995361328125
+Loss at step 33300 : 476.1937255859375
+Loss at step 33400 : 392.4936828613281
+Loss at step 33500 : 461.698486328125
+Loss at step 33600 : 446.88824462890625
+Loss at step 33700 : 446.11712646484375
+Loss at step 33800 : 492.1636657714844
+Loss at step 33900 : 387.7255554199219
+Loss at step 34000 : 455.0904235839844
+Loss at step 34100 : 440.4345703125
+Loss at step 34200 : 451.39068603515625
+Loss at step 34300 : 433.4784240722656
+Loss at step 34400 : 479.7956848144531
+Loss at step 34500 : 476.1765441894531
+Loss at step 34600 : 477.4943542480469
+Loss at step 34700 : 477.27374267578125
+Loss at step 34800 : 463.1661682128906
+Loss at step 34900 : 400.8953857421875
+Loss at step 35000 : 434.0122375488281
+Nearest to il: de, je, à, ,, un,
+Nearest to elle: de, ., ,, pas, un,
+Nearest to grand: ne, c'est, stationnée, #guerlain, #ledailymag,
+Nearest to petit: la, à, le, de, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #survivalisme,
+Nearest to femme: enculez, 18.423, surmultiplication, lessons, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 35100 : 404.0838623046875
+Loss at step 35200 : 443.64093017578125
+Loss at step 35300 : 449.4413757324219
+Loss at step 35400 : 372.964111328125
+Loss at step 35500 : 432.4827575683594
+Loss at step 35600 : 498.4555358886719
+Loss at step 35700 : 460.2507629394531
+Loss at step 35800 : 430.9564208984375
+Loss at step 35900 : 388.7100524902344
+Loss at step 36000 : 421.9232482910156
+Loss at step 36100 : 373.5901184082031
+Loss at step 36200 : 424.0368347167969
+Loss at step 36300 : 397.7439270019531
+Loss at step 36400 : 394.3355712890625
+Loss at step 36500 : 417.89111328125
+Loss at step 36600 : 432.92919921875
+Loss at step 36700 : 446.8916931152344
+Loss at step 36800 : 515.5764770507812
+Loss at step 36900 : 451.4505310058594
+Loss at step 37000 : 437.5518798828125
+Loss at step 37100 : 422.163330078125
+Loss at step 37200 : 419.2521667480469
+Loss at step 37300 : 460.89801025390625
+Loss at step 37400 : 381.75634765625
+Loss at step 37500 : 393.1831359863281
+Loss at step 37600 : 472.7043151855469
+Loss at step 37700 : 406.4541320800781
+Loss at step 37800 : 387.8215637207031
+Loss at step 37900 : 418.5504455566406
+Loss at step 38000 : 436.0667419433594
+Loss at step 38100 : 365.81494140625
+Loss at step 38200 : 408.4827880859375
+Loss at step 38300 : 371.07659912109375
+Loss at step 38400 : 411.0332336425781
+Loss at step 38500 : 386.5065612792969
+Loss at step 38600 : 387.3653564453125
+Loss at step 38700 : 333.6192626953125
+Loss at step 38800 : 379.8813781738281
+Loss at step 38900 : 374.612060546875
+Loss at step 39000 : 421.7764892578125
+Loss at step 39100 : 420.4523010253906
+Loss at step 39200 : 372.135009765625
+Loss at step 39300 : 383.7296142578125
+Loss at step 39400 : 406.4059143066406
+Loss at step 39500 : 395.70074462890625
+Loss at step 39600 : 372.98638916015625
+Loss at step 39700 : 363.8115539550781
+Loss at step 39800 : 356.2254638671875
+Loss at step 39900 : 406.8661804199219
+Loss at step 40000 : 358.8757019042969
+Nearest to il: de, je, à, ,, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, stationnée, #guerlain,
+Nearest to petit: la, à, de, le, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #survivalisme,
+Nearest to femme: enculez, 18.423, surmultiplication, lessons, creepypasta,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 40100 : 356.4098815917969
+Loss at step 40200 : 392.16619873046875
+Loss at step 40300 : 450.5980224609375
+Loss at step 40400 : 432.0848388671875
+Loss at step 40500 : 374.7945556640625
+Loss at step 40600 : 409.1625061035156
+Loss at step 40700 : 368.7096862792969
+Loss at step 40800 : 378.9570617675781
+Loss at step 40900 : 386.5285949707031
+Loss at step 41000 : 350.03009033203125
+Loss at step 41100 : 375.8219909667969
+Loss at step 41200 : 433.0907287597656
+Loss at step 41300 : 379.51715087890625
+Loss at step 41400 : 325.9875183105469
+Loss at step 41500 : 424.46124267578125
+Loss at step 41600 : 347.5342712402344
+Loss at step 41700 : 349.86297607421875
+Loss at step 41800 : 378.2755432128906
+Loss at step 41900 : 348.96588134765625
+Loss at step 42000 : 345.5466613769531
+Loss at step 42100 : 352.26068115234375
+Loss at step 42200 : 404.3154296875
+Loss at step 42300 : 414.04443359375
+Loss at step 42400 : 390.9679260253906
+Loss at step 42500 : 357.77996826171875
+Loss at step 42600 : 399.69183349609375
+Loss at step 42700 : 350.861572265625
+Loss at step 42800 : 327.6674499511719
+Loss at step 42900 : 344.7826843261719
+Loss at step 43000 : 362.68994140625
+Loss at step 43100 : 369.48651123046875
+Loss at step 43200 : 382.2691650390625
+Loss at step 43300 : 355.0561218261719
+Loss at step 43400 : 357.8731994628906
+Loss at step 43500 : 333.7918701171875
+Loss at step 43600 : 340.9857482910156
+Loss at step 43700 : 306.8190002441406
+Loss at step 43800 : 345.7417907714844
+Loss at step 43900 : 348.35009765625
+Loss at step 44000 : 293.40277099609375
+Loss at step 44100 : 323.98321533203125
+Loss at step 44200 : 333.12017822265625
+Loss at step 44300 : 282.4217529296875
+Loss at step 44400 : 340.1195068359375
+Loss at step 44500 : 322.7927551269531
+Loss at step 44600 : 339.1390075683594
+Loss at step 44700 : 398.4427490234375
+Loss at step 44800 : 296.7749328613281
+Loss at step 44900 : 357.353759765625
+Loss at step 45000 : 325.9628601074219
+Nearest to il: de, je, à, ,, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, stationnée,
+Nearest to petit: la, à, de, le, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #survivalisme,
+Nearest to femme: enculez, 18.423, surmultiplication, lessons, ressemble,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 45100 : 301.62945556640625
+Loss at step 45200 : 383.5121765136719
+Loss at step 45300 : 363.27294921875
+Loss at step 45400 : 351.7110900878906
+Loss at step 45500 : 348.78289794921875
+Loss at step 45600 : 415.3836669921875
+Loss at step 45700 : 332.6670837402344
+Loss at step 45800 : 335.88720703125
+Loss at step 45900 : 322.427978515625
+Loss at step 46000 : 345.4578857421875
+Loss at step 46100 : 285.76800537109375
+Loss at step 46200 : 277.9711608886719
+Loss at step 46300 : 318.4252014160156
+Loss at step 46400 : 317.30255126953125
+Loss at step 46500 : 352.7560119628906
+Loss at step 46600 : 303.589599609375
+Loss at step 46700 : 314.078125
+Loss at step 46800 : 316.6727600097656
+Loss at step 46900 : 343.0255432128906
+Loss at step 47000 : 384.91412353515625
+Loss at step 47100 : 387.0058288574219
+Loss at step 47200 : 290.33624267578125
+Loss at step 47300 : 284.3161315917969
+Loss at step 47400 : 281.2770690917969
+Loss at step 47500 : 299.9098815917969
+Loss at step 47600 : 309.8230895996094
+Loss at step 47700 : 367.431884765625
+Loss at step 47800 : 374.07843017578125
+Loss at step 47900 : 342.8501281738281
+Loss at step 48000 : 259.1428527832031
+Loss at step 48100 : 316.1473388671875
+Loss at step 48200 : 298.4819641113281
+Loss at step 48300 : 340.9437561035156
+Loss at step 48400 : 341.39605712890625
+Loss at step 48500 : 336.5443420410156
+Loss at step 48600 : 342.242919921875
+Loss at step 48700 : 303.6020202636719
+Loss at step 48800 : 319.7303771972656
+Loss at step 48900 : 295.885009765625
+Loss at step 49000 : 292.6394958496094
+Loss at step 49100 : 293.5973815917969
+Loss at step 49200 : 314.4272766113281
+Loss at step 49300 : 259.9515686035156
+Loss at step 49400 : 367.1925964355469
+Loss at step 49500 : 324.6982421875
+Loss at step 49600 : 309.0442810058594
+Loss at step 49700 : 325.2310485839844
+Loss at step 49800 : 251.23153686523438
+Loss at step 49900 : 329.6468811035156
+Loss at step 50000 : 295.8246154785156
+Nearest to il: de, je, à, un, ,,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ...,
+Nearest to petit: la, à, de, le, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #arg,
+Nearest to femme: enculez, 18.423, surmultiplication, ressemble, lessons,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 50100 : 303.8680114746094
+Loss at step 50200 : 301.3518371582031
+Loss at step 50300 : 365.3082580566406
+Loss at step 50400 : 271.66717529296875
+Loss at step 50500 : 267.6861877441406
+Loss at step 50600 : 333.0144348144531
+Loss at step 50700 : 274.5389404296875
+Loss at step 50800 : 268.7097473144531
+Loss at step 50900 : 313.1316833496094
+Loss at step 51000 : 290.0732421875
+Loss at step 51100 : 285.59893798828125
+Loss at step 51200 : 258.9066467285156
+Loss at step 51300 : 286.350830078125
+Loss at step 51400 : 324.3057556152344
+Loss at step 51500 : 326.2603759765625
+Loss at step 51600 : 297.1514892578125
+Loss at step 51700 : 311.7030334472656
+Loss at step 51800 : 279.55908203125
+Loss at step 51900 : 277.0687561035156
+Loss at step 52000 : 245.6173858642578
+Loss at step 52100 : 314.4801330566406
+Loss at step 52200 : 259.73260498046875
+Loss at step 52300 : 285.3929748535156
+Loss at step 52400 : 304.6206970214844
+Loss at step 52500 : 336.0027160644531
+Loss at step 52600 : 317.5843200683594
+Loss at step 52700 : 247.1691131591797
+Loss at step 52800 : 276.72210693359375
+Loss at step 52900 : 257.4468078613281
+Loss at step 53000 : 292.935302734375
+Loss at step 53100 : 311.11798095703125
+Loss at step 53200 : 281.553955078125
+Loss at step 53300 : 312.98138427734375
+Loss at step 53400 : 304.7882995605469
+Loss at step 53500 : 258.9324645996094
+Loss at step 53600 : 306.41107177734375
+Loss at step 53700 : 298.7947692871094
+Loss at step 53800 : 280.35101318359375
+Loss at step 53900 : 300.0741882324219
+Loss at step 54000 : 278.6058044433594
+Loss at step 54100 : 284.62725830078125
+Loss at step 54200 : 271.4921875
+Loss at step 54300 : 260.2821960449219
+Loss at step 54400 : 266.203857421875
+Loss at step 54500 : 299.5229797363281
+Loss at step 54600 : 283.49847412109375
+Loss at step 54700 : 342.9944763183594
+Loss at step 54800 : 321.7022705078125
+Loss at step 54900 : 296.1416320800781
+Loss at step 55000 : 264.9670715332031
+Nearest to il: de, je, à, un, ,,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ...,
+Nearest to petit: la, à, de, le, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #arg,
+Nearest to femme: enculez, 18.423, surmultiplication, ressemble, lessons,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 55100 : 320.2526550292969
+Loss at step 55200 : 273.5401306152344
+Loss at step 55300 : 261.8973083496094
+Loss at step 55400 : 270.3485412597656
+Loss at step 55500 : 247.51251220703125
+Loss at step 55600 : 286.1769714355469
+Loss at step 55700 : 281.0238342285156
+Loss at step 55800 : 270.2326354980469
+Loss at step 55900 : 264.1838684082031
+Loss at step 56000 : 254.23033142089844
+Loss at step 56100 : 241.8766632080078
+Loss at step 56200 : 246.21463012695312
+Loss at step 56300 : 275.6108703613281
+Loss at step 56400 : 285.7235107421875
+Loss at step 56500 : 281.13323974609375
+Loss at step 56600 : 280.98260498046875
+Loss at step 56700 : 267.57855224609375
+Loss at step 56800 : 248.1907501220703
+Loss at step 56900 : 280.6655578613281
+Loss at step 57000 : 274.2650451660156
+Loss at step 57100 : 261.2320556640625
+Loss at step 57200 : 210.4771270751953
+Loss at step 57300 : 306.24945068359375
+Loss at step 57400 : 237.88572692871094
+Loss at step 57500 : 238.53648376464844
+Loss at step 57600 : 261.2484436035156
+Loss at step 57700 : 278.8181457519531
+Loss at step 57800 : 257.78277587890625
+Loss at step 57900 : 242.82125854492188
+Loss at step 58000 : 241.23211669921875
+Loss at step 58100 : 251.2234344482422
+Loss at step 58200 : 259.1056213378906
+Loss at step 58300 : 235.16928100585938
+Loss at step 58400 : 271.81988525390625
+Loss at step 58500 : 233.01171875
+Loss at step 58600 : 286.66082763671875
+Loss at step 58700 : 277.8746032714844
+Loss at step 58800 : 240.695556640625
+Loss at step 58900 : 208.95770263671875
+Loss at step 59000 : 234.3140106201172
+Loss at step 59100 : 248.0845947265625
+Loss at step 59200 : 245.2427215576172
+Loss at step 59300 : 286.7808837890625
+Loss at step 59400 : 283.5608215332031
+Loss at step 59500 : 281.8659973144531
+Loss at step 59600 : 235.7397003173828
+Loss at step 59700 : 236.2523193359375
+Loss at step 59800 : 282.07763671875
+Loss at step 59900 : 222.81080627441406
+Loss at step 60000 : 257.53717041015625
+Nearest to il: de, à, je, un, ,,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ...,
+Nearest to petit: la, à, de, le, mais,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, #arg,
+Nearest to femme: enculez, 18.423, surmultiplication, ressemble, lessons,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 60100 : 248.7466583251953
+Loss at step 60200 : 253.75155639648438
+Loss at step 60300 : 299.3992004394531
+Loss at step 60400 : 266.5968017578125
+Loss at step 60500 : 249.2337646484375
+Loss at step 60600 : 241.29649353027344
+Loss at step 60700 : 256.4216613769531
+Loss at step 60800 : 275.7546081542969
+Loss at step 60900 : 285.08367919921875
+Loss at step 61000 : 239.27938842773438
+Loss at step 61100 : 266.3783264160156
+Loss at step 61200 : 257.3863830566406
+Loss at step 61300 : 229.30116271972656
+Loss at step 61400 : 252.46295166015625
+Loss at step 61500 : 255.62338256835938
+Loss at step 61600 : 239.7813720703125
+Loss at step 61700 : 212.78012084960938
+Loss at step 61800 : 251.30902099609375
+Loss at step 61900 : 196.58602905273438
+Loss at step 62000 : 250.69000244140625
+Loss at step 62100 : 224.88836669921875
+Loss at step 62200 : 220.93153381347656
+Loss at step 62300 : 231.69796752929688
+Loss at step 62400 : 258.1820068359375
+Loss at step 62500 : 210.52325439453125
+Loss at step 62600 : 257.6120910644531
+Loss at step 62700 : 255.3604736328125
+Loss at step 62800 : 273.03167724609375
+Loss at step 62900 : 255.31454467773438
+Loss at step 63000 : 255.54464721679688
+Loss at step 63100 : 219.89459228515625
+Loss at step 63200 : 252.93618774414062
+Loss at step 63300 : 256.42681884765625
+Loss at step 63400 : 272.7309265136719
+Loss at step 63500 : 309.0425109863281
+Loss at step 63600 : 233.23692321777344
+Loss at step 63700 : 220.82687377929688
+Loss at step 63800 : 228.60372924804688
+Loss at step 63900 : 269.43536376953125
+Loss at step 64000 : 254.68458557128906
+Loss at step 64100 : 269.6023864746094
+Loss at step 64200 : 224.1356201171875
+Loss at step 64300 : 243.32472229003906
+Loss at step 64400 : 268.84954833984375
+Loss at step 64500 : 240.81695556640625
+Loss at step 64600 : 240.0626678466797
+Loss at step 64700 : 234.98922729492188
+Loss at step 64800 : 222.69851684570312
+Loss at step 64900 : 241.71209716796875
+Loss at step 65000 : 251.49993896484375
+Nearest to il: de, à, je, un, .,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, woookie,
+Nearest to femme: 18.423, enculez, surmultiplication, ressemble, par,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 65100 : 272.2219543457031
+Loss at step 65200 : 249.76333618164062
+Loss at step 65300 : 232.29754638671875
+Loss at step 65400 : 218.6173095703125
+Loss at step 65500 : 225.9190673828125
+Loss at step 65600 : 213.5030517578125
+Loss at step 65700 : 258.6956481933594
+Loss at step 65800 : 236.58543395996094
+Loss at step 65900 : 231.5804443359375
+Loss at step 66000 : 198.6695556640625
+Loss at step 66100 : 209.6531524658203
+Loss at step 66200 : 214.1935577392578
+Loss at step 66300 : 227.72811889648438
+Loss at step 66400 : 226.3605499267578
+Loss at step 66500 : 215.02496337890625
+Loss at step 66600 : 198.45826721191406
+Loss at step 66700 : 214.65545654296875
+Loss at step 66800 : 249.11346435546875
+Loss at step 66900 : 250.69325256347656
+Loss at step 67000 : 227.77293395996094
+Loss at step 67100 : 233.07803344726562
+Loss at step 67200 : 250.42941284179688
+Loss at step 67300 : 202.2079315185547
+Loss at step 67400 : 248.6477813720703
+Loss at step 67500 : 202.43167114257812
+Loss at step 67600 : 200.31736755371094
+Loss at step 67700 : 213.3281707763672
+Loss at step 67800 : 244.31204223632812
+Loss at step 67900 : 214.02728271484375
+Loss at step 68000 : 230.04759216308594
+Loss at step 68100 : 190.85305786132812
+Loss at step 68200 : 202.33656311035156
+Loss at step 68300 : 241.31121826171875
+Loss at step 68400 : 230.1193084716797
+Loss at step 68500 : 208.45252990722656
+Loss at step 68600 : 253.19784545898438
+Loss at step 68700 : 221.3355712890625
+Loss at step 68800 : 219.66934204101562
+Loss at step 68900 : 231.58502197265625
+Loss at step 69000 : 195.37557983398438
+Loss at step 69100 : 220.85035705566406
+Loss at step 69200 : 196.72044372558594
+Loss at step 69300 : 243.0062713623047
+Loss at step 69400 : 209.55543518066406
+Loss at step 69500 : 211.21791076660156
+Loss at step 69600 : 241.20469665527344
+Loss at step 69700 : 224.8246612548828
+Loss at step 69800 : 213.7218780517578
+Loss at step 69900 : 253.0074005126953
+Loss at step 70000 : 205.15390014648438
+Nearest to il: de, à, je, un, .,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, woookie,
+Nearest to femme: par, 18.423, ressemble, enculez, surmultiplication,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 70100 : 225.0005645751953
+Loss at step 70200 : 215.23379516601562
+Loss at step 70300 : 209.6766357421875
+Loss at step 70400 : 216.7198486328125
+Loss at step 70500 : 245.63516235351562
+Loss at step 70600 : 259.6540222167969
+Loss at step 70700 : 206.8834991455078
+Loss at step 70800 : 211.3717041015625
+Loss at step 70900 : 222.89996337890625
+Loss at step 71000 : 219.75303649902344
+Loss at step 71100 : 237.20071411132812
+Loss at step 71200 : 242.04638671875
+Loss at step 71300 : 201.21214294433594
+Loss at step 71400 : 238.81809997558594
+Loss at step 71500 : 238.80758666992188
+Loss at step 71600 : 218.66085815429688
+Loss at step 71700 : 201.3871612548828
+Loss at step 71800 : 215.38128662109375
+Loss at step 71900 : 239.1906280517578
+Loss at step 72000 : 224.2005157470703
+Loss at step 72100 : 221.98487854003906
+Loss at step 72200 : 195.52171325683594
+Loss at step 72300 : 184.95184326171875
+Loss at step 72400 : 215.10794067382812
+Loss at step 72500 : 214.13198852539062
+Loss at step 72600 : 212.6427764892578
+Loss at step 72700 : 199.55618286132812
+Loss at step 72800 : 206.94760131835938
+Loss at step 72900 : 184.56549072265625
+Loss at step 73000 : 198.76806640625
+Loss at step 73100 : 207.69996643066406
+Loss at step 73200 : 216.70828247070312
+Loss at step 73300 : 255.5296630859375
+Loss at step 73400 : 202.3575897216797
+Loss at step 73500 : 238.20840454101562
+Loss at step 73600 : 209.5030975341797
+Loss at step 73700 : 210.7896270751953
+Loss at step 73800 : 194.24232482910156
+Loss at step 73900 : 190.29776000976562
+Loss at step 74000 : 203.271728515625
+Loss at step 74100 : 215.09481811523438
+Loss at step 74200 : 190.19088745117188
+Loss at step 74300 : 234.27183532714844
+Loss at step 74400 : 220.2378387451172
+Loss at step 74500 : 240.383544921875
+Loss at step 74600 : 202.44952392578125
+Loss at step 74700 : 196.92234802246094
+Loss at step 74800 : 236.91641235351562
+Loss at step 74900 : 200.56130981445312
+Loss at step 75000 : 239.8804931640625
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: ne, c'est, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, woookie,
+Nearest to femme: par, ressemble, petit, 18.423, enculez,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 75100 : 232.85739135742188
+Loss at step 75200 : 205.06297302246094
+Loss at step 75300 : 220.1984100341797
+Loss at step 75400 : 226.0043182373047
+Loss at step 75500 : 180.25131225585938
+Loss at step 75600 : 206.25750732421875
+Loss at step 75700 : 264.7770690917969
+Loss at step 75800 : 260.9685363769531
+Loss at step 75900 : 238.29055786132812
+Loss at step 76000 : 216.00408935546875
+Loss at step 76100 : 245.57752990722656
+Loss at step 76200 : 218.1230926513672
+Loss at step 76300 : 222.48362731933594
+Loss at step 76400 : 189.71981811523438
+Loss at step 76500 : 256.62530517578125
+Loss at step 76600 : 259.5362854003906
+Loss at step 76700 : 221.98373413085938
+Loss at step 76800 : 180.554443359375
+Loss at step 76900 : 189.06002807617188
+Loss at step 77000 : 191.02772521972656
+Loss at step 77100 : 197.82699584960938
+Loss at step 77200 : 209.72442626953125
+Loss at step 77300 : 212.3118896484375
+Loss at step 77400 : 186.00840759277344
+Loss at step 77500 : 208.5830535888672
+Loss at step 77600 : 202.7734375
+Loss at step 77700 : 187.0723419189453
+Loss at step 77800 : 198.6594696044922
+Loss at step 77900 : 211.91810607910156
+Loss at step 78000 : 223.60057067871094
+Loss at step 78100 : 189.3778076171875
+Loss at step 78200 : 168.24053955078125
+Loss at step 78300 : 179.98464965820312
+Loss at step 78400 : 203.5946502685547
+Loss at step 78500 : 237.28411865234375
+Loss at step 78600 : 222.53439331054688
+Loss at step 78700 : 185.08676147460938
+Loss at step 78800 : 190.96629333496094
+Loss at step 78900 : 189.77706909179688
+Loss at step 79000 : 217.29483032226562
+Loss at step 79100 : 181.70745849609375
+Loss at step 79200 : 215.50393676757812
+Loss at step 79300 : 200.58116149902344
+Loss at step 79400 : 217.45750427246094
+Loss at step 79500 : 255.01783752441406
+Loss at step 79600 : 221.33543395996094
+Loss at step 79700 : 186.08262634277344
+Loss at step 79800 : 175.70376586914062
+Loss at step 79900 : 186.52346801757812
+Loss at step 80000 : 177.6409912109375
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, manaa, woookie,
+Nearest to femme: par, petit, tellement, toi, ressemble,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 80100 : 218.08566284179688
+Loss at step 80200 : 234.09365844726562
+Loss at step 80300 : 224.36480712890625
+Loss at step 80400 : 204.4509735107422
+Loss at step 80500 : 214.47036743164062
+Loss at step 80600 : 224.2286834716797
+Loss at step 80700 : 228.0007781982422
+Loss at step 80800 : 188.63973999023438
+Loss at step 80900 : 189.84324645996094
+Loss at step 81000 : 189.6193389892578
+Loss at step 81100 : 186.40231323242188
+Loss at step 81200 : 203.2410125732422
+Loss at step 81300 : 197.22703552246094
+Loss at step 81400 : 188.30682373046875
+Loss at step 81500 : 184.97393798828125
+Loss at step 81600 : 236.05575561523438
+Loss at step 81700 : 236.55299377441406
+Loss at step 81800 : 259.3641662597656
+Loss at step 81900 : 193.27890014648438
+Loss at step 82000 : 173.8103790283203
+Loss at step 82100 : 179.8228759765625
+Loss at step 82200 : 192.235107421875
+Loss at step 82300 : 159.0377655029297
+Loss at step 82400 : 192.9313507080078
+Loss at step 82500 : 232.8724365234375
+Loss at step 82600 : 212.99256896972656
+Loss at step 82700 : 185.88987731933594
+Loss at step 82800 : 222.55442810058594
+Loss at step 82900 : 214.78843688964844
+Loss at step 83000 : 196.08444213867188
+Loss at step 83100 : 226.22523498535156
+Loss at step 83200 : 188.15138244628906
+Loss at step 83300 : 214.049560546875
+Loss at step 83400 : 232.63858032226562
+Loss at step 83500 : 195.41018676757812
+Loss at step 83600 : 222.07403564453125
+Loss at step 83700 : 204.33349609375
+Loss at step 83800 : 166.99319458007812
+Loss at step 83900 : 208.77232360839844
+Loss at step 84000 : 162.7401885986328
+Loss at step 84100 : 205.56080627441406
+Loss at step 84200 : 195.36033630371094
+Loss at step 84300 : 206.00234985351562
+Loss at step 84400 : 215.42369079589844
+Loss at step 84500 : 168.3070831298828
+Loss at step 84600 : 188.2879638671875
+Loss at step 84700 : 189.2423553466797
+Loss at step 84800 : 174.38812255859375
+Loss at step 84900 : 179.75582885742188
+Loss at step 85000 : 189.97927856445312
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, woookie, manaa,
+Nearest to femme: par, petit, tellement, toi, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 85100 : 186.83734130859375
+Loss at step 85200 : 188.97015380859375
+Loss at step 85300 : 212.29771423339844
+Loss at step 85400 : 222.49713134765625
+Loss at step 85500 : 184.89332580566406
+Loss at step 85600 : 202.6311492919922
+Loss at step 85700 : 195.18258666992188
+Loss at step 85800 : 199.297119140625
+Loss at step 85900 : 203.7830047607422
+Loss at step 86000 : 179.20941162109375
+Loss at step 86100 : 176.3157501220703
+Loss at step 86200 : 172.99440002441406
+Loss at step 86300 : 227.69754028320312
+Loss at step 86400 : 173.69921875
+Loss at step 86500 : 168.28419494628906
+Loss at step 86600 : 170.86199951171875
+Loss at step 86700 : 209.24618530273438
+Loss at step 86800 : 192.4174346923828
+Loss at step 86900 : 184.62750244140625
+Loss at step 87000 : 175.34056091308594
+Loss at step 87100 : 182.5196533203125
+Loss at step 87200 : 202.81239318847656
+Loss at step 87300 : 189.88450622558594
+Loss at step 87400 : 172.65740966796875
+Loss at step 87500 : 197.06875610351562
+Loss at step 87600 : 204.740234375
+Loss at step 87700 : 188.17294311523438
+Loss at step 87800 : 204.3619842529297
+Loss at step 87900 : 186.73309326171875
+Loss at step 88000 : 155.93016052246094
+Loss at step 88100 : 228.99465942382812
+Loss at step 88200 : 196.7585906982422
+Loss at step 88300 : 177.833251953125
+Loss at step 88400 : 206.5043182373047
+Loss at step 88500 : 166.079345703125
+Loss at step 88600 : 180.75784301757812
+Loss at step 88700 : 178.65264892578125
+Loss at step 88800 : 159.42709350585938
+Loss at step 88900 : 190.1248779296875
+Loss at step 89000 : 165.1623992919922
+Loss at step 89100 : 200.75479125976562
+Loss at step 89200 : 181.98828125
+Loss at step 89300 : 194.41175842285156
+Loss at step 89400 : 167.49044799804688
+Loss at step 89500 : 201.8277587890625
+Loss at step 89600 : 171.3682403564453
+Loss at step 89700 : 179.42056274414062
+Loss at step 89800 : 206.7176971435547
+Loss at step 89900 : 190.22561645507812
+Loss at step 90000 : 205.4928741455078
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, woookie, manaa,
+Nearest to femme: par, petit, tellement, de, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 90100 : 224.28648376464844
+Loss at step 90200 : 221.27915954589844
+Loss at step 90300 : 158.830322265625
+Loss at step 90400 : 175.32275390625
+Loss at step 90500 : 196.98362731933594
+Loss at step 90600 : 192.2811279296875
+Loss at step 90700 : 186.3783416748047
+Loss at step 90800 : 171.49526977539062
+Loss at step 90900 : 189.6844940185547
+Loss at step 91000 : 185.83607482910156
+Loss at step 91100 : 175.56044006347656
+Loss at step 91200 : 171.35037231445312
+Loss at step 91300 : 205.46548461914062
+Loss at step 91400 : 195.2096710205078
+Loss at step 91500 : 189.0723419189453
+Loss at step 91600 : 174.20130920410156
+Loss at step 91700 : 202.11680603027344
+Loss at step 91800 : 186.4092559814453
+Loss at step 91900 : 176.04486083984375
+Loss at step 92000 : 180.84466552734375
+Loss at step 92100 : 150.66693115234375
+Loss at step 92200 : 177.018798828125
+Loss at step 92300 : 180.64166259765625
+Loss at step 92400 : 156.75498962402344
+Loss at step 92500 : 174.4355010986328
+Loss at step 92600 : 156.2933807373047
+Loss at step 92700 : 169.76052856445312
+Loss at step 92800 : 223.19322204589844
+Loss at step 92900 : 142.4044952392578
+Loss at step 93000 : 166.5619659423828
+Loss at step 93100 : 179.2907257080078
+Loss at step 93200 : 161.09112548828125
+Loss at step 93300 : 186.45840454101562
+Loss at step 93400 : 181.29067993164062
+Loss at step 93500 : 173.97193908691406
+Loss at step 93600 : 152.61865234375
+Loss at step 93700 : 169.59046936035156
+Loss at step 93800 : 195.8813018798828
+Loss at step 93900 : 168.38453674316406
+Loss at step 94000 : 140.39988708496094
+Loss at step 94100 : 200.1427764892578
+Loss at step 94200 : 180.32247924804688
+Loss at step 94300 : 186.09559631347656
+Loss at step 94400 : 181.75656127929688
+Loss at step 94500 : 169.80450439453125
+Loss at step 94600 : 180.3820343017578
+Loss at step 94700 : 156.60743713378906
+Loss at step 94800 : 146.0110321044922
+Loss at step 94900 : 180.0785675048828
+Loss at step 95000 : 155.58523559570312
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, bigoudi, woookie, manaa,
+Nearest to femme: par, petit, tellement, de, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 95100 : 189.2427520751953
+Loss at step 95200 : 176.75714111328125
+Loss at step 95300 : 197.25131225585938
+Loss at step 95400 : 172.9444122314453
+Loss at step 95500 : 180.74078369140625
+Loss at step 95600 : 177.73133850097656
+Loss at step 95700 : 165.21493530273438
+Loss at step 95800 : 172.00527954101562
+Loss at step 95900 : 209.97850036621094
+Loss at step 96000 : 171.83612060546875
+Loss at step 96100 : 177.73170471191406
+Loss at step 96200 : 182.05735778808594
+Loss at step 96300 : 209.7913818359375
+Loss at step 96400 : 167.1540069580078
+Loss at step 96500 : 180.12416076660156
+Loss at step 96600 : 168.88421630859375
+Loss at step 96700 : 156.3432159423828
+Loss at step 96800 : 195.58299255371094
+Loss at step 96900 : 184.77684020996094
+Loss at step 97000 : 153.9167938232422
+Loss at step 97100 : 148.53408813476562
+Loss at step 97200 : 176.5808868408203
+Loss at step 97300 : 167.52513122558594
+Loss at step 97400 : 171.1107940673828
+Loss at step 97500 : 212.51316833496094
+Loss at step 97600 : 182.7672119140625
+Loss at step 97700 : 157.78878784179688
+Loss at step 97800 : 138.58047485351562
+Loss at step 97900 : 229.02932739257812
+Loss at step 98000 : 214.35446166992188
+Loss at step 98100 : 167.97354125976562
+Loss at step 98200 : 189.62159729003906
+Loss at step 98300 : 184.94700622558594
+Loss at step 98400 : 143.850830078125
+Loss at step 98500 : 158.03933715820312
+Loss at step 98600 : 163.8018798828125
+Loss at step 98700 : 192.05715942382812
+Loss at step 98800 : 173.27809143066406
+Loss at step 98900 : 211.7986602783203
+Loss at step 99000 : 173.81552124023438
+Loss at step 99100 : 179.21409606933594
+Loss at step 99200 : 158.81298828125
+Loss at step 99300 : 200.7075958251953
+Loss at step 99400 : 219.5818328857422
+Loss at step 99500 : 154.7330780029297
+Loss at step 99600 : 190.93443298339844
+Loss at step 99700 : 204.8430633544922
+Loss at step 99800 : 148.92921447753906
+Loss at step 99900 : 169.92843627929688
+Loss at step 100000 : 184.3015594482422
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, woookie, bigoudi, manaa,
+Nearest to femme: par, petit, de, tellement, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 100100 : 171.87744140625
+Loss at step 100200 : 195.5083770751953
+Loss at step 100300 : 154.07716369628906
+Loss at step 100400 : 173.04449462890625
+Loss at step 100500 : 203.28402709960938
+Loss at step 100600 : 172.19688415527344
+Loss at step 100700 : 166.93435668945312
+Loss at step 100800 : 159.86431884765625
+Loss at step 100900 : 175.86972045898438
+Loss at step 101000 : 179.70362854003906
+Loss at step 101100 : 164.77194213867188
+Loss at step 101200 : 177.09263610839844
+Loss at step 101300 : 167.1575469970703
+Loss at step 101400 : 158.70106506347656
+Loss at step 101500 : 171.5664825439453
+Loss at step 101600 : 175.39161682128906
+Loss at step 101700 : 143.00852966308594
+Loss at step 101800 : 126.99317169189453
+Loss at step 101900 : 135.02052307128906
+Loss at step 102000 : 171.66197204589844
+Loss at step 102100 : 163.60601806640625
+Loss at step 102200 : 159.4891357421875
+Loss at step 102300 : 174.7403564453125
+Loss at step 102400 : 164.12353515625
+Loss at step 102500 : 185.89646911621094
+Loss at step 102600 : 164.53404235839844
+Loss at step 102700 : 172.2523193359375
+Loss at step 102800 : 179.6909637451172
+Loss at step 102900 : 169.76840209960938
+Loss at step 103000 : 143.2234344482422
+Loss at step 103100 : 172.40814208984375
+Loss at step 103200 : 161.98480224609375
+Loss at step 103300 : 169.49569702148438
+Loss at step 103400 : 164.98915100097656
+Loss at step 103500 : 199.12205505371094
+Loss at step 103600 : 125.0967025756836
+Loss at step 103700 : 171.527587890625
+Loss at step 103800 : 151.3175048828125
+Loss at step 103900 : 196.1167449951172
+Loss at step 104000 : 164.64414978027344
+Loss at step 104100 : 186.22894287109375
+Loss at step 104200 : 174.99720764160156
+Loss at step 104300 : 157.83497619628906
+Loss at step 104400 : 144.73585510253906
+Loss at step 104500 : 155.19874572753906
+Loss at step 104600 : 173.44960021972656
+Loss at step 104700 : 178.17799377441406
+Loss at step 104800 : 145.9631805419922
+Loss at step 104900 : 176.46925354003906
+Loss at step 105000 : 177.69778442382812
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, #écoles2commerce, woookie, bigoudi, manaa,
+Nearest to femme: par, de, petit, tellement, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 105100 : 174.08778381347656
+Loss at step 105200 : 155.93359375
+Loss at step 105300 : 153.1584930419922
+Loss at step 105400 : 127.67792510986328
+Loss at step 105500 : 172.985595703125
+Loss at step 105600 : 155.87042236328125
+Loss at step 105700 : 187.02500915527344
+Loss at step 105800 : 173.9311065673828
+Loss at step 105900 : 150.13241577148438
+Loss at step 106000 : 155.53736877441406
+Loss at step 106100 : 139.91705322265625
+Loss at step 106200 : 159.55752563476562
+Loss at step 106300 : 155.896240234375
+Loss at step 106400 : 172.3705291748047
+Loss at step 106500 : 187.36647033691406
+Loss at step 106600 : 158.34100341796875
+Loss at step 106700 : 171.0397186279297
+Loss at step 106800 : 162.53878784179688
+Loss at step 106900 : 187.71493530273438
+Loss at step 107000 : 146.26068115234375
+Loss at step 107100 : 184.31890869140625
+Loss at step 107200 : 186.28074645996094
+Loss at step 107300 : 174.10394287109375
+Loss at step 107400 : 174.9429473876953
+Loss at step 107500 : 172.60484313964844
+Loss at step 107600 : 146.6555633544922
+Loss at step 107700 : 176.6470489501953
+Loss at step 107800 : 153.39048767089844
+Loss at step 107900 : 195.55587768554688
+Loss at step 108000 : 161.8314971923828
+Loss at step 108100 : 171.06112670898438
+Loss at step 108200 : 143.72218322753906
+Loss at step 108300 : 138.2688446044922
+Loss at step 108400 : 161.90660095214844
+Loss at step 108500 : 136.03250122070312
+Loss at step 108600 : 155.4746551513672
+Loss at step 108700 : 172.49063110351562
+Loss at step 108800 : 176.4945068359375
+Loss at step 108900 : 145.8038787841797
+Loss at step 109000 : 185.08718872070312
+Loss at step 109100 : 162.76463317871094
+Loss at step 109200 : 169.5729217529297
+Loss at step 109300 : 162.98208618164062
+Loss at step 109400 : 150.53233337402344
+Loss at step 109500 : 143.3302459716797
+Loss at step 109600 : 153.49891662597656
+Loss at step 109700 : 161.59225463867188
+Loss at step 109800 : 127.90533447265625
+Loss at step 109900 : 145.44325256347656
+Loss at step 110000 : 160.65843200683594
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, #écoles2commerce, bigoudi, aînés,
+Nearest to femme: par, de, petit, tellement, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 110100 : 148.2415313720703
+Loss at step 110200 : 182.0921630859375
+Loss at step 110300 : 143.87130737304688
+Loss at step 110400 : 165.76956176757812
+Loss at step 110500 : 154.86337280273438
+Loss at step 110600 : 174.48797607421875
+Loss at step 110700 : 149.6064910888672
+Loss at step 110800 : 148.6536865234375
+Loss at step 110900 : 154.4105682373047
+Loss at step 111000 : 173.86289978027344
+Loss at step 111100 : 171.72116088867188
+Loss at step 111200 : 167.5202178955078
+Loss at step 111300 : 173.17550659179688
+Loss at step 111400 : 171.08050537109375
+Loss at step 111500 : 151.9693145751953
+Loss at step 111600 : 171.09271240234375
+Loss at step 111700 : 172.7536163330078
+Loss at step 111800 : 162.82284545898438
+Loss at step 111900 : 139.66085815429688
+Loss at step 112000 : 188.57916259765625
+Loss at step 112100 : 152.0229034423828
+Loss at step 112200 : 151.83013916015625
+Loss at step 112300 : 146.50668334960938
+Loss at step 112400 : 164.6962432861328
+Loss at step 112500 : 179.745849609375
+Loss at step 112600 : 175.26065063476562
+Loss at step 112700 : 149.1501922607422
+Loss at step 112800 : 170.0920867919922
+Loss at step 112900 : 143.03611755371094
+Loss at step 113000 : 156.01600646972656
+Loss at step 113100 : 167.82229614257812
+Loss at step 113200 : 167.9801788330078
+Loss at step 113300 : 143.6776885986328
+Loss at step 113400 : 157.31170654296875
+Loss at step 113500 : 177.25228881835938
+Loss at step 113600 : 157.55313110351562
+Loss at step 113700 : 182.4746856689453
+Loss at step 113800 : 160.24668884277344
+Loss at step 113900 : 167.98170471191406
+Loss at step 114000 : 164.8494415283203
+Loss at step 114100 : 190.7715606689453
+Loss at step 114200 : 170.63427734375
+Loss at step 114300 : 162.36094665527344
+Loss at step 114400 : 165.9503173828125
+Loss at step 114500 : 158.216796875
+Loss at step 114600 : 160.55677795410156
+Loss at step 114700 : 170.48866271972656
+Loss at step 114800 : 153.91615295410156
+Loss at step 114900 : 161.0748291015625
+Loss at step 115000 : 147.776611328125
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, #écoles2commerce, bigoudi, aînés,
+Nearest to femme: par, de, petit, tellement, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 115100 : 168.31625366210938
+Loss at step 115200 : 167.91758728027344
+Loss at step 115300 : 211.0648956298828
+Loss at step 115400 : 168.27590942382812
+Loss at step 115500 : 184.27415466308594
+Loss at step 115600 : 173.32823181152344
+Loss at step 115700 : 152.12921142578125
+Loss at step 115800 : 170.88137817382812
+Loss at step 115900 : 148.81365966796875
+Loss at step 116000 : 167.1729736328125
+Loss at step 116100 : 151.9002685546875
+Loss at step 116200 : 160.10301208496094
+Loss at step 116300 : 161.87696838378906
+Loss at step 116400 : 147.46437072753906
+Loss at step 116500 : 151.25387573242188
+Loss at step 116600 : 142.40318298339844
+Loss at step 116700 : 144.56378173828125
+Loss at step 116800 : 170.8193817138672
+Loss at step 116900 : 174.40536499023438
+Loss at step 117000 : 176.3259735107422
+Loss at step 117100 : 142.1233367919922
+Loss at step 117200 : 165.99325561523438
+Loss at step 117300 : 148.48899841308594
+Loss at step 117400 : 128.721923828125
+Loss at step 117500 : 157.33558654785156
+Loss at step 117600 : 165.94239807128906
+Loss at step 117700 : 147.98532104492188
+Loss at step 117800 : 167.32296752929688
+Loss at step 117900 : 161.32627868652344
+Loss at step 118000 : 167.07412719726562
+Loss at step 118100 : 145.53724670410156
+Loss at step 118200 : 136.3387451171875
+Loss at step 118300 : 149.8615264892578
+Loss at step 118400 : 162.0200958251953
+Loss at step 118500 : 149.2583465576172
+Loss at step 118600 : 172.13302612304688
+Loss at step 118700 : 162.57791137695312
+Loss at step 118800 : 160.9092559814453
+Loss at step 118900 : 171.01039123535156
+Loss at step 119000 : 161.8095245361328
+Loss at step 119100 : 123.59174346923828
+Loss at step 119200 : 132.694580078125
+Loss at step 119300 : 158.90109252929688
+Loss at step 119400 : 129.32823181152344
+Loss at step 119500 : 149.70285034179688
+Loss at step 119600 : 174.78240966796875
+Loss at step 119700 : 169.56407165527344
+Loss at step 119800 : 180.54287719726562
+Loss at step 119900 : 154.4722137451172
+Loss at step 120000 : 148.3426971435547
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, #écoles2commerce, aînés, bigoudi,
+Nearest to femme: par, de, tellement, petit, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 120100 : 171.4197540283203
+Loss at step 120200 : 142.75228881835938
+Loss at step 120300 : 134.8899688720703
+Loss at step 120400 : 120.46017456054688
+Loss at step 120500 : 148.45281982421875
+Loss at step 120600 : 196.401123046875
+Loss at step 120700 : 150.00360107421875
+Loss at step 120800 : 176.2168426513672
+Loss at step 120900 : 164.20318603515625
+Loss at step 121000 : 127.21337127685547
+Loss at step 121100 : 165.6015167236328
+Loss at step 121200 : 170.16876220703125
+Loss at step 121300 : 155.5891571044922
+Loss at step 121400 : 143.4154052734375
+Loss at step 121500 : 139.8520965576172
+Loss at step 121600 : 162.6907196044922
+Loss at step 121700 : 145.170166015625
+Loss at step 121800 : 133.11456298828125
+Loss at step 121900 : 173.5564422607422
+Loss at step 122000 : 133.41958618164062
+Loss at step 122100 : 152.7137908935547
+Loss at step 122200 : 178.3646697998047
+Loss at step 122300 : 115.40943908691406
+Loss at step 122400 : 165.6683807373047
+Loss at step 122500 : 174.354248046875
+Loss at step 122600 : 167.246337890625
+Loss at step 122700 : 139.6705322265625
+Loss at step 122800 : 217.4429473876953
+Loss at step 122900 : 143.6859130859375
+Loss at step 123000 : 154.35630798339844
+Loss at step 123100 : 143.04336547851562
+Loss at step 123200 : 142.66665649414062
+Loss at step 123300 : 170.05799865722656
+Loss at step 123400 : 158.0680694580078
+Loss at step 123500 : 160.3864288330078
+Loss at step 123600 : 186.14468383789062
+Loss at step 123700 : 132.74066162109375
+Loss at step 123800 : 124.1282958984375
+Loss at step 123900 : 137.0946502685547
+Loss at step 124000 : 141.54995727539062
+Loss at step 124100 : 134.67649841308594
+Loss at step 124200 : 143.2875213623047
+Loss at step 124300 : 151.81089782714844
+Loss at step 124400 : 163.26747131347656
+Loss at step 124500 : 155.7004852294922
+Loss at step 124600 : 162.90399169921875
+Loss at step 124700 : 166.84585571289062
+Loss at step 124800 : 153.6204376220703
+Loss at step 124900 : 139.2512969970703
+Loss at step 125000 : 164.56703186035156
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, #écoles2commerce, aînés, bigoudi,
+Nearest to femme: par, de, tellement, petit, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 125100 : 158.51266479492188
+Loss at step 125200 : 154.28884887695312
+Loss at step 125300 : 167.91444396972656
+Loss at step 125400 : 151.8029327392578
+Loss at step 125500 : 155.75741577148438
+Loss at step 125600 : 159.58160400390625
+Loss at step 125700 : 128.3714599609375
+Loss at step 125800 : 154.1718292236328
+Loss at step 125900 : 134.08570861816406
+Loss at step 126000 : 147.39340209960938
+Loss at step 126100 : 141.95944213867188
+Loss at step 126200 : 155.24185180664062
+Loss at step 126300 : 137.9897918701172
+Loss at step 126400 : 147.29904174804688
+Loss at step 126500 : 147.36936950683594
+Loss at step 126600 : 168.89370727539062
+Loss at step 126700 : 139.52989196777344
+Loss at step 126800 : 163.2597198486328
+Loss at step 126900 : 141.71005249023438
+Loss at step 127000 : 153.89657592773438
+Loss at step 127100 : 163.60975646972656
+Loss at step 127200 : 167.5447235107422
+Loss at step 127300 : 133.09185791015625
+Loss at step 127400 : 147.2403106689453
+Loss at step 127500 : 152.8709716796875
+Loss at step 127600 : 152.52212524414062
+Loss at step 127700 : 139.5267791748047
+Loss at step 127800 : 145.55357360839844
+Loss at step 127900 : 126.90750885009766
+Loss at step 128000 : 166.89540100097656
+Loss at step 128100 : 141.71115112304688
+Loss at step 128200 : 129.03713989257812
+Loss at step 128300 : 152.62803649902344
+Loss at step 128400 : 136.56407165527344
+Loss at step 128500 : 158.19296264648438
+Loss at step 128600 : 145.33616638183594
+Loss at step 128700 : 174.05873107910156
+Loss at step 128800 : 138.6573028564453
+Loss at step 128900 : 138.6113739013672
+Loss at step 129000 : 157.57290649414062
+Loss at step 129100 : 125.53231048583984
+Loss at step 129200 : 147.30569458007812
+Loss at step 129300 : 131.221923828125
+Loss at step 129400 : 144.48809814453125
+Loss at step 129500 : 143.37416076660156
+Loss at step 129600 : 135.32859802246094
+Loss at step 129700 : 144.00685119628906
+Loss at step 129800 : 163.61544799804688
+Loss at step 129900 : 129.508056640625
+Loss at step 130000 : 131.2769012451172
+Nearest to il: de, à, je, un, !,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, #écoles2commerce, aînés, d'être,
+Nearest to femme: par, de, tellement, petit, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 130100 : 146.2305145263672
+Loss at step 130200 : 144.1320037841797
+Loss at step 130300 : 147.4825439453125
+Loss at step 130400 : 137.76100158691406
+Loss at step 130500 : 135.39688110351562
+Loss at step 130600 : 162.74940490722656
+Loss at step 130700 : 153.71810913085938
+Loss at step 130800 : 137.48187255859375
+Loss at step 130900 : 159.7615203857422
+Loss at step 131000 : 136.73416137695312
+Loss at step 131100 : 172.54742431640625
+Loss at step 131200 : 146.49407958984375
+Loss at step 131300 : 150.8572235107422
+Loss at step 131400 : 157.61497497558594
+Loss at step 131500 : 174.0915069580078
+Loss at step 131600 : 153.56112670898438
+Loss at step 131700 : 142.2949676513672
+Loss at step 131800 : 157.4955596923828
+Loss at step 131900 : 154.60232543945312
+Loss at step 132000 : 134.72804260253906
+Loss at step 132100 : 156.08763122558594
+Loss at step 132200 : 127.27033996582031
+Loss at step 132300 : 163.02392578125
+Loss at step 132400 : 128.83999633789062
+Loss at step 132500 : 157.1200714111328
+Loss at step 132600 : 141.5289306640625
+Loss at step 132700 : 144.8126220703125
+Loss at step 132800 : 143.7172088623047
+Loss at step 132900 : 162.97140502929688
+Loss at step 133000 : 156.8162384033203
+Loss at step 133100 : 177.6870880126953
+Loss at step 133200 : 165.43345642089844
+Loss at step 133300 : 190.11012268066406
+Loss at step 133400 : 169.09715270996094
+Loss at step 133500 : 171.99298095703125
+Loss at step 133600 : 136.08889770507812
+Loss at step 133700 : 150.96875
+Loss at step 133800 : 149.42343139648438
+Loss at step 133900 : 142.12725830078125
+Loss at step 134000 : 198.65673828125
+Loss at step 134100 : 144.73150634765625
+Loss at step 134200 : 139.70086669921875
+Loss at step 134300 : 133.98123168945312
+Loss at step 134400 : 136.03750610351562
+Loss at step 134500 : 150.689697265625
+Loss at step 134600 : 147.5004425048828
+Loss at step 134700 : 131.95941162109375
+Loss at step 134800 : 134.30508422851562
+Loss at step 134900 : 137.20962524414062
+Loss at step 135000 : 142.1946563720703
+Nearest to il: de, à, je, !, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, woookie, d'être, #écoles2commerce, aînés,
+Nearest to femme: par, de, tellement, petit, même,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 135100 : 126.0615005493164
+Loss at step 135200 : 160.82579040527344
+Loss at step 135300 : 149.70309448242188
+Loss at step 135400 : 137.2203369140625
+Loss at step 135500 : 133.86221313476562
+Loss at step 135600 : 136.54640197753906
+Loss at step 135700 : 161.14715576171875
+Loss at step 135800 : 133.8907928466797
+Loss at step 135900 : 115.11956787109375
+Loss at step 136000 : 164.67068481445312
+Loss at step 136100 : 126.27234649658203
+Loss at step 136200 : 139.60678100585938
+Loss at step 136300 : 181.5556182861328
+Loss at step 136400 : 133.6751708984375
+Loss at step 136500 : 164.28118896484375
+Loss at step 136600 : 132.47206115722656
+Loss at step 136700 : 134.19827270507812
+Loss at step 136800 : 154.32916259765625
+Loss at step 136900 : 144.1817169189453
+Loss at step 137000 : 126.73355102539062
+Loss at step 137100 : 148.58595275878906
+Loss at step 137200 : 159.313720703125
+Loss at step 137300 : 144.16957092285156
+Loss at step 137400 : 154.0960693359375
+Loss at step 137500 : 113.9919204711914
+Loss at step 137600 : 156.3923797607422
+Loss at step 137700 : 145.29920959472656
+Loss at step 137800 : 145.7655029296875
+Loss at step 137900 : 118.85830688476562
+Loss at step 138000 : 119.97798919677734
+Loss at step 138100 : 138.64755249023438
+Loss at step 138200 : 155.5792236328125
+Loss at step 138300 : 132.8783416748047
+Loss at step 138400 : 155.4257354736328
+Loss at step 138500 : 133.00306701660156
+Loss at step 138600 : 119.20616149902344
+Loss at step 138700 : 148.65846252441406
+Loss at step 138800 : 107.83679962158203
+Loss at step 138900 : 157.58067321777344
+Loss at step 139000 : 114.35108184814453
+Loss at step 139100 : 143.2596435546875
+Loss at step 139200 : 135.63063049316406
+Loss at step 139300 : 117.57660675048828
+Loss at step 139400 : 129.95513916015625
+Loss at step 139500 : 176.63809204101562
+Loss at step 139600 : 129.6168212890625
+Loss at step 139700 : 137.80429077148438
+Loss at step 139800 : 122.73880004882812
+Loss at step 139900 : 138.0767822265625
+Loss at step 140000 : 122.93478393554688
+Nearest to il: de, à, !, je, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, d'être, woookie, tout, aînés,
+Nearest to femme: par, de, tellement, même, petit,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 140100 : 133.40365600585938
+Loss at step 140200 : 119.23710632324219
+Loss at step 140300 : 131.3710479736328
+Loss at step 140400 : 134.8756866455078
+Loss at step 140500 : 163.6870574951172
+Loss at step 140600 : 139.09442138671875
+Loss at step 140700 : 133.4537353515625
+Loss at step 140800 : 140.85800170898438
+Loss at step 140900 : 169.8775634765625
+Loss at step 141000 : 158.67018127441406
+Loss at step 141100 : 173.87701416015625
+Loss at step 141200 : 112.00980377197266
+Loss at step 141300 : 143.4120635986328
+Loss at step 141400 : 140.3468475341797
+Loss at step 141500 : 117.02562713623047
+Loss at step 141600 : 122.62543487548828
+Loss at step 141700 : 125.04288482666016
+Loss at step 141800 : 136.40774536132812
+Loss at step 141900 : 137.21168518066406
+Loss at step 142000 : 133.71812438964844
+Loss at step 142100 : 115.9159164428711
+Loss at step 142200 : 149.7296142578125
+Loss at step 142300 : 116.74588012695312
+Loss at step 142400 : 108.38256072998047
+Loss at step 142500 : 130.92074584960938
+Loss at step 142600 : 149.80039978027344
+Loss at step 142700 : 137.05831909179688
+Loss at step 142800 : 142.0477752685547
+Loss at step 142900 : 151.83921813964844
+Loss at step 143000 : 133.65310668945312
+Loss at step 143100 : 163.8040008544922
+Loss at step 143200 : 143.19618225097656
+Loss at step 143300 : 111.2699966430664
+Loss at step 143400 : 149.80218505859375
+Loss at step 143500 : 173.6228790283203
+Loss at step 143600 : 99.89171600341797
+Loss at step 143700 : 94.97724914550781
+Loss at step 143800 : 196.0648193359375
+Loss at step 143900 : 141.2907257080078
+Loss at step 144000 : 126.91964721679688
+Loss at step 144100 : 124.56391906738281
+Loss at step 144200 : 145.7122802734375
+Loss at step 144300 : 147.36602783203125
+Loss at step 144400 : 160.24758911132812
+Loss at step 144500 : 131.93093872070312
+Loss at step 144600 : 128.4474334716797
+Loss at step 144700 : 133.3914031982422
+Loss at step 144800 : 139.8746337890625
+Loss at step 144900 : 140.49441528320312
+Loss at step 145000 : 129.48170471191406
+Nearest to il: de, à, !, je, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, un,
+Nearest to homme: #braquo, d'être, tout, woookie, aînés,
+Nearest to femme: par, de, tellement, même, petit,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
+Loss at step 145100 : 174.4299774169922
+Loss at step 145200 : 118.157470703125
+Loss at step 145300 : 156.91151428222656
+Loss at step 145400 : 183.343017578125
+Loss at step 145500 : 152.52745056152344
+Loss at step 145600 : 135.69712829589844
+Loss at step 145700 : 160.36236572265625
+Loss at step 145800 : 113.95740509033203
+Loss at step 145900 : 119.89230346679688
+Loss at step 146000 : 128.03317260742188
+Loss at step 146100 : 129.8934326171875
+Loss at step 146200 : 152.23416137695312
+Loss at step 146300 : 147.09725952148438
+Loss at step 146400 : 145.38763427734375
+Loss at step 146500 : 117.4146728515625
+Loss at step 146600 : 157.95526123046875
+Loss at step 146700 : 141.04049682617188
+Loss at step 146800 : 138.3094024658203
+Loss at step 146900 : 116.48602294921875
+Loss at step 147000 : 142.2525634765625
+Loss at step 147100 : 155.63674926757812
+Loss at step 147200 : 118.68319702148438
+Loss at step 147300 : 156.19801330566406
+Loss at step 147400 : 113.25305938720703
+Loss at step 147500 : 148.06777954101562
+Loss at step 147600 : 141.54177856445312
+Loss at step 147700 : 113.13082122802734
+Loss at step 147800 : 134.40589904785156
+Loss at step 147900 : 174.82940673828125
+Loss at step 148000 : 127.42208099365234
+Loss at step 148100 : 126.04310607910156
+Loss at step 148200 : 137.98202514648438
+Loss at step 148300 : 122.52880096435547
+Loss at step 148400 : 114.77386474609375
+Loss at step 148500 : 133.9135284423828
+Loss at step 148600 : 131.88031005859375
+Loss at step 148700 : 161.43215942382812
+Loss at step 148800 : 120.524169921875
+Loss at step 148900 : 157.265625
+Loss at step 149000 : 134.81446838378906
+Loss at step 149100 : 154.32171630859375
+Loss at step 149200 : 154.7974090576172
+Loss at step 149300 : 152.7868194580078
+Loss at step 149400 : 109.38451385498047
+Loss at step 149500 : 143.31166076660156
+Loss at step 149600 : 121.13479614257812
+Loss at step 149700 : 136.44068908691406
+Loss at step 149800 : 128.9456787109375
+Loss at step 149900 : 101.73089599609375
+Loss at step 150000 : 138.0811004638672
+Nearest to il: de, à, !, je, un,
+Nearest to elle: de, ., ,, un, pas,
+Nearest to grand: c'est, ne, dans, je, ,,
+Nearest to petit: la, à, de, le, du,
+Nearest to homme: #braquo, d'être, tout, woookie, aînés,
+Nearest to femme: par, de, tellement, même, petit,
+Model saved in file: /home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt
