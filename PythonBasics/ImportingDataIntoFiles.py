@@ -7,17 +7,17 @@ from DatabaseManager import *
 from TwitterManager import *
 from functools import partial
 
-TweetFolderPath =  os.getcwd() + "/ExtractedTweets/"
+TweetFolderPath =  os.getcwd() + "/OtherExtractedTweets/"
 datas = ReadJsonFile("./TwiSty-FR.json")
 userIds = GetUserIds(datas)
 os.chdir(TweetFolderPath)
 # We need to build a dictionnary of users / tweets first
 
-for x in userIds[61:]:
+for x in userIds:
     print("Processing user : " + x)
     stringToSave = ""
     with Pool(150) as p:
-        UserTweets = GetConfirmedTweetIdsOfUser(datas,x)
+        UserTweets = GetOtherTweetIdsOfUser(datas,x)
         checker = GetPostFromTwitter(UserTweets[0],x)
         print(checker)
         if(checker != ""):

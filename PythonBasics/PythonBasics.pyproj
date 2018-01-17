@@ -22,19 +22,19 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BuildTFDataset.py" />
+    <Compile Include="TrainingWord2Vec.py" />
     <Compile Include="DatabaseManager.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="ImportingDataIntoFiles.py" />
-    <Compile Include="TensorflowWorkflow.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="TestingFile.py" />
     <Compile Include="text_helper.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TwitterManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Word2VecPCA.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
