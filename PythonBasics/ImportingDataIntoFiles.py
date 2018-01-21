@@ -15,7 +15,7 @@ os.chdir(TweetFolderPath)
 
 for x in userIds[240:]:
     print("Processing user : " + x)
-    with Pool(150) as p:
+    with Pool(2) as p:
         UserTweets = GetOtherTweetIdsOfUser(datas,x)
         checker = None
         if(UserTweets):
