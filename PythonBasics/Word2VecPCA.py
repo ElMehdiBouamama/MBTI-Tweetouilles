@@ -53,14 +53,71 @@ def DisplayData(components,labels):
 #%% cell 3
 pca = PCA(n_components=2)
 data_points = pca.fit_transform(display_values)
-covMatrix = pandas.DataFrame(pca.get_covariance())
-#scatter_matrix(covMatrix[:1])
-#plt.show()
-#DisplayData(data_points,display_labels)
+DisplayData(data_points)
 
 #%% cell 4
 data_points = TSNE(n_components=2,perplexity=500).fit_transform(display_values)
 DisplayData(data_points,display_labels)
 
+#%% cell 5
+# Picking k random words as reference for comparison
+import random
+k_words = 100
+word_indexes = [int(random.uniform(0,vocabulary_size)) for x in range(k_words)]
+# Cosine similarity
+valid_dataset = tf.constant(word_indexes, dtype=tf.int32)
+norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
+normalized_embeddings = embeddings / norm
+valid_embeddings = tf.nn.embedding_lookup(normalized_embeddings, valid_dataset)
+similarity = tf.matmul(valid_embeddings, normalized_embeddings, transpose_b=True)
+# K-Nearest neighbours
+sim = sess.run(similarity)
+def KNN(top_k,word_indexes):
+    log = ""
+    for j in range(len(word_indexes)):
+        valid_word = word_dictionary_rev[word_indexes[j]]
+        nearest = (-sim[j, :]).argsort()[1:top_k+1]
+        log_str = "Nearest to {}:".format(valid_word)
+        for k in range(top_k):
+            close_word = word_dictionary_rev[nearest[k]]
+            log_str = '{} {},'.format(log_str, close_word)
+        print(log_str)
+        log = '{} {} \n'.format(log, log_str)
+    return log   
 
+logs = KNN(3,word_indexes)
+
+norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
+normalized_embeddings = sess.run(embeddings / norm)
+#%% cell 6
+# Vector operations
+
+def add(embedA, embedB):
+    return np.add(embedA,embedB)
+
+def sub(embedA,embedB):
+    return np.subtract(embedA,embedB)
+
+def getEmbeding(word):
+    word_index = tf.constant(word_dictionnary[word], dtype=tf.int32)
+    word_embed = tf.nn.embedding_lookup(embeddings, word_index)
+    return sess.run(word_embed)
+
+
+def NearestTo(embed):
+    sim = np.dot(embed, np.transpose(normalized_embeddings))
+    nearest = (-sim[:]).argsort()
+    return [word_dictionary_rev[nearest[x]] for x in range(10000)]
+
+manVector = getEmbeding('homme')
+womenVector = getEmbeding('femme')
+kingVector = getEmbeding('roi')
+luiVector = getEmbeding('lui')
+
+elleVector = add(sub(luiVector,manVector),womenVector)
+queenVector = add(sub(kingVector,manVector),womenVector)
+
+NearestTo(elleVector)
+NearestTo(getEmbeding('elle'))
+NearestTo(queenVector)
 

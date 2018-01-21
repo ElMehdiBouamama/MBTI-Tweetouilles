@@ -38,6 +38,9 @@
     <Compile Include="TwitterManager.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Word2VecOptimization.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Word2VecPCA.py">
       <SubType>Code</SubType>
     </Compile>

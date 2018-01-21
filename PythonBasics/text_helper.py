@@ -14,6 +14,16 @@ def remove_carriage_return(word):
     if(word != "\n"):
         cleared_texts.append(word)
 
+def count_punctuation(texts):
+    punctuation_count = 0
+    emoji_count = 0
+    for x in texts:
+        for c in x:
+            if(c in string.punctuation):
+                punctuation_count = punction_count + 1
+            elif(c not in string.digits and c not in string.ascii_letters):
+                emoji_count = emoji_count + 1
+    return punctuation_count, emoji_count
 #Normalize text
 def normalize_text(texts):
     #Lower Case
@@ -24,12 +34,6 @@ def normalize_text(texts):
     #Counting Punction and Emoji
     punction_count = 0
     emoji_count = 0
-    for x in texts:
-        for c in x:
-            if(c in string.punctuation):
-                punction_count = punction_count + 1
-            elif(c not in string.digits and c not in string.ascii_letters):
-                emoji_count = emoji_count + 1
     del texts
     return cleared_texts, punction_count, emoji_count
 
@@ -54,19 +58,12 @@ def build_dictionary(users_Tweets, vocabulary_size):
     
     return(word_dict)
 
-# Turn tweets per user list to sentences list
-def split_tweets_into_sentences(user_Tweets):
-    sentences = []
-    for tweets in user_Tweets:
-        temp = []
-        for word in tweets:
-            if(word != "\n"):
-                temp.append(word)
-            else:
-                sentences.append(temp)
-                temp = []
-    return(sentences)
 
+# Turn tweets per user list to sentences list
+def split_tweets_into_sentences(users_Tweets):
+    sentences = []
+    none_catcher = [sentences.extend(tweets.split("\n")) for tweets in users_Tweets]
+    return sentences
 
 # Turn text data into lists of integers from dictionary
 def text_to_numbers(users_Tweets, word_dict):
