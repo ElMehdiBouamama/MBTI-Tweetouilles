@@ -26,8 +26,8 @@ doc_embeddings = tf.Variable(tf.zeros([number_of_tweets, doc_embedding_size]))
 # Restore data from files
 with open("".join([folder_path,dictionnary_path]),"rb") as f:
     word_dictionnary = pickle.load(f)
-word_dictionary_rev = dict(zip(word_dictionnary.values(), word_dictionnary.keys()))
-saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings})
+word_dictionary_rev = dict(zip(word_dictionnary.values(), word_dictionnary.keys())) # Import dictionnary
+saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
 sess = tf.Session()
 saver.restore(sess, "".join([folder_path,checkpoint_path]))
 

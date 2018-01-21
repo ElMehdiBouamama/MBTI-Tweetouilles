@@ -13,14 +13,15 @@ userIds = GetUserIds(datas)
 os.chdir(TweetFolderPath)
 # We need to build a dictionnary of users / tweets first
 
-for x in userIds:
+for x in userIds[240:]:
     print("Processing user : " + x)
-    stringToSave = ""
     with Pool(150) as p:
         UserTweets = GetOtherTweetIdsOfUser(datas,x)
-        checker = GetPostFromTwitter(UserTweets[0],x)
+        checker = None
+        if(UserTweets):
+            checker = GetPostFromTwitter(UserTweets[0],x)
         print(checker)
-        if(checker != ""):
+        if(checker):
             GetPostPartial = partial(GetPostFromTwitter, userId=x)
             result =  p.map(GetPostPartial,UserTweets)
         else:

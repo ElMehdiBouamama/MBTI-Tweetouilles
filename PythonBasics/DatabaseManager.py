@@ -38,6 +38,10 @@ def GetCountArrayOfConfirmedTweet(datas):
     userIds = GetUserIds(datas)
     return [len(GetConfirmedTweetIdsOfUser(datas,userIds[x])) for x in range(GetNumberOfUsers(datas))]
 
+def GetCountArrayOfOtherTweet(datas):
+    userIds = GetUserIds(datas)
+    return [len(GetOtherTweetIdsOfUser(datas,userIds[x])) for x in range(GetNumberOfUsers(datas))]
+
 def GetCountOfConfirmedTweetOfUser(datas, userId):
     return len(GetConfirmedTweetIdsOfUser(datas,userId))
 
