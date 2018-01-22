@@ -52,16 +52,18 @@ print_valid_every = 500
 print_loss_every = 50
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
 dictionary_path = "tweet_vocab.pkl"
+number_of_tweets = 1586307
 
 #Validation words
 valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade","sex","voir","fille","garcon","pense","musique","facebook","regarder","ecole","maman","classe","article","directeur","2015","année","langues","poid","tirer","croire","savoir","force","sms"]
 
 #Formating the data
 texts = split_tweets_into_sentences(users_vocab)
+print('Printing first 3 tweet sentences : {} '.format(texts[:5]))
 
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
-doc_embeddings = tf.Variable(tf.random_uniform([len(texts), doc_embedding_size], -1.0, 1.0))
+doc_embeddings = tf.Variable(tf.random_uniform([number_of_tweets, doc_embedding_size], -1.0, 1.0))
 
 #Importing the dictionaries and pre-trained Embeddings
 print('Dictionary Backup')
@@ -72,7 +74,7 @@ saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddin
 saver.restore(sess, "".join([save_data_folder,checkpoint_path]))
 
 text_data = text_to_numbers(texts, word_dictionary)
-
+print('Printing first 5 tweet numbers from dictionnary {} '.format(text_data[:5]))
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
 print('Creating Model')
