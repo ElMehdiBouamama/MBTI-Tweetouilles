@@ -58,7 +58,6 @@ valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade
 
 #Formating the data
 texts = split_tweets_into_sentences(users_vocab)
-text_data = text_to_numbers(texts, word_dictionary)
 
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
@@ -72,6 +71,7 @@ word_dictionary_rev = dict(zip(word_dictionnary.values(), word_dictionnary.keys(
 saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
 saver.restore(sess, "".join([save_data_folder,checkpoint_path]))
 
+text_data = text_to_numbers(texts, word_dictionnary)
 
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
