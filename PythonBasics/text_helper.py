@@ -62,7 +62,7 @@ def build_dictionary(users_Tweets, vocabulary_size):
 # Turn tweets per user list to sentences list
 def split_tweets_into_sentences(users_Tweets):
     sentences = []
-    none_catcher = [sentences.extend(tweets.split("\n")) for tweets in users_Tweets]
+    none_catcher = [sentences.extend(tweet.split("\n")) for tweet in tweets for tweets in users_Tweets]
     return sentences
 
 # Turn text data into lists of integers from dictionary
