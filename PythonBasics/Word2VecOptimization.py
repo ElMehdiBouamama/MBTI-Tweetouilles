@@ -51,7 +51,7 @@ save_embeddings_every = 1000
 print_valid_every = 500
 print_loss_every = 50
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
-dictionnary_path = "tweet_vocab.pkl"
+dictionary_path = "tweet_vocab.pkl"
 
 #Validation words
 valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade","sex","voir","fille","garcon","pense","musique","facebook","regarder","ecole","maman","classe","article","directeur","2015","année","langues","poid","tirer","croire","savoir","force","sms"]
@@ -63,15 +63,15 @@ texts = split_tweets_into_sentences(users_vocab)
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
 doc_embeddings = tf.Variable(tf.random_uniform([len(texts), doc_embedding_size], -1.0, 1.0))
 
-#Importing the dictionnaries and pre-trained Embeddings
-print('Dictionnary Backup')
-with open("".join([save_data_folder,dictionnary_path]),"rb") as f:
-    word_dictionnary = pickle.load(f)
-word_dictionary_rev = dict(zip(word_dictionnary.values(), word_dictionnary.keys())) # Import dictionnary
+#Importing the dictionaries and pre-trained Embeddings
+print('Dictionary Backup')
+with open("".join([save_data_folder,dictionary_path]),"rb") as f:
+    word_dictionary = pickle.load(f)
+word_dictionary_rev = dict(zip(word_dictionary.values(), word_dictionary.keys())) # Import dictionary
 saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
 saver.restore(sess, "".join([save_data_folder,checkpoint_path]))
 
-text_data = text_to_numbers(texts, word_dictionnary)
+text_data = text_to_numbers(texts, word_dictionary)
 
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
