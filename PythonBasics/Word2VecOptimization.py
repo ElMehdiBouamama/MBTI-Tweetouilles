@@ -20,16 +20,19 @@ datas = ReadJsonFile(project_folder + "TwiSty-FR.json")
 userIds = np.loadtxt(project_folder + 'ValidUserIds.txt' ,dtype=np.str)
 
 def ReadFiles(fileName):
-    tweet_words = []
+    tweet_sentences = []
     with open(extracted_tweet_folder + fileName + ".txt", "r", encoding="UTF-8") as f:
         Tweets = f.readlines()
-        for Tweet in Tweets:
-            tweet_words = tweet_words + Tweet.split(" ")
-    return tweet_words
+    return [Tweet.strip(" \n").split(' ') for Tweet in Tweets]
 
 #%% cell 1
 with Pool(150) as p:
-    users_vocab = p.map(ReadFiles,userIds)
+    users_tweets = p.map(ReadFiles,userIds)
+
+texts = []
+for user_tweets in users_tweets:
+    for tweet in user_tweets:
+        texts.append(tweet)
 
 sess = tf.Session()
 
@@ -53,13 +56,10 @@ print_loss_every = 50
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
 dictionary_path = "tweet_vocab.pkl"
 number_of_tweets = 1586307
+texts = texts[:number_of_tweets]
 
 #Validation words
 valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade","sex","voir","fille","garcon","pense","musique","facebook","regarder","ecole","maman","classe","article","directeur","2015","année","langues","poid","tirer","croire","savoir","force","sms"]
-
-#Formating the data
-texts = split_tweets_into_sentences(users_vocab)
-print('Printing first 3 tweet sentences : {} '.format(texts[:5]))
 
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
@@ -74,7 +74,7 @@ saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddin
 saver.restore(sess, "".join([save_data_folder,checkpoint_path]))
 
 text_data = text_to_numbers(texts, word_dictionary)
-print('Printing first 5 tweet numbers from dictionnary {} '.format(text_data[:5]))
+print('Printing first 2 tweet numbers from dictionnary {} '.format(text_data[:2]))
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
 print('Creating Model')

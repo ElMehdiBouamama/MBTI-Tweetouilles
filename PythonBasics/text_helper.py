@@ -10,9 +10,9 @@ manager = Manager()
 cleared_texts = manager.list([])
 
 #TODO: Parallelize this task
-def remove_carriage_return(word):
-    if(word != "\n"):
-        cleared_texts.append(word)
+def remove_carriage_return(sentence):
+    cleaned_sentence = sentence.strip("\n")
+    cleared_texts.append(cleaned_sentence.split(' '))
 
 def count_punctuation(texts):
     punctuation_count = 0
@@ -26,6 +26,7 @@ def count_punctuation(texts):
     return punctuation_count, emoji_count
 #Normalize text
 def normalize_text(texts):
+    g
     #Lower Case
     texts = [x.lower() for x in texts]
     #Remove Carriage Return
@@ -66,13 +67,13 @@ def split_tweets_into_sentences(users_Tweets):
     return sentences
 
 # Turn text data into lists of integers from dictionary
-def text_to_numbers(users_Tweets, word_dict):
+def text_to_numbers(sentences, word_dict):
     # Initialize the returned data
     data = []
-    for sentences in users_Tweets:
+    for sentence in sentences:
         sentence_data = []
         # For each word, either use selected index or rare word index
-        for word in sentences:
+        for word in sentence:
             if word in word_dict:
                 word_ix = word_dict[word]
             else:
