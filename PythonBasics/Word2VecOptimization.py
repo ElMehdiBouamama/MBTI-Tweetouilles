@@ -34,13 +34,15 @@ for user_tweets in users_tweets:
     for tweet in user_tweets:
         texts.append(tweet)
 
+print(texts[:2])
+
 sess = tf.Session()
 
 #Declare model parameters
-batch_size = 50
+batch_size = 10000
 vocabulary_size = 200000
-generations = 10000
-model_learning_rate = 0.01
+generations = 150000
+model_learning_rate = 0.001
 
 embedding_size = 400     # Word embedding size
 doc_embedding_size = 300
@@ -50,16 +52,15 @@ num_sampled = int(batch_size/2) # Number of negative examples to samples
 window_size = 2 # Numbers to consider to the left
 
 #Add checkpoint to training
-save_embeddings_every = 1000
-print_valid_every = 500
+save_embeddings_every = 5000
+print_valid_every = 100
 print_loss_every = 50
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
 dictionary_path = "tweet_vocab.pkl"
-number_of_tweets = 1586307
-texts = texts[:number_of_tweets]
+number_of_tweets = len(texts)
 
 #Validation words
-valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade","sex","voir","fille","garcon","pense","musique","facebook","regarder","ecole","maman","classe","article","directeur","2015","année","langues","poid","tirer","croire","savoir","force","sms"]
+valid_words = ["il","elle","grand","petit","homme","femme","roi","reine","malade","sex","voir","vue","fille","garcon","pense","musique","facebook","réseaux","regarder","tele","ecole","maman","mére","classe","article","directeur","direction","2015","année","langue","poid","tirer","croire","savoir","force","sms"]
 
 # Define Embeddings:
 embeddings = tf.Variable(tf.random_uniform([vocabulary_size, embedding_size], -1.0, 1.0))
@@ -70,11 +71,10 @@ print('Dictionary Backup')
 with open("".join([save_data_folder,dictionary_path]),"rb") as f:
     word_dictionary = pickle.load(f)
 word_dictionary_rev = dict(zip(word_dictionary.values(), word_dictionary.keys())) # Import dictionary
-saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
-saver.restore(sess, "".join([save_data_folder,checkpoint_path]))
 
 text_data = text_to_numbers(texts, word_dictionary)
 print('Printing first 2 tweet numbers from dictionnary {} '.format(text_data[:2]))
+
 #Get Validation word Keys declared above
 valid_examples = [word_dictionary[x] for x in valid_words] 
 print('Creating Model')
@@ -143,7 +143,7 @@ for i in range(generations):
         sim = sess.run(similarity, feed_dict=feed_dict)
         for j in range(len(valid_words)):
             valid_word = word_dictionary_rev[valid_examples[j]]
-            top_k = 15 # number of nearest neighbors
+            top_k = 5 # number of nearest neighbors
             nearest = (-sim[j, :]).argsort()[1:top_k+1]
             log_str = "Nearest to {}:".format(valid_word)
             for k in range(top_k):
