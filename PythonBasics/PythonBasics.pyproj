@@ -48,6 +48,8 @@
   <ItemGroup>
     <Folder Include="ExtractedTweets\" />
     <Folder Include="SaveFolder\" />
+    <Folder Include="SaveFolder\Training2\" />
+    <Folder Include="SaveFolder\Training1\" />
     <Folder Include="TrainingLogs\" />
   </ItemGroup>
   <ItemGroup>
@@ -1189,9 +1191,9 @@
     <Content Include="ExtractedTweets\998819870.txt" />
     <Content Include="JsonDescription.txt" />
     <Content Include="nohup.out" />
-    <Content Include="SaveFolder\checkpoint" />
-    <Content Include="SaveFolder\doc2vec_mbti_tweets.ckpt.index" />
-    <Content Include="SaveFolder\tweet_vocab.pkl" />
+    <Content Include="SaveFolder\Training1\checkpoint" />
+    <Content Include="SaveFolder\Training1\doc2vec_mbti_tweets.ckpt.index" />
+    <Content Include="SaveFolder\Training1\tweet_vocab.pkl" />
     <Content Include="TrainingLogs\Training01.out" />
     <Content Include="Tweets.txt" />
     <Content Include="TwiSty-FR.json" />
