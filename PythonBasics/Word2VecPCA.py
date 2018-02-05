@@ -3,7 +3,6 @@ import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
 import matplotlib
-matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import pickle
 import tensorflow as tf
@@ -11,7 +10,8 @@ from pandas.plotting import scatter_matrix
 import pandas
 
 # Paths
-folder_path = "./SaveFolder/"
+
+folder_path = "C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/SaveFolder/Training2/"
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
 dictionnary_path = "tweet_vocab.pkl"
 
@@ -36,35 +36,37 @@ saver.restore(sess, "".join([folder_path,checkpoint_path]))
 
 #%%cell 2
 #Setting for K most common word values
-k = 300
-k_most_common_word_vectors = [tf.nn.embedding_lookup(embeddings,x) for x in range(200,k)]
+k = 1000
+k_most_common_word_vectors = [tf.nn.embedding_lookup(embeddings,x) for x in range(100,100+k)]
 display_values = sess.run(k_most_common_word_vectors)
-display_labels = [word_dictionary_rev[x] for x in range(200,k)]
+display_labels = [word_dictionary_rev[x] for x in range(100,100+k)]
 
 #function to display data
-def DisplayData(components,labels,name):
+def DisplayData(components,labels,explained_variance,name='Default'):
     x = components[:,0]
     y = components[:,1]
     fig, ax = plt.subplots()
+    plt.title('Variance expliquée : {} pour les {} premiers elements'.format(np.sum(explained_variance),k))
     ax.scatter(x, y)
     for i,txt in enumerate(labels):
         ax.annotate(txt, (x[i],y[i]))
-    fig.savefig(name+'.png')
+    plt.show()
 
 # Runing PCA
 #%% cell 3
 pca = PCA(n_components=2)
 data_points = pca.fit_transform(display_values)
-DisplayData(data_points,display_labels,'PCA')
+DisplayData(data_points,display_labels,pca.explained_variance_,'PCA')
 
 #%% cell 4
-data_points = TSNE(n_components=2).fit_transform(display_values)
-DisplayData(data_points,display_labels,'TSNE')
+tsne = TSNE(n_components=2)
+data_points = tsne.fit_transform(display_values)
+DisplayData(data_points,display_labels,tsne.kl_divergence_,'TSNE')
 
 #%% cell 5
 # Picking k random words as reference for comparison
 import random
-k_words = 100
+k_words = 1000
 word_indexes = [int(random.uniform(0,vocabulary_size)) for x in range(k_words)]
 # Cosine similarity
 valid_dataset = tf.constant(word_indexes, dtype=tf.int32)
@@ -87,7 +89,7 @@ def KNN(top_k,word_indexes):
         log = '{} {} \n'.format(log, log_str)
     return log   
 
-logs = KNN(3,word_indexes)
+logs = KNN(10,word_indexes)
 
 norm = tf.sqrt(tf.reduce_sum(tf.square(embeddings), 1, keep_dims=True))
 normalized_embeddings = sess.run(embeddings / norm)

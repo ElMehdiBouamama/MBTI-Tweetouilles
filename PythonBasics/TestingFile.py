@@ -1,13 +1,13 @@
 #%% cell 0
-import numpy as np
 import sys
 import os
-import timeit
 
+class Lol():
+    class Petit():
+        variable = 5
+        def Grandir():
+            print('Maintenant, je suis grand !')
+        pass
+    pass
 
-x = [1,2,3,4]
-y = [7,8,3,2]
-z = ['a','b','c','d']
-
-for a,b in zip(x,y):
-    print(a,b)
+print('Fin')

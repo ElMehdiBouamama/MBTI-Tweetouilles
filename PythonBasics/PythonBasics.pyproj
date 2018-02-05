@@ -6,8 +6,7 @@
     <ProjectTypeGuids>{a41c8ea1-112a-4a2d-9f91-29557995525f};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <ProjectHome>.</ProjectHome>
     <StartupFile>MBTI\CNNTensorboard.py</StartupFile>
-    <SearchPath>
-    </SearchPath>
+    <SearchPath>..\PythonBasics</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonBasics</Name>
@@ -22,6 +21,12 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="ConfigManager.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataManager.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="RegexTraining.py" />
     <Compile Include="TrainingWord2Vec.py" />
     <Compile Include="DatabaseManager.py">
@@ -32,7 +37,10 @@
     <Compile Include="text_helper.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="TVProgramAppender.py">
+    <Compile Include="Tweet2Type.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TweetToVec.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="TwitterManager.py">
@@ -42,6 +50,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Word2VecPCA.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="__init__.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -1194,7 +1205,14 @@
     <Content Include="SaveFolder\Training1\checkpoint" />
     <Content Include="SaveFolder\Training1\doc2vec_mbti_tweets.ckpt.index" />
     <Content Include="SaveFolder\Training1\tweet_vocab.pkl" />
+    <Content Include="SaveFolder\Training2\checkpoint" />
+    <Content Include="SaveFolder\Training2\doc2vec_mbti_tweets.ckpt.index" />
+    <Content Include="SaveFolder\Training2\tweet_vocab.pkl" />
     <Content Include="TrainingLogs\Training01.out" />
+    <Content Include="tweet2vec - Copy.ini" />
+    <Content Include="tweet2vec.ini">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="Tweets.txt" />
     <Content Include="TwiSty-FR.json" />
     <Content Include="ValidUserIds.txt" />

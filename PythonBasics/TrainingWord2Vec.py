@@ -92,11 +92,11 @@ embed = tf.zeros([batch_size, embedding_size])
 for element in range(window_size):
     embed += tf.nn.embedding_lookup(embeddings, x_inputs[:, element])
 
-doc_indices = tf.slice(x_inputs, [0,window_size],[batch_size,1])
-doc_embed = tf.nn.embedding_lookup(doc_embeddings,doc_indices)
+doc_indices = tf.slice(x_inputs, [0, window_size], [batch_size, 1])
+doc_embed = tf.nn.embedding_lookup(doc_embeddings, doc_indices)
 
 # concatenate embeddings
-final_embed = tf.concat([embed, tf.squeeze(doc_embed)],1)
+final_embed = tf.concat([embed, tf.squeeze(doc_embed)], 1)
 
 # Get loss from prediction
 loss = tf.reduce_mean(tf.nn.nce_loss(nce_weights, nce_biases, y_target, final_embed, num_sampled, vocabulary_size))
