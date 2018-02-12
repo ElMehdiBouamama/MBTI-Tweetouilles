@@ -1,2 +1,0 @@
-model_checkpoint_path: "/home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt"
-all_model_checkpoint_paths: "/home/elmehdi_bouamama/work/MBTI-Tweetouilles/PythonBasics/./SaveFolder/doc2vec_mbti_tweets.ckpt"
