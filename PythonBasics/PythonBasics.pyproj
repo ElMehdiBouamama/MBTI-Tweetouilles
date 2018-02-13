@@ -1509,6 +1509,7 @@
     <Content Include="Data\TwiSty-FR.json" />
     <Content Include="Data\ValidUserIds.txt" />
     <Content Include="Logs\Images\TSNE.png" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

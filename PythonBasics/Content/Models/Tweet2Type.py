@@ -18,6 +18,7 @@ class Tweet2Type(object):
     """Use this class to predict personnality of people from they're tweets"""
     def __init__(self, path):
         """The path represents the config file path"""
+        # Initialize class variables and import configuration manager and data manager with respective items
         self.confman = ConfigManager.ConfigurationManager()
         self.dataman = DataManager.DataManager()
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
