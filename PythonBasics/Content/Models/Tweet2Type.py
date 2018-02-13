@@ -21,7 +21,7 @@ class Tweet2Type(object):
         self.confman = ConfigManager.ConfigurationManager()
         self.dataman = DataManager.DataManager()
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
-        self.embeddings,self.doc_embeddings = self.dataman.restore_embeddings("Variable") # Importing Embeddings and doc_embeddings
+        self.embeddings,doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
         self.dict,self.rev_dict = dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
 
         # Initialize model variables
