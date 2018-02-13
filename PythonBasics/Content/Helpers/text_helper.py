@@ -26,7 +26,6 @@ def count_punctuation(texts):
     return punctuation_count, emoji_count
 #Normalize text
 def normalize_text(texts):
-    g
     #Lower Case
     texts = [x.lower() for x in texts]
     #Remove Carriage Return

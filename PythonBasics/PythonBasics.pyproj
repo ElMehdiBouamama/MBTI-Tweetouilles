@@ -6,7 +6,7 @@
     <ProjectTypeGuids>{a41c8ea1-112a-4a2d-9f91-29557995525f};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
     <ProjectHome>.</ProjectHome>
     <StartupFile>MBTI\CNNTensorboard.py</StartupFile>
-    <SearchPath>..\PythonBasics</SearchPath>
+    <SearchPath>..\PythonBasics;Content\Managers;Content\Models;Content\Helpers;Content\Tests;Configs</SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
     <OutputPath>.</OutputPath>
     <Name>PythonBasics</Name>
@@ -67,9 +67,13 @@
     <Folder Include="Data\" />
     <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Logs\Training2\" />
     <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Logs\Training1\" />
+    <Folder Include="Data\ExtractedTweets\" />
     <Folder Include="Data\OtherExtractedTweets\" />
     <Folder Include="Logs\" />
-    <Folder Include="TrainingLogs\" />
+    <Folder Include="Logs\Images\" />
+    <Folder Include="Logs\Training1\" />
+    <Folder Include="Logs\Training2\" />
+    <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Logs\TrainingLogs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\ExtractedTweets\100852870.txt" />
@@ -1490,11 +1494,11 @@
     <Content Include="Data\OtherExtractedTweets\97877674.txt" />
     <Content Include="Data\OtherExtractedTweets\982970587.txt" />
     <Content Include="Configs\JsonDescription.txt" />
-    <Content Include="Logs\nohup.out" />
+    <Content Include="Logs\Images\PCA.png" />
+    <Content Include="Logs\TrainingLogs\Training02.out" />
     <Content Include="Logs\Training1\tweet_vocab.pkl" />
     <Content Include="Logs\Training2\doc2vec_mbti_tweets.ckpt.index" />
     <Content Include="Logs\Training2\tweet_vocab.pkl" />
-    <Content Include="TrainingLogs\Training01.out" />
     <Content Include="Configs\tweet2vec - Copy.ini" />
     <Content Include="Configs\tweet2vec.ini">
       <SubType>Code</SubType>
@@ -1502,6 +1506,7 @@
     <Content Include="Data\Tweets.txt" />
     <Content Include="Data\TwiSty-FR.json" />
     <Content Include="Data\ValidUserIds.txt" />
+    <Content Include="Logs\Images\TSNE.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -120,7 +120,7 @@ class DataManager(object):
         return(self.word_dictionary, self.word_dictionary_rev)
     
     # Generate data randomly (N words behind, target, N words ahead)
-    def create_ttt_batch(batch_size, batch_type="Training"):
+    def create_ttt_batch(self, batch_size, batch_type="Training"):
         # batch_data contains vectorized tweets
         batch_data = []
         # label_data contains mbti types from 0 to 15
@@ -159,5 +159,39 @@ class DataManager(object):
         # Convert batch_data to np array
         batch_data = np.array(batch_data)
         label_data = np.array(label_data)
+        return(batch_data, label_data)
+
+    # Generate data randomly (N words behind, target, N words ahead)
+    def create_wtv_batch(self, sentences, batch_size, window_size):
+        # Fill up data batch
+        batch_data = []
+        label_data = []
+        while len(batch_data) < batch_size:
+            # select random sentence to start
+            rand_sentence_ix = int(np.random.choice(len(sentences), size=1))
+            rand_sentence = sentences[rand_sentence_ix]
+            # Generate consecutive windows to look at
+            window_sequences = [rand_sentence[max((ix-window_size),0):(ix+window_size+1)] for ix, x in enumerate(rand_sentence)]
+            # Denote which element of each window is the center word of interest
+            label_indices = [ix if ix<window_size else window_size for ix,x in enumerate(window_sequences)]
+        
+            # Pull out center word of interest for each window and create a tuple for each window
+            # For doc2vec we keep LHS window only to predict target word
+            batch_and_labels = [(rand_sentence[i:i+window_size], rand_sentence[i+window_size]) for i in range(0, len(rand_sentence)-window_size)]
+            if(len(batch_and_labels) < 2 ):
+                continue
+            batch, labels = [list(x) for x in zip(*batch_and_labels)]
+            # Add document index to batch!! Remember that we must extract the last index in batch for the doc-index
+            batch = [x + [rand_sentence_ix] for x in batch]
+            # extract batch and labels
+            batch_data.extend(batch[:batch_size])
+            label_data.extend(labels[:batch_size])
+        # Trim batch and label at the end
+        batch_data = batch_data[:batch_size]
+        label_data = label_data[:batch_size]
+        # Convert to numpy array
+        batch_data = np.array(batch_data)
+        label_data = np.transpose(np.array([label_data]))
+    
         return(batch_data, label_data)
 

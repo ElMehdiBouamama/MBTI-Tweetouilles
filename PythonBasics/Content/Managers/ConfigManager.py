@@ -15,16 +15,22 @@ class ConfigurationManager(object):
         self.embedding_size = self.config['DocToVec'].getint('embedding_size')
         self.number_of_tweets = self.config['DocToVec'].getint('number_of_tweets')
         self.doc_embedding_size = self.config['DocToVec'].getint('doc_embedding_size')
+        self.window_size = self.config['DocToVec'].getint('window_size')
+        self.DTVbatch_size = self.config['DocToVec'].getint('batch_size')
+        self.DTVnum_epoch = self.config['DocToVec'].getint('generations')
+
         self.num_class = self.config['TweetToType'].getint('num_class')
         self.TTTbatch_size = self.config['TweetToType'].getint('batch_size')
         self.logistic_learning_rate = self.config['TweetToType'].getfloat('model_learning_rate')
+        self.print_loss_every = self.config['TweetToType'].getint('print_loss_every')
+
         self.valid_user_ids = self.config['PATHS']['valid_user_ids']
         self.tweets_json = self.config['PATHS']['tweets_json']
         self.checkpoint_path = self.config['PATHS']['doc2vec_save_path']
         self.dictionary_path = self.config['PATHS']['dictionary_path']
         self.extracted_tweets = self.config['PATHS']['extracted_tweets']
-        self.print_loss_every = self.config['TweetToType'].getint('print_loss_every')
         self.tweetToType_save_path = self.config['PATHS']['tweet2type_save_path']
+        
         pass
 
     def getProjectPath(self):
