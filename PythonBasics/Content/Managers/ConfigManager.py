@@ -37,7 +37,7 @@ class ConfigurationManager(object):
         if(os.getcwd() == 'C:\\Users\\BOUÂMAMAElMehdi\\documents\\visual studio 2017\\Projects\\PythonBasics\\PythonBasics'):
             return 'C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics'
         else:
-            return "/home/elmehdi_bouamama/work/PythonBasics/PythonBasics"
+            return os.getcwd()
 
     def getConfigPath(self):
         return self.getProjectPath() + "/Configs/tweet2vec.ini"

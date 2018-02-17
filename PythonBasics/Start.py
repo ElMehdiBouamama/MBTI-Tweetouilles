@@ -6,7 +6,8 @@ def getProjectPath():
     if(os.getcwd() == 'C:\\Users\\BOUÂMAMAElMehdi\\documents\\visual studio 2017\\Projects\\PythonBasics\\PythonBasics'):
         return 'C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics'
     else:
-        return "/home/elmehdi_bouamama/work/PythonBasics/PythonBasics"
+        return os.getcwd()
+
 sys.path.append(getProjectPath())
 sys.path.append(getProjectPath() + "/Content/Managers")
 sys.path.append(getProjectPath() + "/Content/Models")
@@ -14,7 +15,7 @@ sys.path.append(getProjectPath() + "/Content/Helpers")
 sys.path.append(getProjectPath() + "/Content/Tests")
 sys.path.append(getProjectPath() + "/Configs")
 
-import Tweet2Type as ttt
+import TweetToType as ttt
 import matplotlib.pyplot as plt
 
 
