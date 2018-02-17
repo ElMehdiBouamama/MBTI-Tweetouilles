@@ -16,7 +16,7 @@ import tensorflow as tf
 
 class Tweet2Type(object):
     """Use this class to predict personnality of people from they're tweets"""
-    def __init__(self, path):
+    def __init__(self):
         """The path represents the config file path"""
         # Initialize class variables and import configuration manager and data manager with respective items
         self.confman = ConfigManager.ConfigurationManager()

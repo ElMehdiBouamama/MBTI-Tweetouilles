@@ -27,6 +27,9 @@
     <Compile Include="Content\Managers\DataManager.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Content\Tests\matplotlib.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Content\Tests\RegexTraining.py" />
     <Compile Include="Content\Models\TrainingWord2Vec.py" />
     <Compile Include="Content\Managers\DatabaseManager.py">
@@ -62,6 +65,7 @@
     <Folder Include="Content\Managers\" />
     <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Content\Models\" />
     <Folder Include="Content\Helpers\" />
+    <Folder Include="Content\Models\" />
     <Folder Include="Content\Tests\" />
     <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Data\ExtractedTweets\" />
     <Folder Include="Content\" />
@@ -76,6 +80,7 @@
     <Folder Include="Logs\Training1\" />
     <Folder Include="Logs\Training2\" />
     <Folder Include="C:\Users\BOUÂMAMAElMehdi\documents\visual studio 2017\Projects\PythonBasics\PythonBasics\Logs\TrainingLogs\" />
+    <Folder Include="Logs\TrainingLogs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\ExtractedTweets\100852870.txt" />
@@ -1509,7 +1514,6 @@
     <Content Include="Data\TwiSty-FR.json" />
     <Content Include="Data\ValidUserIds.txt" />
     <Content Include="Logs\Images\TSNE.png" />
-    <Content Include="requirements.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

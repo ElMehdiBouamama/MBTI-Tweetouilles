@@ -55,6 +55,7 @@ class DataManager(object):
         self.word_dictionary = []
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
+        self.class_tweets = None
         pass
     
     

@@ -40,7 +40,7 @@ class ConfigurationManager(object):
             return "/home/elmehdi_bouamama/work/PythonBasics/PythonBasics"
 
     def getConfigPath(self):
-        return self.getProjectPath() + "/tweet2vec.ini"
+        return self.getProjectPath() + "/Configs/tweet2vec.ini"
 
     def __str__(self):
         content = "The configuration file contains those elements :\n"
