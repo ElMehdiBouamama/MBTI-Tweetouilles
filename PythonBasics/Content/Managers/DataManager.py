@@ -27,31 +27,31 @@ def read_classified_files(fileName,datas):
 class DataManager(object):
     def __init__(self):
         ''' Upload tweets from files and get them ready to use by tweet2vec and tweet2type classes '''
+        self.sess = tf.Session()
         self.configuration_manager = ConfigManager.ConfigurationManager() # Initialize configuration data
         print('Importing json data')
         all_users = ReadJsonFile(self.configuration_manager.tweets_json) # Importing json file with all informations about users
         print('Importing valid user ids')
         self.userIds = np.loadtxt(self.configuration_manager.valid_user_ids, dtype=np.str) # Importing valid user id's to check who are the users that really have tweets
         # clean json data from unwanted users
-        self.tweet_datas = []
+        self.tweet_datas = dict()
         for x in all_users:
             if x in self.userIds:
-                self.tweet_datas.append(x)
+                self.tweet_datas.update(dict({x:all_users[x]}))
         # split data into train / test / validation
         self.train_data = np.random.choice(self.userIds, size=int(len(self.userIds)*0.6))
         # test userIds
-        testing_data = []
+        testing_data = dict()
         for data in self.userIds:
             if data not in self.train_data:
-                testing_data.extend(data)
-        self.test_data = np.random.choice(testing_data, size=int(len(testing_data)*0.5))
+                testing_data.update(dict({data:all_users[data]}))
+        self.test_data = np.random.choice(testing_data.keys(), size=int(len(testing_data)*0.5))
         # validation userIds
-        self.valid_data = []
+        self.valid_data = dict()
         for data in testing_data:
             if data not in self.test_data:
-                self.valid_data.extend(data)
+                self.valid_data.update(dict({data:all_users[data]}))
         # initialize global variables and dictionaries
-        self.sess = tf.Session()
         self.word_dictionary = []
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
