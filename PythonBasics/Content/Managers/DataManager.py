@@ -42,15 +42,15 @@ class DataManager(object):
         self.train_data = np.random.choice(self.userIds, size=int(len(self.userIds)*0.6))
         # test userIds
         testing_data = dict()
-        for data in self.userIds:
-            if data not in self.train_data:
-                testing_data.update(dict({data:all_users[data]}))
-        self.test_data = np.random.choice(testing_data.keys(), size=int(len(testing_data)*0.5))
+        for x in self.userIds:
+            if x not in self.train_data:
+                testing_data.update(dict({x:all_users[x]}))
+        self.test_data = np.random.choice(list(testing_data.keys()), size=int(len(testing_data)*0.5))
         # validation userIds
         self.valid_data = dict()
-        for data in testing_data:
-            if data not in self.test_data:
-                self.valid_data.update(dict({data:all_users[data]}))
+        for x in testing_data:
+            if x not in self.test_data:
+                self.valid_data.update(dict({x:all_users[x]}))
         # initialize global variables and dictionaries
         self.word_dictionary = []
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
