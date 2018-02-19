@@ -27,6 +27,7 @@
     <Compile Include="Content\Managers\DataManager.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Content\Models\TweetToType.py" />
     <Compile Include="Content\Tests\matplotlib.py">
       <SubType>Code</SubType>
     </Compile>
@@ -37,9 +38,6 @@
     </Compile>
     <Compile Include="Content\Helpers\ImportingDataIntoFiles.py" />
     <Compile Include="Content\Helpers\text_helper.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Content\Models\Tweet2Type.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Content\Models\TweetToVec.py">
@@ -1510,7 +1508,7 @@
     <Content Include="Configs\tweet2vec.ini">
       <SubType>Code</SubType>
     </Content>
-    <Content Include="Data\Tweets.txt" />
+    <Content Include="Data\OtherExtractedTweets\Tweets.txt" />
     <Content Include="Data\TwiSty-FR.json" />
     <Content Include="Data\ValidUserIds.txt" />
     <Content Include="Logs\Images\TSNE.png" />

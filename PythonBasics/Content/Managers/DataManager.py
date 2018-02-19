@@ -20,9 +20,13 @@ def ReadFiles(fileName):
     return [Tweet.strip(" \n").split(' ') for Tweet in Tweets]
 
 def read_classified_files(fileName,datas):
-    with open(extracted_tweet_folder + "/" + fileName + ".txt", "r", encoding="UTF-8") as f:
-        Tweets = f.readlines()
-    return ([Tweet.strip(" \n").split(' ') for Tweet in Tweets], GetMbtiOfUser(datas,fileName))
+    file_path = extracted_tweet_folder + "/" + fileName + ".txt"
+    if(os.path.exist(file_path)):
+        with open(extracted_tweet_folder + "/" + fileName + ".txt", "r", encoding="UTF-8") as f:
+            Tweets = f.readlines()
+        return ([Tweet.strip(" \n").split(' ') for Tweet in Tweets], GetMbtiOfUser(datas,fileName))
+    else:
+        return ["",None]
 
 class DataManager(object):
     def __init__(self):
