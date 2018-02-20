@@ -23,7 +23,7 @@ class Tweet2Type(object):
         self.dataman = DataManager.DataManager()
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
         self.embeddings,doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
-        self.dict,self.rev_dict = dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
+        self.dict,self.rev_dict = self.dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
 
         # Initialize model variables
         self.weights = tf.Variable(tf.random_normal([self.confman.doc_embedding_size, self.confman.num_class]),dtype=tf.float32)
