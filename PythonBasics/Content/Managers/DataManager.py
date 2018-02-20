@@ -98,14 +98,13 @@ class DataManager(object):
 
     # restore embeddings in Variable or Constant tensors
     def restore_embeddings(self,tensorType="Variable"):
-        if(tensorType == "Constant"):
-            embeddings = tf.constant(np.ones([self.configuration_manager.vocabulary_size, self.configuration_manager.embedding_size]), tf.float32)
-            doc_embeddings = tf.constant(np.ones([self.configuration_manager.number_of_tweets, self.configuration_manager.doc_embedding_size]), tf.float32)
-        else:
-            embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.vocabulary_size, self.configuration_manager.embedding_size], -1.0, 1.0))
-            doc_embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.number_of_tweets, self.configuration_manager.doc_embedding_size], -1.0, 1.0))
+        embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.vocabulary_size, self.configuration_manager.embedding_size], -1.0, 1.0))
+        doc_embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.number_of_tweets, self.configuration_manager.doc_embedding_size], -1.0, 1.0))
         saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
         saver.restore(self.sess, self.configuration_manager.checkpoint_path) # Restore data from checkpoint path
+        if(tensorType=="Constant"):
+            embeddings = self.sess.run(embeddings)
+            doc_embeddings = self.sess.run(doc_embeddings)
         return(embeddings, doc_embeddings)
     # restore Tweet2Type weights
     def restore_weights(self):
