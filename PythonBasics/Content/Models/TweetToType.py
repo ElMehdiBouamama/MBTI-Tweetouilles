@@ -111,7 +111,7 @@ class Tweet2Type(object):
     def Fit(self):
         logits = tf.matmul(self.tweet_vectors, self.weights)  # matrice multiplication
         prediction = tf.nn.softmax(logits) # prediction with probabilities
-        loss = tf.reduce_mean(tf.square(tf.subtract(self.class_target, prediction))) # MSE of the model
+        loss = tf.reduce_mean(tf.square(tf.subtract(tf.cast(self.class_target, tf.float32), prediction))) # MSE of the model
         
         optimizer = tf.train.GradientDescentOptimizer(self.logistic_learning_rate)
         optimizationStep = optimizer.minimize(loss)
