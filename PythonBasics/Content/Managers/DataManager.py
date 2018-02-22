@@ -141,6 +141,7 @@ class DataManager(object):
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
+            lines=[]
             if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
                 with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
                           lines = f.readlines() # read user tweets
@@ -164,8 +165,6 @@ class DataManager(object):
         # Convert batch_data to np array
         batch_data = np.array(batch_data)
         label_data = np.array(label_data)
-        print(np.shape(batch_data))
-        print(np.shape(label_data))
         return(batch_data, label_data)
 
     # Generate data randomly (N words behind, target, N words ahead)

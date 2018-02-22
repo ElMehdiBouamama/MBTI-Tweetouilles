@@ -121,6 +121,8 @@ class Tweet2Type(object):
         num_epoch = self.confman.TTTepoch
         print_loss_every = self.confman.print_loss_every
 
+        self.sess.run(tf.global_variables_initializer())
+
         # Train the model on a loop
         train_loss = []
         eval_loss = []
