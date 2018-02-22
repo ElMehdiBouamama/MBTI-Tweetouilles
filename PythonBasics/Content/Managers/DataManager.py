@@ -122,9 +122,9 @@ class DataManager(object):
                 self.word_dictionary = pickle.load(f)
             self.word_dictionary_rev = dict(zip(self.word_dictionary.values(), self.word_dictionary.keys())) # Import dictionary
         return(self.word_dictionary, self.word_dictionary_rev)
-    
+
     # Generate data randomly (N words behind, target, N words ahead)
-    def create_ttt_batch(self, batch_size, batch_type="Training"):
+    def create_ttt_batch(self, batch_size, batch_type="Training", embeddings, doc_embeddings):
         # batch_data contains vectorized tweets
         batch_data = []
         # label_data contains mbti types from 0 to 15
@@ -148,9 +148,7 @@ class DataManager(object):
             rand_tweet_ix = int(np.random.choice(len(lines), size=1))
             rand_tweet = lines[rand_tweet_ix]
             # save memory
-            del lines
-            # get word/doc embeddings
-            embeddings, doc_embeddings = self.restore_embeddings("Constant")
+            del lines            
             # select doc embedding
             cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)] # get cumulative count array and add 0 to first tweet count
             doc_ix = cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix

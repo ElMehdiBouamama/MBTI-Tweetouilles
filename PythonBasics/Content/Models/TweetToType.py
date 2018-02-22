@@ -22,7 +22,7 @@ class Tweet2Type(object):
         self.confman = ConfigManager.ConfigurationManager()
         self.dataman = DataManager.DataManager()
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
-        self.embeddings,doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
+        self.embeddings,self.doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
         self.dict,self.rev_dict = self.dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
         self.logistic_learning_rate = self.confman.logistic_learning_rate
         # Initialize model variables
@@ -125,7 +125,7 @@ class Tweet2Type(object):
         train_loss = []
         eval_loss = []
         for i in range(num_epoch):
-            batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
+            batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, 'Training',self.embeddings, self.doc_embeddings) # Create batches from true data ([tweetVectors, target_class],[...],....)
             feed_dict = {self.tweet_vectors : batch_datas, self.class_target : batch_labels}
             
             self.sess.run(optimizationStep, feed_dict=feed_dict)
@@ -134,7 +134,7 @@ class Tweet2Type(object):
             train_loss.append([i+1, loss_train])
             # Print loss
             if i % print_loss_every == 0:
-                eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, 'Testing')
+                eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, 'Testing',self.embeddings, self.doc_embeddings)
                 feed_dict={self.tweet_vectors : eval_datas, self.class_target : eval_labels}
                 loss_eval = self.sess.run(loss, feed_dict=feed_dict)
                 eval_loss.append([i+1, loss_eval])
