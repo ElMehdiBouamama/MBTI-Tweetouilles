@@ -24,7 +24,7 @@ class Tweet2Type(object):
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
         self.embeddings,doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
         self.dict,self.rev_dict = self.dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
-
+        self.logistic_learning_rate = self.confman.logistic_learning_rate
         # Initialize model variables
         self.weights = tf.Variable(tf.random_normal([self.confman.doc_embedding_size, self.confman.num_class]),dtype=tf.float32)
 
@@ -52,6 +52,7 @@ class Tweet2Type(object):
         vocabulary_size = self.confman.vocabulary_size
         num_sampled = int(batch_size/2)
         doc_embedding_size = self.confman.doc_embedding_size
+        model_learning_rate = self.confman.model_learning_rate
 
         # NCE loss parameters and tweet embeddings
         nce_weights = tf.Variable(tf.truncated_normal([vocabulary_size, concatenated_size], stddev=1.0 / np.sqrt(concatenated_size)))
