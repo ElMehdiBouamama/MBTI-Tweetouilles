@@ -126,7 +126,7 @@ class Tweet2Type(object):
         eval_loss = []
         for i in range(num_epoch):
             batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
-            feed_dict = {self.tweet_vectors : batch_datas, class_target : batch_labels}
+            feed_dict = {self.tweet_vectors : batch_datas, self.class_target : batch_labels}
             
             self.sess.run(optimizationStep, feed_dict=feed_dict)
             loss_train = self.sess.run(loss, feed_dict=feed_dict)
@@ -135,7 +135,7 @@ class Tweet2Type(object):
             # Print loss
             if i % print_loss_every == 0:
                 eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, 'Testing')
-                feed_dict={self.tweet_vectors : eval_datas, class_targer : eval_labels}
+                feed_dict={self.tweet_vectors : eval_datas, self.class_target : eval_labels}
                 loss_eval = self.sess.run(loss, feed_dict=feed_dict)
                 eval_loss.append([i+1, loss_eval])
                 print('Training loss at step {} : {}'.format(i+1, loss_train))
