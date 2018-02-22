@@ -126,7 +126,7 @@ class Tweet2Type(object):
         eval_loss = []
         for i in range(num_epoch):
             batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
-            feed_dict = {tweet_vectors : batch_datas, class_target : batch_labels}
+            feed_dict = {self.tweet_vectors : batch_datas, class_target : batch_labels}
             
             self.sess.run(optimizationStep, feed_dict=feed_dict)
             loss_train = self.sess.run(loss, feed_dict=feed_dict)
@@ -135,7 +135,7 @@ class Tweet2Type(object):
             # Print loss
             if i % print_loss_every == 0:
                 eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, 'Testing')
-                feed_dict={tweet_vectors : eval_datas, class_targer : eval_labels}
+                feed_dict={self.tweet_vectors : eval_datas, class_targer : eval_labels}
                 loss_eval = self.sess.run(loss, feed_dict=feed_dict)
                 eval_loss.append([i+1, loss_eval])
                 print('Training loss at step {} : {}'.format(i+1, loss_train))
@@ -151,7 +151,7 @@ class Tweet2Type(object):
         mostProbableClass = tf.arg_max(prediction,0) # take most probable class over all classes
 
         # take data and feed it to the model
-        feed_dict = {tweet_vectors : datas}
+        feed_dict = {self.tweet_vectors : datas}
         target_class = self.sess.run(mostProbableClass, feed_dict=feed_dict)
         # return most probable class in string format
         return [self.dataman.type_rev_dict(x) for x in target_class] 
