@@ -162,8 +162,10 @@ class DataManager(object):
             bucketized_tweet[x] = 1 # add one at the correct position of the class
             label_data.append(bucketized_tweet) # add the array to batch
         # Convert batch_data to np array
-        batch_data = np.array(batch_data).transpose()
+        batch_data = np.array(batch_data)
         label_data = np.array(label_data)
+        print(np.shape(batch_data))
+        print(np.shape(label_data))
         return(batch_data, label_data)
 
     # Generate data randomly (N words behind, target, N words ahead)
