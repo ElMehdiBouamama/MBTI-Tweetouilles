@@ -141,8 +141,9 @@ class DataManager(object):
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
-            with open("".join([self.configuration_manager.extracted_tweets , str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
-                      lines = f.readlines() # read user tweets
+            if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
+                with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
+                          lines = f.readlines() # read user tweets
             # select a random tweet from user tweets
             rand_tweet_ix = int(np.random.choice(len(lines), size=1))
             rand_tweet = lines[rand_tweet_ix]
