@@ -154,7 +154,7 @@ class DataManager(object):
             # select doc embedding
             cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)] # get cumulative count array and add 0 to first tweet count
             doc_ix = cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
-            batch_data.extend(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
+            batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))
             x = self.type_dict[GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))]
