@@ -124,7 +124,7 @@ class DataManager(object):
         return(self.word_dictionary, self.word_dictionary_rev)
 
     # Generate data randomly (N words behind, target, N words ahead)
-    def create_ttt_batch(self, batch_size, batch_type="Training", embeddings, doc_embeddings):
+    def create_ttt_batch(self, batch_size, embeddings, doc_embeddings, batch_type="Training"):
         # batch_data contains vectorized tweets
         batch_data = []
         # label_data contains mbti types from 0 to 15
