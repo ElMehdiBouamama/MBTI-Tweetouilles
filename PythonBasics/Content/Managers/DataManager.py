@@ -162,7 +162,7 @@ class DataManager(object):
             bucketized_tweet[x] = 1 # add one at the correct position of the class
             label_data.append(bucketized_tweet) # add the array to batch
         # Convert batch_data to np array
-        batch_data = np.array(batch_data)
+        batch_data = np.array(batch_data).transpose()
         label_data = np.array(label_data)
         return(batch_data, label_data)
 
