@@ -144,7 +144,7 @@ class DataManager(object):
             if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
                 with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
                           lines = f.readlines() # read user tweets
-            else:
+            if(len(lines)==0):
                 continue
             # select a random tweet from user tweets
             rand_tweet_ix = int(np.random.choice(len(lines), size=1))
