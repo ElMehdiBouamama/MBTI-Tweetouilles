@@ -23,6 +23,7 @@ class ConfigurationManager(object):
         self.TTTbatch_size = self.config['TweetToType'].getint('batch_size')
         self.logistic_learning_rate = self.config['TweetToType'].getfloat('model_learning_rate')
         self.print_loss_every = self.config['TweetToType'].getint('print_loss_every')
+        self.TTTepoch = self.config['TweetToType'].getint('generations')
 
         self.valid_user_ids = self.config['PATHS']['valid_user_ids']
         self.tweets_json = self.config['PATHS']['tweets_json']
