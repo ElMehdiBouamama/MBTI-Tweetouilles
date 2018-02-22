@@ -90,7 +90,7 @@ class Tweet2Type(object):
         loss_x_vec = []
         print('Training tweet vectors for the {} given tweets'.format(len(text_tweets)))
         for i in num_epoch:
-            batch_inputs, batch_labels = create_wtv_batch(number_tweets, batch_size, window_size) # create batches
+            batch_inputs, batch_labels = self.dataman.create_wtv_batch(number_tweets, batch_size, window_size) # create batches
             feed_dict = {x_inputs : batch_inputs, y_target : batch_labels}
 
             # Run the train step
@@ -125,7 +125,7 @@ class Tweet2Type(object):
         train_loss = []
         eval_loss = []
         for i in range(num_epoch):
-            batch_datas, batch_labels = self.dataman.createTTTbatch(batch_size, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
+            batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
             feed_dict = {tweet_vectors : batch_datas, class_target : batch_labels}
             
             self.sess.run(optimizationStep, feed_dict=feed_dict)
@@ -134,7 +134,7 @@ class Tweet2Type(object):
             train_loss.append([i+1, loss_train])
             # Print loss
             if i % print_loss_every == 0:
-                eval_datas, eval_labels = self.dataman.createTTTbatch(batch_size, 'Testing')
+                eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, 'Testing')
                 feed_dict={tweet_vectors : eval_datas, class_targer : eval_labels}
                 loss_eval = self.sess.run(loss, feed_dict=feed_dict)
                 eval_loss.append([i+1, loss_eval])
