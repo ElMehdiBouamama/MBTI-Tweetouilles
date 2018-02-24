@@ -16,7 +16,10 @@ sys.path.append(getProjectPath() + "/Content/Tests")
 sys.path.append(getProjectPath() + "/Configs")
 
 import TweetToType as ttt
+import matplotlib
+matplotlib.use('AGG')
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 def main():
@@ -27,14 +30,18 @@ def main():
     fig = plt.figure()
 
     ax1 = fig.add_subplot(2,1,1)
-    ax1.title('Training loss per step :')
+    ax1.set_title('Training loss per step :')
     ax1.plot(train_loss[:, 0], train_loss[:, 1])
 
-    ax2 = fig.add_subplot(212)
-    ax2.title('Evaluation loss per step :')
+    ax2 = fig.add_subplot(2,1,2)
+    ax2.set_title('Evaluation loss per step :')
     ax2.plot(eval_loss[:, 0], train_loss[:, 1])
 
     fig.savefig('loss.png')
+
+    # Save loss in files
+    np.savetxt("TrainingLoss.txt",np.array(train_loss))
+    np.savetxt("EvaluationLoss.txt",np.array(eval_loss))
 
     # Saving the model
     model.SaveModel()

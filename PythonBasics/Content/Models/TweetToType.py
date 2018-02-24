@@ -110,6 +110,8 @@ class Tweet2Type(object):
 
     """Train the model to fit (tweet vector/type) embedding space mapping """
     def Fit(self):
+        print("Initializing Model Variables")
+
         logits = tf.matmul(self.tweet_vectors, self.weights)  # matrice multiplication
         prediction = tf.nn.softmax(logits) # prediction with probabilities
         loss = tf.reduce_mean(tf.square(tf.subtract(tf.cast(self.class_target, tf.float32), prediction))) # MSE of the model
@@ -123,7 +125,14 @@ class Tweet2Type(object):
 
         self.sess.run(tf.global_variables_initializer())
 
+        print("Printing 5 batch examples")
+        batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Training') # Batch examples
+        debug_info = ["{} with {}".format(str(batch_datas[x]),str(batch_labels[x])) for x in range(5)]
+        for info in debug_info:
+            print(debug_info)
+
         # Train the model on a loop
+        print("Starting training")
         train_loss = []
         eval_loss = []
         for i in range(num_epoch):
@@ -136,7 +145,7 @@ class Tweet2Type(object):
             train_loss.append([i+1, loss_train])
             # Print loss
             if i % print_loss_every == 0:
-                eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size,self.embeddings, self.doc_embeddings, 'Testing')
+                eval_datas, eval_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Testing')
                 feed_dict={self.tweet_vectors : eval_datas, self.class_target : eval_labels}
                 loss_eval = self.sess.run(loss, feed_dict=feed_dict)
                 eval_loss.append([i+1, loss_eval])

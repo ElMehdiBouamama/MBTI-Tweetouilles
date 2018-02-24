@@ -133,8 +133,10 @@ class DataManager(object):
         data = None
         if batch_type == 'Validation':
             data = self.valid_data
+            batch_size = len(doc_embeddings)*0.2
         elif batch_type == 'Testing':
             data = self.test_data
+            batch_size = len(doc_embeddings)*0.2
         else:
             data = self.train_data
         while len(batch_data) < batch_size:
