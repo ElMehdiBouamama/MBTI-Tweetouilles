@@ -127,9 +127,9 @@ class Tweet2Type(object):
 
         print("Printing 5 batch examples")
         batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Training') # Batch examples
-        debug_info = ["{} with {}".format(str(batch_datas[x]),str(batch_labels[x])) for x in range(5)]
-        for info in debug_info:
-            print(debug_info)
+        
+        print(np.shape(batch_datas))
+        print(np.shape(batch_labels))
 
         # Train the model on a loop
         print("Starting training")
