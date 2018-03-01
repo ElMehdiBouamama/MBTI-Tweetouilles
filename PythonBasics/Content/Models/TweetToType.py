@@ -125,11 +125,11 @@ class Tweet2Type(object):
 
         self.sess.run(tf.global_variables_initializer())
 
-        print("Printing 5 batch examples")
+        print("Printing batch example")
         batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Training') # Batch examples
         
-        print(np.shape(batch_datas))
-        print(np.shape(batch_labels))
+        print(batch_datas[0])
+        print(batch_labels[0])
 
         # Train the model on a loop
         print("Starting training")
