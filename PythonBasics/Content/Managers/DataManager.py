@@ -149,23 +149,18 @@ class DataManager(object):
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
+            print("{} user_id_ix and {} rand_user_ix".format(user_id_ix,rand_user_ix))
             # Checking if user is a valid user before continue
             if(str(rand_user_ix) not in self.userIds):
                 continue
-            lines=[]
-            if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
-                with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
-                          lines = f.readlines() # read user tweets
-            else:
-                print("File {}.txt doesn't exist !".format(str(rand_user_ix)))
-            if(len(lines)==0):
+            userTweetCount = GetCountOfConfirmedTweetOfUser(this.tweet_datas, str(rand_user_ix))
+            if(userTweetCount==0):
                 continue
             # select a random tweet from user tweets
-            rand_tweet_ix = int(np.random.choice(len(lines), size=1))
-            # save memory
-            del lines            
+            rand_tweet_ix = int(np.random.choice(userTweetCount, size=1))          
             # select doc embedding
             doc_ix = self.cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
+            print("{} doc_ix".format(doc_ix))
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))
