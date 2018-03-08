@@ -165,7 +165,7 @@ class DataManager(object):
             rand_tweet_ix = int(np.random.choice(userTweetCount, size=1))          
             # select doc embedding
             doc_ix = self.cum_tweet_array[self.id_to_ix[str(rand_user_ix)]] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
-            print("{} doc_ix".format(doc_ix))
+            print(rand_tweet_ix)
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))
