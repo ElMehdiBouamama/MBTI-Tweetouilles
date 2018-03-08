@@ -150,22 +150,25 @@ class DataManager(object):
             batch_size = len(doc_embeddings)*0.2
         else:
             data = self.train_data
-         # get cumulative count array and add 0 to first tweet count
+        skipped = 0
         while len(batch_data) < batch_size:
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
             # Checking if user is a valid user before continue
             if(str(rand_user_ix) not in self.userIds):
+                skipped = skipped + 1
                 continue
             userTweetCount = GetCountOfConfirmedTweetOfUser(self.tweet_datas, str(rand_user_ix))
             if(userTweetCount==0):
+                skipped = skipped + 1
                 continue
             # select a random tweet from user tweets
             rand_tweet_ix = np.random.randint(userTweetCount)  
             # select doc embedding
             doc_ix = self.cum_tweet_array[self.id_to_ix[str(rand_user_ix)]] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
             if(doc_ix >= self.configuration_manager.number_of_tweets):
+                skipped = skipped + 1
                 continue
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
@@ -177,6 +180,7 @@ class DataManager(object):
         # Convert batch_data to np array
         batch_data = np.array(batch_data)
         label_data = np.array(label_data)
+        print("{} skipped".format(skipped))
         return(batch_data, label_data)
 
     # Generate data randomly (N words behind, target, N words ahead)
