@@ -38,6 +38,7 @@ class DataManager(object):
         print('Importing valid user ids')
         self.userIds = np.loadtxt(self.configuration_manager.valid_user_ids, dtype=np.str) # Importing valid user id's to check who are the users that really have tweets
         # clean json data from unwanted users
+        print('Spliting data into 3 sets')
         self.tweet_datas = dict()
         for x in all_users:
             if x in self.userIds:
@@ -56,11 +57,14 @@ class DataManager(object):
             if x not in self.test_data:
                 self.valid_data.update(dict({x:all_users[x]}))
         # initialize global variables and dictionaries
+        print('Creating type dictionnary')
         self.word_dictionary = []
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
         self.class_tweets = None
+        print('Importing cumulative tweet count array shown below :')
         self.cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)]
+        print(self.cum_tweet_array)
         pass
     
     
