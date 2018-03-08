@@ -162,7 +162,7 @@ class DataManager(object):
             if(userTweetCount==0):
                 continue
             # select a random tweet from user tweets
-            rand_tweet_ix = int(np.random.choice(userTweetCount, size=1))          
+            rand_tweet_ix = np.random.randint(userTweetCount)  
             # select doc embedding
             doc_ix = self.cum_tweet_array[self.id_to_ix[str(rand_user_ix)]] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
             print(rand_tweet_ix)
