@@ -19,13 +19,18 @@ class Tweet2Type(object):
     def __init__(self):
         """The path represents the config file path"""
         # Initialize class variables and import configuration manager and data manager with respective items
+        print("Importing configurations from files")
         self.confman = ConfigManager.ConfigurationManager()
+        print("Importing datas from files")
         self.dataman = DataManager.DataManager()
         self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
+        print("Importing embeddings")
         self.embeddings,self.doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
+        print("Importing word dictionnaries")
         self.dict,self.rev_dict = self.dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
         self.logistic_learning_rate = self.confman.logistic_learning_rate
         # Initialize model variables
+        print("Initializing model variables")
         self.weights = tf.Variable(tf.random_normal([self.confman.doc_embedding_size, self.confman.num_class]),dtype=tf.float32)
 
         # Initialize model inputs
@@ -33,6 +38,7 @@ class Tweet2Type(object):
         self.tweet_vectors = tf.placeholder(tf.float32,[None, self.confman.doc_embedding_size])
 
         # Initialize tensorflow session
+        print("Creating tf session")
         self.sess = tf.Session()
         pass
     
@@ -110,10 +116,10 @@ class Tweet2Type(object):
 
     """Train the model to fit (tweet vector/type) embedding space mapping """
     def Fit(self):
-        print("Initializing Model Variables")
+        print("Creating model's graph")
 
         logits = tf.matmul(self.tweet_vectors, self.weights)  # matrice multiplication
-        prediction = tf.nn.softmax(logits) # prediction with probabilities
+        prediction = tf.nn.softmax(logits) # prediction probabilities
         loss = tf.reduce_mean(tf.square(tf.subtract(tf.cast(self.class_target, tf.float32), prediction))) # MSE of the model
         
         optimizer = tf.train.GradientDescentOptimizer(self.logistic_learning_rate)
