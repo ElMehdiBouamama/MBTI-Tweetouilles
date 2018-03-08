@@ -64,6 +64,10 @@ class DataManager(object):
         self.class_tweets = None
         print('Importing cumulative tweet count array shown below :')
         self.cum_tweet_array = [0,*(np.cumsum(GetCountArrayOfConfirmedTweet(self.tweet_datas)))]
+        ids = self.tweet_datas.keys()
+        self.id_to_ix = dict()
+        for ix,id in enumerate(ids):
+            self.id_to_ix.update(dict({id:ix}))
         print(self.cum_tweet_array)
         pass
     
@@ -149,7 +153,6 @@ class DataManager(object):
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
-            print("{} user_id_ix and {} rand_user_ix".format(user_id_ix,rand_user_ix))
             # Checking if user is a valid user before continue
             if(str(rand_user_ix) not in self.userIds):
                 continue
@@ -159,7 +162,7 @@ class DataManager(object):
             # select a random tweet from user tweets
             rand_tweet_ix = int(np.random.choice(userTweetCount, size=1))          
             # select doc embedding
-            doc_ix = self.cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
+            doc_ix = self.cum_tweet_array[self.id_to_ix[rand_user_ix]] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
             print("{} doc_ix".format(doc_ix))
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
