@@ -150,18 +150,15 @@ class DataManager(object):
             batch_size = len(doc_embeddings)*0.2
         else:
             data = self.train_data
-        skipped = 0
         while len(batch_data) < batch_size:
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
             # Checking if user is a valid user before continue
             if(str(rand_user_ix) not in self.userIds):
-                skipped = skipped + 1
                 continue
             userTweetCount = GetCountOfConfirmedTweetOfUser(self.tweet_datas, str(rand_user_ix))
             if(userTweetCount==0):
-                skipped = skipped + 1
                 continue
             # select a random tweet from user tweets
             rand_tweet_ix = np.random.randint(userTweetCount)  
@@ -178,7 +175,6 @@ class DataManager(object):
         # Convert batch_data to np array
         batch_data = np.array(batch_data)
         label_data = np.array(label_data)
-        print("{} skipped".format(skipped))
         return(batch_data, label_data)
 
     # Generate data randomly (N words behind, target, N words ahead)
