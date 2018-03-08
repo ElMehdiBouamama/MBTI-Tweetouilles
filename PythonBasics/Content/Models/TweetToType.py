@@ -23,7 +23,6 @@ class Tweet2Type(object):
         self.confman = ConfigManager.ConfigurationManager()
         print("Importing datas from files")
         self.dataman = DataManager.DataManager()
-        self.class_tweets = self.dataman.bucketized_tweets() # Import texts + types from files
         print("Importing embeddings")
         self.embeddings,self.doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
         print("Importing word dictionnaries")
