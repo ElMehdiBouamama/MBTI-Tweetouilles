@@ -149,6 +149,9 @@ class DataManager(object):
             # select random user to start
             user_id_ix = np.random.randint(len(data))
             rand_user_ix = int(data[user_id_ix])
+            # Checking if user is a valid user before continue
+            if(str(rand_user_ix) not in self.userIds):
+                continue
             lines=[]
             if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
                 with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:

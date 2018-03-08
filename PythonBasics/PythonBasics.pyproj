@@ -81,6 +81,7 @@
     <Folder Include="Logs\TrainingLogs\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Data\ExtractedTweets\1004662758.txt" />
     <Content Include="Data\ExtractedTweets\100852870.txt" />
     <Content Include="Data\ExtractedTweets\101028240.txt" />
     <Content Include="Data\ExtractedTweets\101232575.txt" />
