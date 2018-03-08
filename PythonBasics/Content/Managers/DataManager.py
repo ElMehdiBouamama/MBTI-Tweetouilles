@@ -60,6 +60,7 @@ class DataManager(object):
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
         self.class_tweets = None
+        self.cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)]
         pass
     
     
@@ -139,6 +140,7 @@ class DataManager(object):
             batch_size = len(doc_embeddings)*0.2
         else:
             data = self.train_data
+         # get cumulative count array and add 0 to first tweet count
         while len(batch_data) < batch_size:
             # select random user to start
             user_id_ix = np.random.randint(len(data))
@@ -147,16 +149,16 @@ class DataManager(object):
             if(os.path.exists("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]))):
                 with open("".join([self.configuration_manager.extracted_tweets, "/", str(rand_user_ix), ".txt"]), "r", encoding="UTF-8") as f:
                           lines = f.readlines() # read user tweets
+            else:
+                print("File {}.txt doesn't exist !".format(str(rand_user_ix)))
             if(len(lines)==0):
                 continue
             # select a random tweet from user tweets
             rand_tweet_ix = int(np.random.choice(len(lines), size=1))
-            rand_tweet = lines[rand_tweet_ix]
             # save memory
             del lines            
             # select doc embedding
-            cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)] # get cumulative count array and add 0 to first tweet count
-            doc_ix = cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
+            doc_ix = self.cum_tweet_array[user_id_ix] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))

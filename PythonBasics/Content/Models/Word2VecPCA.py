@@ -11,7 +11,7 @@ import pandas
 
 # Paths
 
-folder_path = "C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/SaveFolder/Training2/"
+folder_path = "C:/Users/BOUÂMAMAElMehdi/documents/visual studio 2017/Projects/PythonBasics/PythonBasics/Logs/Training2/"
 checkpoint_path = "doc2vec_mbti_tweets.ckpt"
 dictionnary_path = "tweet_vocab.pkl"
 
