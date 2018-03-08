@@ -26,6 +26,9 @@ def main():
     model = ttt.Tweet2Type()
     train_loss, eval_loss = model.Fit()
 
+    np.savetxt("TrainingLoss.txt",np.array(train_loss))
+    np.savetxt("EvaluationLoss.txt",np.array(eval_loss))
+    print(train_loss)
     # Printing loss
     fig = plt.figure()
 
@@ -40,8 +43,7 @@ def main():
     fig.savefig('loss.png')
 
     # Save loss in files
-    np.savetxt("TrainingLoss.txt",np.array(train_loss))
-    np.savetxt("EvaluationLoss.txt",np.array(eval_loss))
+    
 
     # Saving the model
     model.SaveModel()
