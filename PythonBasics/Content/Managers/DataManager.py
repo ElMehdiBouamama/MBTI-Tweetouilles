@@ -63,7 +63,7 @@ class DataManager(object):
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
         self.class_tweets = None
         print('Importing cumulative tweet count array shown below :')
-        self.cum_tweet_array = [0,*GetCountArrayOfConfirmedTweet(self.tweet_datas)]
+        self.cum_tweet_array = [0,*(np.cumsum(GetCountArrayOfConfirmedTweet(self.tweet_datas)))]
         print(self.cum_tweet_array)
         pass
     
