@@ -153,7 +153,7 @@ class DataManager(object):
             # Checking if user is a valid user before continue
             if(str(rand_user_ix) not in self.userIds):
                 continue
-            userTweetCount = GetCountOfConfirmedTweetOfUser(this.tweet_datas, str(rand_user_ix))
+            userTweetCount = GetCountOfConfirmedTweetOfUser(self.tweet_datas, str(rand_user_ix))
             if(userTweetCount==0):
                 continue
             # select a random tweet from user tweets
