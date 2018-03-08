@@ -62,15 +62,13 @@ class DataManager(object):
         self.type_dict = {'ENFJ':0, 'INFJ':1, 'INTJ':2, 'ENTJ':3, 'ENTP':4, 'INTP':5 ,'INFP':6, 'ENFP':7, 'ESFP':8, 'ISFP':9, 'ISTP':10, 'ESTP':11, 'ESFJ':12, 'ISFJ':13, 'ISTJ':14, 'ESTJ':15}
         self.type_rev_dict = dict(zip(self.type_dict.values(), self.type_dict.keys()))
         self.class_tweets = None
-        print('Importing cumulative tweet count array shown below :')
+        print('Importing cumulative tweet count array')
         self.cum_tweet_array = [0,*(np.cumsum(GetCountArrayOfConfirmedTweet(self.tweet_datas)))]
-        print(self.cum_tweet_array)
         print('Creating id to ix dictionnary')
         ids = self.tweet_datas.keys()
         self.id_to_ix = dict()
         for ix,id in enumerate(ids):
             self.id_to_ix.update(dict({id:ix}))
-        print(self.id_to_ix)
         pass
     
     
@@ -168,7 +166,7 @@ class DataManager(object):
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))
-            x = self.type_dict[GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))]
+            x = self.type_dict[user_type]
             bucketized_tweet = np.zeros(self.configuration_manager.num_class) # create array for the array
             bucketized_tweet[x] = 1 # add one at the correct position of the class
             label_data.append(bucketized_tweet) # add the array to batch
