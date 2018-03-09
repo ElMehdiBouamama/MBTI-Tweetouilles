@@ -156,6 +156,8 @@ class Tweet2Type(object):
                 eval_loss.append([i+1, loss_eval])
                 print('Training loss at step {} : {}'.format(i+1, loss_train))
                 print('Eval loss at step {} : {}'.format(i+1, loss_eval))
+        print('Training loss : {}'.format(train_loss))
+        print('Evaluation loss : {}'.format(eval_loss))
         return(train_loss, eval_loss)
     
     """ Use a tweet vector to predict the type of personnality of the user
