@@ -52,6 +52,9 @@
     <Compile Include="Content\Models\Word2VecPCA.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Content\Tests\TestWordToVec.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Start.py">
       <SubType>Code</SubType>
     </Compile>
