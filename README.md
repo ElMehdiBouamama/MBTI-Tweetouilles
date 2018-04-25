@@ -1,5 +1,7 @@
 # MBTI-Tweetouilles
 
+Author : El Mehdi Bouâmama
+
 <p align="center"><u><b>Video showing embedding visualisation PCA/T-SNE before training</b></u></p>
 <p align="center"><a href="https://youtu.be/sKwr3i8fq6g"><img src ="https://img.youtube.com/vi/sKwr3i8fq6g/0.jpg" /></a></p>
 
