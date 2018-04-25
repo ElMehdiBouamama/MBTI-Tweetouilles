@@ -1,6 +1,6 @@
 # MBTI-Tweetouilles
 
-<p align="center"><b>Video showing embedding visualisation PCA/T-SNE before training</b></p>
+<p align="center"><u><b>Video showing embedding visualisation PCA/T-SNE before training</b></u></p>
 <p align="center"><a href="https://youtu.be/sKwr3i8fq6g"><img src ="https://img.youtube.com/vi/sKwr3i8fq6g/0.jpg" /></a></p>
 
 This project is meant to analyze user tweets, trying to determin users personality types according to MBTI types by analyzing the users tweets, it is also built on form of classes to be able to accept any data / categories so it can learn to classify many documents not only tweets.
