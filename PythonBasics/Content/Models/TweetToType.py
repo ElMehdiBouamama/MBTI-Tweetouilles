@@ -12,7 +12,7 @@ import collections
 import os
 import pandas as pd
 import tensorflow as tf
-
+import psutil
 
 class Tweet2Type(object):
     """Use this class to predict personnality of people from they're tweets"""
@@ -24,23 +24,21 @@ class Tweet2Type(object):
         print("Importing datas from files")
         self.dataman = DataManager.DataManager()
         print("Importing embeddings")
-        self.embeddings,self.doc_embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
+        self.embeddings = self.dataman.restore_embeddings("Constant") # Importing Embeddings and doc_embeddings
         print("Importing word dictionnaries")
         self.dict,self.rev_dict = self.dataman.restore_dictionaries() # Importing dictionary and rev_dictionary
         self.logistic_learning_rate = self.confman.logistic_learning_rate
         # Initialize model variables
         print("Initializing model variables")
         self.weights = tf.Variable(tf.random_normal([self.confman.doc_embedding_size, self.confman.num_class]),dtype=tf.float32)
-
         # Initialize model inputs
         self.class_target = tf.placeholder(tf.int32,[None, self.confman.num_class])
         self.tweet_vectors = tf.placeholder(tf.float32,[None, self.confman.doc_embedding_size])
-
         # Initialize tensorflow session
         print("Creating tf session")
         self.sess = tf.Session()
         pass
-    
+
     """Training the model on specific tweets to get it's embedding
        text_tweets : array of tweet text that should be given in the format ['TweeOne', 'TweetTwo', ...] """
     def Vectorize_tweet(self,text_tweets):
@@ -49,8 +47,8 @@ class Tweet2Type(object):
         number_tweets = text_to_numbers(tweets, self.dict)
 
         # Intialize model variables
-        batch_size = len(Tweets) * 2 
-        window_size = self.confman.window_size 
+        batch_size = len(Tweets) * 2
+        window_size = self.confman.window_size
         num_epoch = self.confman.DTVnum_epoch
         print_loss_every = self.confman.print_loss_every
         num_sampled = self.confman.num_sampled
@@ -67,7 +65,7 @@ class Tweet2Type(object):
         # Create data/target placeholders
         x_inputs = tf.placeholder(tf.int32, shape=[None, window_size + 1]) # plus 1 for doc index
         y_target = tf.placeholder(tf.int32, shape=[None, 1])
-        
+
         # Lookup the word embedding
         # Add together element embeddings in window:
         embed = tf.zeros([batch_size, embedding_size])
@@ -86,7 +84,7 @@ class Tweet2Type(object):
         # Create optimizer
         optimizer = tf.train.GradientDescentOptimizer(learning_rate=model_learning_rate)
         train_step = optimizer.minimize(loss)
-                
+
         #Add variable initializer
         self.sess.run(tf.global_variables_initializer())
 
@@ -111,42 +109,35 @@ class Tweet2Type(object):
         # Convert tensors to numpy arrays
         tweet_embeddings = self.sess.run(doc_embeddings)
         # Return embeddings
-        return tweet_embeddings 
+        return tweet_embeddings
 
     """Train the model to fit (tweet vector/type) embedding space mapping """
     def Fit(self):
         print("Creating model's graph")
-
         logits = tf.matmul(self.tweet_vectors, self.weights)  # matrice multiplication
         prediction = tf.nn.softmax(logits) # prediction probabilities
         loss = tf.reduce_mean(tf.square(tf.subtract(tf.cast(self.class_target, tf.float32), prediction))) # MSE of the model
-        
+        print("Creating model Optimizer")
         optimizer = tf.train.GradientDescentOptimizer(self.logistic_learning_rate)
         optimizationStep = optimizer.minimize(loss)
-        
+        print("importing model global variables")
         batch_size = self.confman.TTTbatch_size
         num_epoch = self.confman.TTTepoch
         print_loss_every = self.confman.print_loss_every
-
+        print("Initializing tf global variables")
         self.sess.run(tf.global_variables_initializer())
-
-        print("Printing batch example")
-        batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Training') # Batch examples
-        
-        print(batch_datas[0])
-        print(batch_labels[0])
-
+        print('Prediction and class_target shape :')
+        print(self.sess.run(tf.shape(prediction)))
+        print(self.sess.run(tfsess.shape(self.class_target)))
         # Train the model on a loop
         print("Starting training")
         train_loss = []
         eval_loss = []
         for i in range(num_epoch):
-            batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings, 'Training') # Create batches from true data ([tweetVectors, target_class],[...],....)
+            batch_datas, batch_labels = self.dataman.create_ttt_batch(batch_size, self.embeddings, self.doc_embeddings) # Create batches from true data ([tweetVectors, target_class],[...],....)
             feed_dict = {self.tweet_vectors : batch_datas, self.class_target : batch_labels}
-            
             self.sess.run(optimizationStep, feed_dict=feed_dict)
             loss_train = self.sess.run(loss, feed_dict=feed_dict)
-            
             train_loss.append([i+1, loss_train])
             # Print loss
             if i % print_loss_every == 0:
@@ -159,7 +150,7 @@ class Tweet2Type(object):
         print('Training loss : {}'.format(train_loss))
         print('Evaluation loss : {}'.format(eval_loss))
         return(train_loss, eval_loss)
-    
+
     """ Use a tweet vector to predict the type of personnality of the user
                 datas : contains vectorized tweet vectors that should be analyzed """
     def Predict(self, datas):
@@ -191,6 +182,6 @@ class Tweet2Type(object):
     def __del__(self, **kwargs):
         self.sess.close()
         return self.super().__del__()
-    
+
 
 

@@ -2,15 +2,15 @@
 import sys
 import os
 from functools import partial
-import ConfigManager
+import Content.Managers.ConfigManager as ConfigManager
 import multiprocessing
 from multiprocessing import Pool
-from DatabaseManager import *
+from Content.Managers.DatabaseManager import *
 import collections
 import pickle
 import numpy as np
 import tensorflow as tf
-from text_helper import *
+from Content.Helpers.text_helper import *
 import pandas as pd
 
 extracted_tweet_folder = " "
@@ -20,23 +20,20 @@ def ReadFiles(fileName):
     return [Tweet.strip(" \n").split(' ') for Tweet in Tweets]
 
 def read_classified_files(fileName,datas):
-    file_path = extracted_tweet_folder + "/" + fileName + ".txt"
-    if(os.path.exists(file_path)):
-        with open(extracted_tweet_folder + "/" + fileName + ".txt", "r", encoding="UTF-8") as f:
-            Tweets = f.readlines()
-        return ([Tweet.strip(" \n").split(' ') for Tweet in Tweets], GetMbtiOfUser(datas,fileName))
-    else:
-        return ["",None]
+    with open(extracted_tweet_folder + "/" + fileName + ".txt", "r", encoding="UTF-8") as f:
+        Tweets = f.readlines()
+    return ([Tweet.strip(" \n").split(' ') for Tweet in Tweets], GetMbtiOfUser(datas,fileName))
 
 class DataManager(object):
     def __init__(self):
         ''' Upload tweets from files and get them ready to use by tweet2vec and tweet2type classes '''
         self.sess = tf.Session()
-        self.configuration_manager = ConfigManager.ConfigurationManager() # Initialize configuration data
+        self.configman = ConfigManager.ConfigurationManager() # Initialize configuration data
+        self.users_tweets = None
         print('Importing json data')
-        all_users = ReadJsonFile(self.configuration_manager.tweets_json) # Importing json file with all informations about users
+        all_users = ReadJsonFile(self.configman.tweets_json) # Importing json file with all informations about users
         print('Importing valid user ids')
-        self.userIds = np.loadtxt(self.configuration_manager.valid_user_ids, dtype=np.str) # Importing valid user id's to check who are the users that really have tweets
+        self.userIds = np.loadtxt(self.configman.valid_user_ids, dtype=np.str) # Importing valid user id's to check who are the users that really have tweets
         # clean json data from unwanted users
         print('Spliting data into 3 sets')
         self.tweet_datas = dict()
@@ -70,56 +67,53 @@ class DataManager(object):
         for ix,id in enumerate(ids):
             self.id_to_ix.update(dict({id:ix}))
         pass
-    
-    
+
     # Get all tweets of each user
-    def user_tweets(self):
-        if(self.users_tweets is None):
-            threads_count = os.cpu_count()*6 # Number of thread per CPU
-            global extracted_tweet_folder
-            extracted_tweet_folder = self.configuration_manager.extracted_tweets # Get tweets folder from configuration manager
-            # Each CPU will have 6 threads to manage at every timestep
-            with Pool(threads_count) as p:
-                self.users_tweets = p.map(ReadFiles,self.userIds) # Asynchronously extract tweeter texts
-        return self.user_tweets
+    def get_user_tweets(self,userIds):
+        threads_count = os.cpu_count()*6 # Number of thread per CPU
+        global extracted_tweet_folder
+        extracted_tweet_folder = self.configman.extracted_tweets # Get tweets folder from configuration manager
+        # Each CPU will have 6 threads to manage at every timestep
+        with Pool(threads_count) as p:
+            self.users_tweets = p.map(ReadFiles,userIds) # Asynchronously extract tweeter texts
+        print("User Tweets are stred in users_tweets")
 
 
 
     # Get all tweets with the classes of each user
-    def bucketized_tweets(self):
-        if(self.class_tweets is None):
-            threads_count = os.cpu_count()*6
-            global extracted_tweet_folder
-            extracted_tweet_folder = self.configuration_manager.extracted_tweets
-            readFiles = partial(read_classified_files, datas=self.tweet_datas) # Proxy function of read files with data included as parameter
-            with Pool(threads_count) as p:
-                self.class_tweets = p.map(readFiles,self.userIds) # Asynchronously extract text with type associated
-        return self.class_tweets
-    
+    def get_labeled_tweets(self, userIds):
+        threads_count = os.cpu_count()*6
+        global extracted_tweet_folder
+        extracted_tweet_folder = self.configman.extracted_tweets
+        readFiles = partial(read_classified_files, datas=self.tweet_datas) # Proxy function of read files with data included as parameter
+        with Pool(threads_count) as p:
+            class_tweets = p.map(readFiles,userIds) # Asynchronously extract text with type associated
+        return class_tweets
+
     # Get tweets without user separation
-    def all_tweets(self): 
-        if(self.texts is None):
-            self.texts = []
-            for user_tweets in users_tweets:
-                for tweet in user_tweets:
-                    self.texts.append(tweet)
-        return self.texts
+    def all_tweets(self):
+        texts = []
+        for user_tweets in self.users_tweets:
+            for tweet in user_tweets:
+                texts.append(tweet)
+        return texts
 
     # restore embeddings in Variable or Constant tensors
     def restore_embeddings(self,tensorType="Variable"):
-        embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.vocabulary_size, self.configuration_manager.embedding_size], -1.0, 1.0))
-        doc_embeddings = tf.Variable(tf.random_uniform([self.configuration_manager.number_of_tweets, self.configuration_manager.doc_embedding_size], -1.0, 1.0))
-        saver = tf.train.Saver({"embeddings": embeddings, "doc_embeddings": doc_embeddings}) # Import Embeddings
-        saver.restore(self.sess, self.configuration_manager.checkpoint_path) # Restore data from checkpoint path
+        sess = tf.Session()
+        embeddings = tf.Variable(tf.random_uniform([self.configman.vocabulary_size, self.configman.embedding_size], -1.0, 1.0))
+        saver = tf.train.Saver({"embeddings": embeddings}) # Import Embeddings
+        saver.restore(sess, self.configman.checkpoint_path) # Restore data from checkpoint path
         if(tensorType=="Constant"):
-            embeddings = self.sess.run(embeddings)
-            doc_embeddings = self.sess.run(doc_embeddings)
-        return(embeddings, doc_embeddings)
+            sess.run(tf.global_variables_initializer())
+            embeddings = tf.constant(sess.run(embeddings))
+        return(embeddings)
+
     # restore Tweet2Type weights
     def restore_weights(self):
-        weights = tf.Variable(tf.random_normal([self.configuration_manager.doc_embedding_size, self.configuration_manager.num_class]),dtype=tf.float32)
+        weights = tf.Variable(tf.random_normal([self.configman.doc_embedding_size, self.configman.num_class]),dtype=tf.float32)
         saver = tf.train.Saver({"weights": weights})
-        saver.restore(self.sess, self.configuration_manager.tweetToType_save_path)
+        saver.restore(self.sess, self.configman.tweetToType_save_path)
         return weights
 
 
@@ -127,7 +121,7 @@ class DataManager(object):
     def restore_dictionaries(self):
         if len(self.word_dictionary) == 0:
             print('Dictionary Backup')
-            with open(self.configuration_manager.dictionary_path,"rb") as f:
+            with open(self.configman.dictionary_path,"rb") as f:
                 self.word_dictionary = pickle.load(f)
             self.word_dictionary_rev = dict(zip(self.word_dictionary.values(), self.word_dictionary.keys())) # Import dictionary
         return(self.word_dictionary, self.word_dictionary_rev)
@@ -159,15 +153,15 @@ class DataManager(object):
             if(userTweetCount==0):
                 continue
             # select a random tweet from user tweets
-            rand_tweet_ix = np.random.randint(userTweetCount)  
+            rand_tweet_ix = np.random.randint(userTweetCount)
             # select doc embedding
             doc_ix = self.cum_tweet_array[self.id_to_ix[str(rand_user_ix)]] + rand_tweet_ix # select doc embedding index using user_ix and tweet_ix
-            doc_ix = doc_ix % self.configuration_manager.number_of_tweets
+            doc_ix = doc_ix % self.configman.number_of_tweets
             batch_data.append(doc_embeddings[doc_ix]) # Extract doc_embedding from specific user
             # get user labels and bucketize them
             user_type = GetMbtiOfUser(self.tweet_datas, str(rand_user_ix))
             x = self.type_dict[user_type]
-            bucketized_tweet = np.zeros(self.configuration_manager.num_class) # create array for the array
+            bucketized_tweet = np.zeros(self.configman.num_class) # create array for the array
             bucketized_tweet[x] = 1 # add one at the correct position of the class
             label_data.append(bucketized_tweet) # add the array to batch
         # Convert batch_data to np array
@@ -188,7 +182,7 @@ class DataManager(object):
             window_sequences = [rand_sentence[max((ix-window_size),0):(ix+window_size+1)] for ix, x in enumerate(rand_sentence)]
             # Denote which element of each window is the center word of interest
             label_indices = [ix if ix<window_size else window_size for ix,x in enumerate(window_sequences)]
-        
+
             # Pull out center word of interest for each window and create a tuple for each window
             # For doc2vec we keep LHS window only to predict target word
             batch_and_labels = [(rand_sentence[i:i+window_size], rand_sentence[i+window_size]) for i in range(0, len(rand_sentence)-window_size)]
@@ -206,5 +200,10 @@ class DataManager(object):
         # Convert to numpy array
         batch_data = np.array(batch_data)
         label_data = np.transpose(np.array([label_data]))
-    
+
         return(batch_data, label_data)
+
+        def restore_types_set():
+            with open(self.configman.type_set_path , "rb") as f:
+                self.type_set = pickle.load(f)
+            print("type tweet dictionnary has been uploaded to self.type_set")

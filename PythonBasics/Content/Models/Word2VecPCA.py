@@ -2,7 +2,6 @@
 import numpy as np
 from sklearn.decomposition import PCA
 from sklearn.manifold import TSNE
-import matplotlib
 import matplotlib.pyplot as plt
 import pickle
 import tensorflow as tf

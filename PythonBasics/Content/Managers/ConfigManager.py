@@ -18,6 +18,10 @@ class ConfigurationManager(object):
         self.window_size = self.config['DocToVec'].getint('window_size')
         self.DTVbatch_size = self.config['DocToVec'].getint('batch_size')
         self.DTVnum_epoch = self.config['DocToVec'].getint('generations')
+        self.DTVlearning_rate = self.config['DocToVec'].getfloat('learning_rate')
+        self.DTVsave_embeddings_every = self.config['DocToVec'].getint('save_embeddings_every')
+        self.DTVprint_valid_every = self.config['DocToVec'].getint('print_valid_every')
+        self.DTVprint_loss_every = self.config['DocToVec'].getint('print_loss_every')
 
         self.num_class = self.config['TweetToType'].getint('num_class')
         self.TTTbatch_size = self.config['TweetToType'].getint('batch_size')
@@ -31,7 +35,10 @@ class ConfigurationManager(object):
         self.dictionary_path = self.config['PATHS']['dictionary_path']
         self.extracted_tweets = self.config['PATHS']['extracted_tweets']
         self.tweetToType_save_path = self.config['PATHS']['tweet2type_save_path']
-        
+        self.type_set_path = self.config['PATHS']['type_dictionnary_path']
+        self.user_mbti_tweets_path = self.config['PATHS']['user_mbti_tweets_path']
+        self.new_checkpoint_path = self.config['PATHS']['doc2vec_new_save_path']
+        self.summary_path = self.config['PATHS']['summary_path']
         pass
 
     def getProjectPath(self):
@@ -50,5 +57,3 @@ class ConfigurationManager(object):
             for j in config[i]:
                 content = content + j + "\n"
         return content
-
-    
