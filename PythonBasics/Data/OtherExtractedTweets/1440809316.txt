@@ -1,0 +1,741 @@
+#ps1 development indie rpg , early engine ! live stream on twitch !LINK! 
+ありがとう ;) 
+philia jagcd : playing from start to the end ! todo : menu , joypad gameplay , mouse adapter , testing 
+i feel like , i made a nice tool , but i'm doing shit with it :/ 
+it's not pleasant :( !LINK! 
+can you feel the sunshiiine ! ! !LINK! 
+relief ! i'm done with philia and yopaz for jaguar cd , i can rest a bit and then move on to new fresh game projects ! #happy 
+i like low level asm , but the nes is way too limited for me :D i tried 6502 but i just can't code a proper gameplay in 8bits asm 
+philia jagcd : engine now working , still have strange behaviors , buggy scene transition , sound bug , font bug , & have to code inventory screen 
+how our world would look if you were a bird , beautiful aerial photos !LINK! 
+i think i will rewrite my lib to support only webp , it's better than jpeg , smaller than png ( in lossless ) and smaller than my video codec ! 
+new smartphone , first thing to do: uninstall all pre-installed crappy applications , deactivate all auto-update or auto-whatever 
+a f * cking awesome atari 2600 demo ! ! !LINK! 
+i played a bit with cyber studio on my atari st when i was a kid , i didn't know it would later become 3ds max ! !LINK! 
+1 game released on jaguar = 75 cartridges sold in 24h , 1 game released for free on playstation 1 = 3 posts on a forum ... dilemma :/ ( psx <3 ) 
+playstation 1 live game development : rpg battle module !LINK! #indiedev #livedev #twitchstream #ps1 #psx #psone #psxdev 
+more than 20 variables / registers to handle in a single assembly routine , my head explode > _ < 
+orion_'s jaguar collection pre-orders starts now ! !LINK! 
+progressive trance <3 @ 3:27 !LINK! 
+my 3d engine be like : 
+daaah x86 version % ) 
+a linker is nice , but cartridges are better :) #gb #gbc #gba 
+coding my dsp mixer for like one hour , running it for the first time , it works ! damn i'm good % ) 
+it seems like everyone use a precompiled program for cinepak and no one had integrated cinepak in a game , i might use raw video 
+star parodia , the only shoot'em up that i can play up to level 4 in super easy mode % ) 
+70 copy of elansar jaguar sold in 24 hours , w00t ! 
+i got this " super gameboy " like for ps1 ! too bad most of the game i tried aren't working :( only 32k games ? 
+alice's mom's rescue for the atari jaguar almost done ! needs some testing on different jaguar models , then production will start ! 
+my c mobile game library was already ios , android and windows compatible , now , after a ( long ) day of work , mac os x and linux compatible \ o / 
+frissons / chills !LINK! 
+nice to have some news ... through twitter :/ 
+my 2 adventure games elansar & philia + a bunch of other game for only 1 $ ! ! !LINK! 
+reworked by op sprite list manager , so i can call it easier in c like if i was sending drawcall on screen ... now need to start c integration 
+in angry and jaded mode ... 
+yes 
+ps1 : 104millions sold , release a game on it , nobody gives a fuck , atari jaguar : 250k sold , release a game on it and everyone gets hysterical 
+street of rage 2 awesome acapella ! always by smooth mc groove ! !LINK! 
+playing like a classic gamepad on a touchscreen is really the worst thing ever , why is there no more android device with integrated gamepad ? 
+tamagotchi hacking ! !LINK! 
+#afk #lt 
+mwahaahahha machiavellian enigmas :] 
+just ordered a custom " atari st " t-shirt with 68k code in the back #forevergeek 
+reading raw video ( 160x120 8bits ) from cd with ringbuffer and chunk resync ✔ check , now i need some 15fps sync with vbl , audio and zoom x2 
+watashi wa sakusei-sha desu ! 
+my jaguar cd " file system " works ! read 44 files , all checksums passed :) now i'm stuck with cinepak video , i can't make it work :( 
+!LINK! 
+well in facts , it's working , it's just that when booting cd from cart , the wordram address is moved to $ 6000 instead of $ 2000 ... 
+i envi japan , all these games on beautiful computer like x68000 and pc - 98 , i would so have wanted to live in japan in the 90 ' s t_t 
+nice idea =) 
+playstation anthologie vol . 2 classic edition !LINK! 
+too lazy to debug the philia jagcd engine today , so i reconverted all the video with a nice fade in / out and smoother credits appear effect 
+my childhood #atari 1040 ste after a #retrobright session ! #retrocomputing 
+it's always the same thing , when in release mode , my game have random bugs , when i switch to debug mode , no more bugs , arrgghh > _ < 
+testing my soft rendering 3d engine with texture mapping on atari falcon ct60 , 152 faces object -> 55fps ! ! ! now this is motivating ! 
+ok i'm done , yopaz master cd encrypted and tested . i just need to design a dedicated jagcd cover and i can move on to new game projects ! 
+300 professionally pressed cds , ready to ship :) soon available on my website #philia #jagcd 
+i just got some japanese playstation magazine from 1996 to 1999 , pieces of history ! #ps1 #retrogaming #japan 
+rise of the ps1 homebrew ! soon \ o / 
+well done , those level are not easy :) ( i myself have a hard time finishing those 2 :p ) 
+" done is better than perfect " 
+my swimming app for #pebble is finally working ! release soon :) 
+new little #tutorial on #hpc #cegcc #gx #gapi programming !LINK! 
+voodoo code : ikbdvec = ( void ( * * ) ( ) ) & kbdvecs 2 [ - 1 ]; / * undocumented * / 
+what's cool about the playstation 1 , is that , drawing a flat quad or a textured quad , takes about the same gpu time \ o / #psxdev 
+true :) 
+tetris master ! 
+on device pocketstation save manager ( view , delete & restore saves ! ) !LINK! 
+i was bored , so i made something fun , pc cd-rom + pc engine + jaguar cd -> all in one hybrid cd ! !LINK! #hack #retrogaming 
+i guess it won't be , i'm in the south of france at 5min from the sea ;) 
+i fucking love demomaking ! 
+received a memorytrack cartridge as a gift from racerx , more test to come ! 
+i didn't use raptor in the end :) 
+a nice review of my game alice !LINK! by " console snob " . available on dreamcast , android , pc , jaguar !LINK! 
+i'm trying cinepak but the sample code from the sdk is not easy to use , do you have another example code ? ideally play cd track n 
+meanwhile in my love life ... !LINK! 
+look what i received today :) alice's mom's rescue for jaguar cd ! ( skunkboard & pc windows version included too ! ) 
+i was happy seeing you two enjoying the game on the video , the next worlds / levels should be a bit more challenging ;) 
+thanks , but i'm just using !LINK! as a " lego " resource :) 
+very nice c64 music and game homebrew !LINK! 
+w00t ! #psxdev texture mapping with only a few line change , ps1 rulez ! 
+my #indie 2d platformer game alice's mom's rescue is available on #steam ! !LINK! 
+i don't have skype , but you can send me an email if you want 
+how sony broke the internet #ff7remake !LINK! 
+o_o ! awesome pixel art ! 
+i'm stuck in the past , probably because it was the happiest period of my life . #retrogaming 
+data transfer from jaguar to pc wasn't working , had a stupid issue with epp mode not set in my computer bios :/ 
+do you speak english ? !LINK! 
+tetris madness !LINK! 
+i just discovered that metal gear twin snakes on gamecube is a remake of mgs ps1 ! now i really need a gc for this and mario kart double dash 
+street fighter church edition ! !LINK! 
+first test on real dreamcast ... well , houston , we have some problems ... 
+pure eargasm ! too bad it isn't finished :( !LINK! 
+lovely cute & colorful little pixels <3 
+my next game is an rpg , and here is the story plot ! ( in french :p ) #psxdev #ps1 #retrogaming #indiedev #rpg 
+last arrival from japan yamatoku-classic , i can now play at 5 on my pc engine . + a nice pocketstation oddity ! 
+funny to read how people are stuck in my game philia :D !LINK! i guess i can help a bit by posting some hints :) 
+ported my mobile phone game library to the atari falcon today ! not fully functionnal of course , but it runs quite well on my ct60 :) 
+almost finished :) now integrating a built in testing mode 
+yes yes yes ! ! ! all my low level asm functions are clean , so now i can call cd file loading or cinepak movie from a single line of c code ! ! 
+check out my new #puzzlegame for #android ! yopaz icestar ( the sequel of diamjag ;) !LINK! 
+goto hell ; #geekjoke 
+battle engine of my rpg zia for playstation 1 !LINK! #indiedev #psxdev ( + menu system ) 
+psx 2psp , the best tool ever ! i will bring back all my ps1 game collection to my dusty psp ! 
+credits card in 2013 , you expect high end security ? it's easier to crack than ever before ! what a shame .. !LINK! 
+porting c code : while ( ! working ) { code wrappers while ( ! compiling ) { hack hack hack } crash } working ! 
+porting alice's mom's rescue to jaguar , live coding !LINK! 
+3 current game projects ... 6 games idea for future projects ... motivation = none > _ < 
+68k ! :p 
+the jaguar blitter is fast , i can blit 2 full screen of 8bpp 16x16 tiles in less than one vbl , really nice for my next projects :] 
+my next puzzle game for the atari jaguar cd : yopaz icestar ! 
+my custom script parser for my next rpg game is almost done :) will start graphic engine soon ! 
+master of the economic punchlines ! !LINK! 
+" les gens ne savent que ce qu'on leur dit . " - " people only know what they are told . " #tv #media 
+i wrote a new ima adpcm decoder for the dsp , i will try a mixer with one channel ima 16bits ( music ) , and 3 channels 8bits ( sfx ) , up to 32khz 
+update of elansar for the atari gem desktop , done ! now starting the same for philia , release soon ( free update for those who already bought ) 
+received a beautiful gp32 asr pack with the original 1.5 . 7 bios and freelauncher , now i need another gplink ! 
+all alone in the night - time-lapse footage of the earth as seen from the iss !LINK! stunningly beautiful ! 
+sending text from my computer to the pc engine through the usb port of the turbo everdrive ! !LINK! 
+when i play ff7 ' s musics in background while testing my rpg game , it suddenly becomes awesome , why ? 
+starting a little #megacd collection with this 2 really nice gem ! 
+here you go :) !LINK! 
+i made some progress on my rpg engine ( offline ) , now i'm debugging live on twitch #ps1 dev !LINK! 
+inside an arcade card duo , 2mbytes of addtionnal ram for the pc engine , in a credit card format cartridge of 1994 ! 
+the glove for playstation ! ( too bad it doesn't work :/ ) 
+back from gdansk / poland #sillyventure my falcon ct60 demo finished 2nd , not bad :) prize was a skunkboard ! ( serial n ° 6502 beat that ! ) 
+line drawing using tile on megadrive , success ! not quite accurate but enough for the game i plan to make :) 
+i was wrong ( or homebrew doc are wrong ) final fantasy tactics have 1500 files in a single folder o_o i should try the official cd image tool 
+comparaison de l'intro de #metalgearsolid demo / jap / pal / fr et essai de #mgs jap ! #ps1 #retrogaming !LINK! 
+doesn't work on real hardware :( gotta do some game disassembly ... 
+the core gameplay of my platform game engine is almost done ! intense level design coming next ... 
+no :) i tried coding for a2600 but it's too hard , here is the official page of this game !LINK! 
+elansar for atari jaguar , cartridge making of & game demonstration !LINK! 
+merci :) 
+testing 3d dev stuff on playstation 1 #ps1dev #psxdev !LINK! #twitch live dev 
+the awesomeness of the megacd , 12mhz cpu drawing chunky screen while the md do dma transfer of the automatic chunky to tile interface of mcd 
+daaamnnn ! ! ! fixed a f * cking division by zero that was causing random crash for months ! ! ! 
+ok , my code is working randomly on my jaguar , sometimes it works , sometimes not . it's not a good start :/ #murphyslaw 
+cute little hardware <3 :) 
+feel the upcoming jaguar cd releases :) 
+the most difficult part is to apply stickers without air bubbles . i think i got it , but the first ones have some small bubbles , sorry m ( _ _ ) m 
+let's do some magic spells effects ! rpg development on playstation 1 live !LINK! 
+sonic theme by the acapella god , smooth mcgroove ! !LINK! 
+optimizing sprite blitting to death with 68k pre-generated code , still 12fps @ vga 60hz ... i guess the slow falcon bus can't help it :p 
+19 cartridges shipped this morning ! 
+i did not realize , i sent a copy of alice's mom's rescue for jaguar cd to hawaii ! ! 😎 🌅 
+evil mushroom ! ! 
+neo retro rendering test for next game : photo vs computer graphics ( i try some tricks ) 
+move . l # " tokyo " , location ; ror . l # 3 , location ; \ o / 
+first test of zia rpg on the real ps1 console . some minor bugs , but it's working ! feel so great ! #ps1dev 
+and suddenly i realize that the train strike is probably why i still didn't received the cds package of philia for jagcd :/ 
+ah ben ça alors ! alice est greenlight ! 
+i just optimized elansar the same way , hopefully getting faster loading time . i will test this through a speedrun tomorrow on twitch :) 
+elansar and philia rediscovered on multiple platforms - !LINK! !LINK! 
+thanks to for this review of my 2 adventures games elansar & philia on dreamcast ! !LINK! 
+#pebbletime lasts 10 times more than #applewatch , and cost at least 2 times less , #dothemath 
+#lt see the result of my 3d camera / objects test on playstation 1 #psxdev !LINK! 
+the cinepak sample code is not working , the best i get is a single flashing pixel , and the " gamefilm " code is too huge to dig in :/ 
+do you know if there is an active homebrew scene for pc engine in japan ? 
+homebrew pizza :D #omnomnom 
+going to the swimming pool this evening to test my own #pebble " swim monitor " app :) 
+now disassembling the cinepak player binary , it use gpu in main ! ! just to set the olp :| wtf ? ? 
+ps1 rpg project : june goal reached , with one day late , phew ! 
+why the f * ck did i started this morning with the idea of porting arj mode 4 depacking to jaguar gpu asm , won't work and #headache #badidea 
+i dont know if creating a level that i'm struggling to finish , is a good thing or not . ( knowing that i'm not good at video games in general ) 
+after seeing the " lords of thunder " pce / segacd dual boot hack from tomaitheous , i can say that a pc / jagcd / segacd / pce hybrid cd can be done :) 
+the atari jaguar , the only game system who needs buffer address aligned on 32 bytes . no not 32bits , 32 bytes ! ! ! 11 ! ! 111 ! ! oneone 
+big thanks to for reviewing my jaguar games ! they are all available here !LINK! ! !LINK! 
+all versions of my adventure game elansar & philia #toomuchports #wontdothatagain 
+woohoo j'ai reçu airaki ! je test ça ce soir :) 
+jolie harpe <3 !LINK! 
+yopaz for psx : level editor done ! need some polishing and cd release should follow by the end of the month :) my first full psx game \ o / 
+oops ! #joyofcoding 
+tried some fixed point oldschool raycasting algorithm ... can't make it work , i'm rusted :( ( or not motivated ) 
+i don't know what i got myself into ... it's gonna take forever to code > _ < 
+approved seal of quality !LINK! 
+story of my life !LINK! 
+philia : the sequel to elansar , my new adventure game is now for sale on jaguar cd ! !LINK! #philia #jagcd #jaguar #homebrew 
+tried to load over 470 files , 21.4 mbytes of data from jagcd , all checksum passed ! ! who said the jagcd is not reliable ? :p 
+now designing philia jagcd cover :) 
+2 players versus wipeout 2097 using link cable between two playstation 1 #ps1 #psone #retrogaming !LINK! 
+my program get stuck in a middle of complex c code , black screen , no debugger , no printf output , well , good luck finding where the problem is 
+ayé ! j'ai fini airaki , 35002 . 
+philia : the sequel to elansar , making of & teaser ! !LINK! 
+teaser of my next puzzle game , it's finished , i just want some beta testing before release . 
+after days of confusion , i finally begin to understand how works 3d matrices on the ps1 , yay \ o / #psxdev 
+i'm talking about philia game engine , not cinepak 
+well , i will use it only for debugging purpose :) it's way better than reading bjl 68k registers list :D 
+awesome resources of beautiful free musics ! give this guy donations ! !LINK! by eric matyas 
+i haz a ps2slim ! free mcboot installed , now trying to figure out what i can use it for , + got some good games to test ! merci level games ! 
+i would like to try steam , but , the 100 $ entry barrier and the greenlight process seems like a lotery ticket :/ #indiedev 
+a 68000 asm code , might not beat a 68060 c code ... 
+#elansar for #ios finally submitted ! should be available in one week :) 
+cinepak player working ... but no sound , and no double buffering for the moment , nice progress anyway ! thanks for the sources 
+introducing the " putnop " function % ) 
+reading data from segacd ✔ playing audio from segacd ✔ transfering tile to vdp using dma ✔ sprite and joypad ✔ now need to make a game :) 
+new pocketstation bios tool ! !LINK! 
+the cover design i made for yopaz / elansar , kicks ass :p i can't wait to see the printed result ! 
+the first and only 8cm playstation 1 cd ever produced ! #retrogaming #psx #ps1 ( part of playstation club vol . 0 ) 
+the playstation 1 can display 3000 sprites of 16x16 at 60 fps in 640x480 ! eat this ! 
+philia ( elansar 2 ) on the good way , planning end of november for a fully playable game ! 
+yeah , lucky you have a wife :) 
+ps1 seems not considered " retro " , and there are a lots of jaguar fanatics % ) 
+my islandnet #bbs is finally live ! ( after 8 years of laziness ) telnet !LINK! enjoy #oldschool spirit ! 
+european election today :) 
+after only 2 days of hacking , alice's mom's rescue is * almost * working on dreamcast , i need to get rid of the bugs now :p 
+received this today , i'm like a kid excited in front of his christmas present ! #c64 #retrogaming #geek #floppy 
+" philia : the sequel to elansar " , first beta version of part 1 is currently being tested :) 
+#laserdisc #selfie one more item in my " old medias " collection ^ ^ 
+look at the tile in vram , i made 16 predefined line pattern , i don't draw the line pixel by pixel i draw using sprites 
+sending 2 games in one package cost me the same price than posting 2 separate envelopes , so no shipping reduction sorry 
+i want to code on retro platform again ! 
+i got more " chinese " botnet connections on my bss than real people , i might try adding a " bot " detector ... 
+it's a nightmare to process your sprites in this mode 
+just received 100 brand new atari jaguar flash pcb ! elansar jaguar is on it's way :) 
+alice's mom's rescue #dreamcast unboxing by adamkoralik !LINK! 
+comparison of some of my app for and #pebbletime :: alice's mom's rescue in color ! !LINK! 
+!LINK! <- i have enough musics here to make trillions of awesome games ! rpg , fantasy , sci-fi , so much ideas ! ! 
+i suspect voltage current going through bjl cable from pc to jaguar , sometimes i get strange jagcd behavior ( lens going crazy , dead motor ) 
+let's try steam greenlight ! #indiedev 
+the ultimate psx tech doc ! !LINK! and very nice new psx emu / debugger !LINK! 
+too bad i cannot attend to mi68 , my airplane is landing in tokyo on 14 september but in the evening :( 
+bra . s code ? #68k 
+if i can do realtime 3d on an atari st @ 8mhz , i can do this on megacd ! :p 
+i would be so amazed to see someone make a speedrun of my game alice's mom's rescue :D 
+philia running on atari falcon 030 & 68060 ! !LINK! 
+i love the heroes original score !LINK! ( and if you didn't saw this tv series , i recommend at least the season 1 ! ) #heroes 
+do want :( !LINK! 
+my next indie 2d platformer game " alice's mom's rescue " - preview on android + gamepad !LINK! soon on ios , win , dc , jagcd 
+philia finished ! ! ! from a to z including menu , an epic ending with epic music ! now just need some testing and the english translation :) 
+finished a " bigfile " manager , elansar have > 100 pictures , and psx cd are limited by file entry , so i had to pack all in a single big file 
+floppy shaped cd-r ! ! ! do want ! ! ! 
+a new playstation 1 / psone homebrew puzzle game available for sale ! yopaz icestar !LINK! 
+neko cat and variants on your pocketstation ! ~ nya ~ !LINK! + new transfer tool !LINK! 
+woohoo ! ! finally got my segacd code working ! i'm booting from cart then start the sega cd cpu , read data from cd and get them back to md ! 
+as christmas is approaching you get promotional prices on my games ! !LINK! #elansar #philia #jagcd #ps1 #psone #homebrew 
+just wait a few month for the pebble time :) !LINK! 
+after an update , my mac mini won't boot due to an old model restriction , had to hack the partition by hand from linux 
+i made a ricotta cheesecake <3 
+did you ever tried to code 2 big projects everyday for 2 months long ? 
+whoohoo ! i finally made the hsync interrupt to work on pc engine cd rom ! some nice bg distortion effect to follow next ! =) 
+i spent my week optimizing the 3d engine i used in my last atari falcon demo , it went from 10.87 fps to 18.28 fps ! ( 3000 triangles , 66mhz ) 
+wants to avoid bugs ? better clear the entire bss ... #coder 
+i never thought that one day i would buy a mac ... well ios dev requirement ... 
+fixed point = graphic glitches :'( 
+i put my dreamcast in my closet , and i got my good old playstation 1 setup , rpg dev can now begin ! port on dc / pc / android will be done later 
+it's when you look at the assembly output of a c compiler , that you want to redo it all in pure asm ! 
+just got these :) not quite what i wanted but it will do it anyway , i should have worked a bit more the image . 
+seems like 2bpp bmp are not supported by the majority of painting programs , don't worry i made a convertion tool :) !LINK! 
+i want to know the song name in this video :( !LINK! #glassmaster 
+finally i has a webcam \ o / coding on jaguar !LINK! 
+finally took some time to work on my bbs server , login , user db , intro and main menu done , need to add some interesting content now :p 
+playstation 1 collector orugasumu ! !LINK! 
+old-school magazine from japan #pcengine 
+just rendered a 36 seconds intro video for the future jaguar cd port of yopaz icestar , cinepak video everywhere ! 
+let's have some .. fun =) #atari #jaguar #flash #pcb #cartridge #homebrew #elansar #ojc 
+pebble gem clock , new version with config page ( date format ) et traduction française :) !LINK! 
+my code for alice's mom's rescue on jaguar cd is going bananas ... i don't understand why i get random sprites glitches #fuckthatshit 
+my latest whim , porting my puzzle game yopaz icestar to the #atarist gem 
+" shrinkwrap " plastic removed from 200 boxes , 200 cds thrown away ... waiting for the new run of " correctly " burned cds .. #jagcd 
+skunkconsolewrite ( " hello , world ! \ n " ); 
+my new adventure game philia : the sequel to elansar , available on android ! !LINK! 
+christmas tale vs reality !LINK! 
+megacd reading benchmark 128k in 1.28 sec = 100k / s 
+playing my new platformer alice's mom's rescue !LINK! 
+mo6 floppy file mount + bmp viewer from micro sd card ! !LINK! 
+before starting my platform game , i should have ask myself does my c library support multi touch ? try running and jumping with one button :/ 
+hello , i'm penguin and i would like to science with you please !LINK! 
+dreamshell's iso loader is not reliable at all :/ seems like i will need a coder cable after all ... 
+i compiled these sources and it's not working , as already said , the best i get is a flashing pixel 
+e-mail from #japan " game ' alice's mom's rescue ' has caused in my heart fireworks of emotions ! " - - i love japanese people <3 
+testing some ps1 japanese demo cd live on twitch ! !LINK! 
+
+telnet !LINK! but please don't try too much , it's currently in development :) 
+what do you mean , c is not explicit ? * lvl & = ~ ( 3 < < ( ( x & 7 ) < < 1 ) ); seems clear to me % ) 
+seems like apple is forcing developers to buy newer mac hardware and os , i'm not allowed to submit my app using old os version ... 
+~ purrr ~ purr ~ !LINK! 
+nice cartmod ! 
+i think that tomb raider 3 developers , didn't wanted us to finish the game . 
+awesome blast from the past , loading ms basic using paper tape and teletype in an altair 8800 ! !LINK! 
+let me eat please :p 
+just received the jaguar cd gift from atariage forum guys ! serious coding work ahead ! 
+atari gem clock for #pebble watch , new animated version :) !LINK! !LINK! 
+step by step debugging my old code , now it will run at 30fps only 
+plastic shell + pcb + sticker + screw x 100 = let the " fun " begins :) 
+i already had the sources i downloaded from you , and those are not corresponding to the binary player you use in your cd . 
+yes , porting some of my games !LINK! :) 
+playstation hardware explained ! !LINK! 
+you are awesome :) thanks for the review ! i made 3 other games on jagcd before that , unfortunately i don't have any more stock 
+my #indie #pixelart #platformer game alice's mom's rescue on #steamgreenlight !LINK! #indiedev 
+it is a demo , it's just precalc :p 
+some part of a demo effect can be slower or faster to compute , so using this technic you have a constant display speed 
+ahh , the satisfaction of having something that works after hours of programming , it's really the meaning of life for a programmer :D 
+not that easy to setup app communication between phone ( js ) and pebble , but now it's done , let's do some fun :) 
+so much said in this photo :) 
+oh my god ! sony & nintendo playstation prototype ! !LINK! how on earth did they uncovered this ? ? ! ! 
+nope , it reads a byte , bit by bit on ( a2 ) an external hardware device :) ( seems like the output is inversed by a not signal ) 
+hello , i would like to know if you released your track " sanodg 0748 " as a full title on cd or download ? thank you . 
+want to try an old school bbs ? telnet to my islandnet bbs server !LINK! ! ( homemade bbs with love ) 
+doh ! my jaguar has some problem booting , sometimes i get a black screen , i hope it will work for the at least 30 cartridges i need to flash 
+this was my contribution to the atari jaguar indie game scene . now , i'm done ! #atarijaguar #homebrew #indiedev 
+velo 10km , soleil , brocante 
+after trying 4 different psx emulator , mednafen is really the best , it will save me some cd-r wasting ! ! #psxdev 
+i tried wipeout fusion , generally speaking i'm rather good at wipeout , but damn , this version is hard ! ( or my tv is too small maybe ... ) 
+megadrive challenge of the week : how to draw a line using 8x8 tile sprite ? 
+alice pushing boxes , picking up keys , bouncing off the mushrooms , growing . shrinking . #nextgame #indiedev 
+video of my new falcon 060 demo " unexpected fun " shown at #sillyventure 2014 in gdansk / poland !LINK! !LINK! 
+wishing for something is not the same as doing it ;) 
+yopaz icestar for jagcd , done ! 
+" thank you for applying to the sony computer entertainment partner program . sce will review your application ... " finger crossed ! 
+a 1998 japanese magazine with a ps1 cd " making of " video of parasite eve at squaresoft usa studio 
+after a long day of coding , i finally have the philia engine running , but it get stuck sometimes , i guess it will need a long debugging time 
+ridge racer's musics in the ears , what else for coding without seeing the time pass 
+my #pebble swimming app is available ! swimmonitor !LINK! 
+reduced price for alice's mom's rescue on steam ! !LINK! #indiedev 
+tilemap for linear screen , ok , now trying to sync my cd cpu code and the md dma transfer , with wordram swap and vram double buffering , outch ! 
+testing some old japanese demo cd on playstation 1 ! #ps1 #psone #retrogaming #japan live on #twitch !LINK! 
+final debug and speedrun of elansar & philia on dreamcast ! #gamedev !LINK! 
+games intro videos are so awesome , it reminds me the ps1 era . now i can do the same ! #dreamcometrue 
+whooohooo ! just finished the intro animation of my next pixel 2d indie platformer game : alice's mom's rescue ! 
+w00t ! 
+looks like it's done ! #yopaz #atarist #gem need testing then release with the pc version on my itch.io store ! 
+why ... why ? ? ! ! can't you just leave the original game cover as it is ? ! no , let's draw it uglier ! 
+i guess the gba can emulate a wonderswan color , gpu is almost similar , cpu is x5 faster 
+philia : the sequel to elansar , gameplay video of my new adventure game ! !LINK! available soon ( early 2014 ) 
+megadrive homebrew cartridges made easy ! !LINK! !LINK! 
+alice's mom's rescue for dreamcast = 7677 lines of code ( including my own game library ) , main gameplay file is 1400 lines 
+doing some nice 2d design for elansar 2 puzzles , i'm pretty satisfied 
+elansar on iphone / ipad , very soon ... :) 
+what you see , what a programmer sees .. #coder #geek 
+yeah , > 150 philia in my room :/ for the next i might do replication with 150 cd + box , and 150 cd in a spindle , less space taken 
+starwars rebel assault , microcosm , and starblade ( boot but ingame locks ) , otherwise , time gal and ax 101 works ( but also in 50hz ) 
+i have 10 pending ideas of stuff to code for the pocketstation ... so , spending all my time on these , or working on the sequel of elansar ? 
+well well well , seems like philia for jagcd is very close to be ready :) 
+the production of alice's mom's rescue for jaguar cd will start this week , expected release by the end of the month :) 
+my myst like adventure games elansar & philia are now both playable on atari #firebee !LINK! 
+enjoy opensource on some of my tools , #pebble and #pebbletime stuff on github :) !LINK! 
+hot weather = no motivation 
+my complete pocketstation devkit , lib & tools included !LINK! 
+pixel art = eye candy !LINK! 
+send me an email ( see the readme ) and describe the step you have done . 
+help ! > _ < ' t_t #toughcoderlife 
+i didn't know that , but i like low level ;) ( even if sometimes it give me headache :D ) 
+strange .. if you have my email , try sending me your compilation line , your system.cnf file and maybe cd directory list 
+if one day i win the lottery ... i want this !LINK! this guy game's collection is just unreal ! ! 
+alice's mom's rescue : exclusive jaguar #homebrew cart customized with your name !LINK! #retrogaming 
+gettin ' jiggy wit it ! #minidisc #childhooddreams #achievment 
+how users see programmers and vice versa , so true ... 
+8bits assembly programming = = 80 % use of macros , 20 % pure 8bits code 
+jaguar cd dev : reading data inside a cd track with an offset and a custom marker ✔ check 
+i just played tongueman's logic from chris covell on pc engine , this game is really well designed , and i love picross ! !LINK! 
+wonderswan ? =) 
+received a copy of kobayashi maru for jagcd as a 3rd price for our demo at sv2013 ! thanks and grey / msb ! + an atari t-shirt ! 
+soon ! but as game , not as flash card :) 
+moving on to the next project , well well well ... yopaz port to jagcd or gpalice platformer ? 
+j'aime 👍 
+when everything went right on the first run , it's almost suspicious ... or maybe we are just getting better =) 
+got it ! nothing is better than a realtime visual example for understanding our errors :) 
+dreamcast dev test : texture ✔ sound ✔ ogg stream ✔ gamepad ✔ : the porting of my game library will start soon :) 
+dreamcast mouse support ☑ mouse emulation via dreamcast analog joystick ☑ will start elansar dreamcast port soon :) 
+i got " ekkusu " ( x ) , the only ( ? ) full 3d game for gameboy ! full in box with manual ! !LINK! ( je ramene a la rgc ? :p ) 
+thanks , got them mostly from !LINK! :) 
+new #pebble app " note on watch " , allow you to write multiple notes directly on your watch ! !LINK! 
+umd vs minidisc vs minicd 
+gp32 / wiz / caanoo = dead , gcw - 0 = angry community , gamegadget = wtf ? , the only good one remaining seems like the psp ( using signed homebrew ) 
+the anr workaround fix from ndk r9b was actually making a new anr bug on my device ! had to get a previous version of android_native_app_glue 
+a little video of my trip to #sillyventure 2014 , an atari demo party in gdansk poland !LINK! 
+officially started my next game , it will be a colorful platform type game ! #motivated 
+gamer existential question : why squaresoft had a triangle in its logo ? 
+#eargasm !LINK! 
+i think i'm done with jaguar cd productions ... too much sensitive , not reliable at all ... 
+my myst like point & click adventure game : elansar !LINK! on #steamgreenlight ! #indiedev 
+alice's mom's rescue for & #pebbletime available on the pebble appstore ! !LINK! 
+#pebble 3d clock soon :) !LINK! 
+reversing game password , yes that is my definition of " fun " :) 
+k-pax ost in my ears , relax and code !LINK! 
+space clock 3d watchface , compatible with #pebble & #pebbletime ! !LINK! 
+atari st vs . commodore amiga - which is the better 16 - bit computer ? - vote - !LINK! atari ! ! ! 
+reworked the rom a bit this morning , now with a nice menu & credits screen ! flashed the first 50 pcbs today :) 
+jagcd cinepak player module on the way ! all 68k registers will be trashed , and memory from $ 86f00 to $ 1fc000 will be fooked ! mwahahaha % ) 
+sanodg always have awesome tunes !LINK! 
+alice's mom's rescue running on my dreamcast ! there is still some work to do , but it's on a good way :) #homebrew 
+ti68k hacking trying something fun :] 
+high mips is useless with snail slow memory access ... #bullshit 
+led overload ! 
+.. thanks glut and openal ^ ^ ( i just need to update the ios compatibility ) 
+got my turbo everdrive with usb ! my pc engine duo is happy ! ( and me too ) 
+getting something playable ! #happy 
+the more i see what happen in france , the more i think , i should move to japan 
+planning the story of my old rpg project , while listening to ff7 ost , what could be more inspiring ? " flowers blooming in the church " 
+3 hours of rendering for ... 3 seconds of movie , with i3 @ 3ghz , damn ! :/ 
+at least on unix system , it's running on a raspberry pi 
+beta testing alice's mom's rescue on atari jaguar ! !LINK! 
+too many game ideas , not enough motivation :( 
+i made a function that converts any 8bits chunky image to vdi planar of any bitplane ( 1-8 ) and true color ( 16/32 bits ) too ! ( 68k asm inside ) 
+a voté ! 
+castlevania sur zx spectrum ... castlevania sur zx , nom de dieu ! ! ! !LINK! #amazing #retrogaming 
+my pc engine is now rgb modded ! + 5 gamepad for epic bomberman matches ! 
+sorry , obs won't let me stream on twitch for unknown reasons , no elansar dreamcast port dev stream tonight :/ 
+voices in peter's theme ( at 1:56 ) are a bit different from what i heard in the tv episode , i've searched this theme for years ! 
+puzzle , done ! :) !LINK! 
+je note ça :) 
+a little goodbye to my pc engine , she goes in paris for a little while to get an rgb mod ! 
+why hurting your head trying to do a 3d engine , when you have yeti 3d pro ( i should have think about this years ago ... ) 
+ジア ： 女神の魔法 。 <- is this correct ? #japanese 
+philia and elansar can't be ported to megacd , but yopaz maybe , i should make a poll to see how many are interested 
+you start by using functions from the sdk , then you start re-coding them because yours works better ... #wasteoftime 
+let it snow ! let it snow ! let it snow ! 
+every time i get in the codeblocks debugger and see " watch * this " i can't help but think of worms tiny voice :) 
+sonic 2 music on floppy drive ! !LINK! 
+motivated by nothing today :( 
+i can't believe i spent my day coding a nyancat on a mini console that maybe 2 people on earth still use ... what i'm doing with my life > _ < 
+famicom disk system and quick disk are exactly the same ! nintendo just added a physic logo security and a shutter . 
+little twitch stream , still my rpg development on playstation 1 #ps1 petit stream de dev rapide ce soir !LINK! 
+i can't stop thinking about coding something on my atari falcon , 68k love came back 
+philia : sequel to elansar , almost done ! now need intense beta testing , translation , menu , how to play , smartphone release by december :) 
+tried megadrive coding in 100 % 68k asm , had fun , until i tried to boot it on megacd , not working :( 
+elansar speedrun < 3min !LINK! 
+hacking the yeti ... 3d engine , expect nothing :p !LINK! 
+so , started considering making data transfer over audio or generating a qr code on screen , i like getting headache for nothing ... 
+just finished the last cartridges of elansar , one for me , one for a friend , one sold ( bare ) , 77 in cardboard box ready to ship 
+neuron on fire ! after that you can try to beat the best time , argh ! ! ! 
+today i tried webp as a replacement for the slow nanojpeg i used , it saved 5mbytes on philia , better quality , and faster decoding 
+i did some test but i had nothing reliable for transferring data :/ 
+elansar & yopaz icestar , 2 new games available for jaguar cd ! !LINK! 
+debugging my jaguar c code , using an atari st emulator assembly debugger #toughcoderlife 
+demande a godzil sur yaronet 
+nice ! ! 
+i made a c version of the packfire " tiny " depack routine !LINK! this !LINK! is a fantastic packer ! 
+packing 512k in 9k , i guess it might be worth it 
+biiic bic bic bic cameraaa ! 
+32x cluster ! 23mhz * 2 * 9 = 414mhz ! ! 
+no , they will come cellophane wrapped from the factory 
+today or tomorrow #philia #jagcd can't wait ! 
+i finally have a playable battle engine for my rpg ! i'm not sure if it's a good battle system or not , but it's a bit unusual :p #ps1dev 
+ask for jagcd gift to port philia , was a joke at first , one week later they really bought me one , awesome jaguar community ! hard work coming 
+damn , everything was working fine , and now that i'm adding the latest features , i get random bugs > _ < 
+f-f-f-full set ! of the japanese " playstation club " ps1 demo cds 
+for all game coders who don't have any music / gfx skills like me : the resources site : !LINK! 
+new release of my jagcd cinepak player , now including a ima adpcm audio decoder , allowing 16bits stereo sounds ! !LINK! 
+my 2 adventure games elansar & philia are now available on #dreamcast ! !LINK! #retrogaming 
+nothing better than music for coding motivation ! my current one -> !LINK! 
+it's working ! ! on emulators ! ! ... not on hardware : ' ' ' ( 
+whenever you start 8bits assembler programming = = 2 times more headaches . 
+i am torn between the desire of coding for fun on a an old machine , and knowing that i will spend time on something useless . 
+7 ps1 games for 15 € at book off from kyoto \ o / 
+have you ever been afraid of losing the flow of your program in your head when it become too complex ? 
+nice ascent of elansar on #ios i am pleasantly surprised :) 
+it's kind of fun to write the dialogues of an rpg game , usually i'm not very inspired for stories , but this time , it seems self-evident ! 
+boom ! megacd realtime 3d cubes ! ( thanks to atari st hardcore 68k optimization techniques :p ) !LINK! 
+it must be a parallel port equipped ps1 ! please bring some 32k gb games so we can test more ! :) 
+expect at least one ct60 demo at silly venture 2014 in gdansk / poland ;) 
+released the final version of my gp32 puzzle game quadtris + a win 7 64bits gp32 usb driver and gplink tool !LINK! 
+* warning * battery low , please recharge with love . 
+teasing :) 
+yeah ! 
+zerosquare made me an avi stream handler , i integrated the ima audio encoder , burner a cd to test , it's working on the first run ! 
+nice review of my game alice's mom's rescue on dreamcast !LINK! by ! 
+elansar & philia for dreamcast , master cds are fully tested and ready to ship to the publisher ! 
+trying something crazy with the turbo everdrive , hacking the cd bios by hand , will it ever work ? who knows ... #busy #hacking 
+i just begin to understand the kind of nice " window " logic of pebble ui api ... ( it's hard for me , since i'm used to framebuffer only logic ) 
+finishing & debugging philia on dreamcast !LINK! 
+my very own #pebble watchface , the good old atari tos desktop ! 
+and what about realtime 400 moving 3d cube at 60 fps in 640x480 ? #psx rulez ! 
+executing 68k binary from my old ti89 calculator games , on an atari st :] preliminary romcall and lcd emulation 
+oh and , world premiere , this will be an hybrid cd ! pc / jaguar compatible #lt 
+wow stniccc 2015 in mid december ! i can't attend , but why not try a remote entry ! #atarist 
+my dsp 4 channels mixer doesn't work , too much external ram access during the i2s int , need to do an external mixing loop with small buffers 
+being self-employed ... #autoentrepreneur #indiedev #freedom 
+i don't know what this is , but it looks damn cool ! 
+the last time i posted here , was in 2007 ... w00t i was ahead of time ! 
+a little break on my rpg , i back to #atari gem coding , can i port a little game using gem on st ? ! seems like i can ! 
+philia : the sequel to elansar available now on cd for windows , mac , linux , and atari falcon 030/060 ! !LINK! 
+made a special elansar ending movie for the psx version , play well on the psx 
+for lucky #pebbletime owners , check this out ! !LINK! i still don't have my watch , so i can't test :( 
+received 50 jaguar flash cart pcb today ! now ordering 50 cart plastic shell , elansar and ojc second run soon ! 
+i never thought of using 8bits mode until now , you can do nice game too , and it's twice faster than blitting 16bpp ! 
+coding on jaguar , alice's mom's rescue port !LINK! 
+#define ko * 1024 char buffer [ 32 ko ]; #programmerstricks 
+fortunately i create games on retro consoles , because android is a disaster . #indiedev #toughlife 
+philia jagcd : finally got an encrypted cd to boot ! but after some testing , i found strange bugs on some screens , so , more debugging to come 
+fuck yeah ! ! cd data loading + cd audio playing + cinepak movie in loop without any bug , any glitch , any weird jagcd voodoo stuff , i'm happy 
+reprint of my games elansar , philia & yopaz for jaguar cd are now available ! !LINK! #retrogaming #atarijaguar 
+reading data from sega-cd ok , getting the data back to the main cpu , fail :/ but i'm close ! 
+sorry but the first ones that will be able to order are the people who donated me a jagcd / memtrack :) 
+even after multiple failures , when an idea won't leave your head until you succeed 
+of course :) ps1 first for fun only ( won't sell many ) , then dreamcast / android / pc port planned ! 
+working , in debug mode ;) 
+#ps1 japanese square's preview collection ( fullset ? ) #retrogaming 
+2nd testing of my pebble swim app at swimming pool , my detection algorithm is cheap so it doesn't work well , need to think of something else 
+preparing a special surprise for jaguar cart fan and alice fan ;) 
+there are already plenty of pebble app that can do this . i wanted something you can edit from your watch , not from your phone . 
+you should name it " achoo ! watchface " % ) 
+playing intensely with my calculator , trying to see if philia can be squeezed into 2mbytes of ram ! need to cut down some sfx and music loop 
+been trying to submit my ios app since 3 hours , no luck , invalid binary for an obscure launch image name reason , apple y u no want my app ? ? 
+#20yearsofplay support ps1 homebrew games ! !LINK! 
+no , ima adpcm allow storing a 16bits sample on 4bits , so you can do stereo 16bits with the same rate as 8bits mono 
+i bring you a set of tools and sources code for jaguar cd development ! enjoy ! !LINK! 
+nice ! 
+my 2 adventure games elansar & philia for #dreamcast are available for pre-order ! !LINK! #retrogaming 
+soon , i will post a topic on aa , it will be very limited edition on ebay 
+interested by 4 new games on dreamcast ? tell me ! !LINK! #dreamcast #homebrew #indie 
+reduced to 26k of code ! w00t ! 
+do want ! ! ! playstation transformers !LINK! 
+good job & now i can't stop thinking of creating new apps for my #pebble 
+my puzzle game yopaz icestar is available ! windows + atari gem !LINK! level editor & online sharing 
+what kind of handheld console are you holding in your hands please ? 
+current project : zia & the goddesses of magic genre : rpg platform : ps1 lines of code : 4227 ( excluding game library ) engine : 90 % game : 15 % 
+to jagcd dev : the word $ 000 at the beginning of each cd track is important ! it makes the atri marker long aligned ! else encryption fooked 
+it's not the correct printed picture , but i guess you know what that mean :) 
+i found and edited some magic spells graphics animation for my rpg , now it just needs to be shown on screen through some lines of code :) 
+too much work 
+about the elansar jagcd loss , it's the duplication machine fault , anyway the supplier will burn one cd so i can verify before doing it again 
+beautiful pixelart ! 
+philia : the sequel to elansar , teaser ;) 
+sony & nintendo playstation superdisc video !LINK! 
+android : a new cute puzzle game full of internet meme and turtle omnomnom ! !LINK! 
+今だけ ～ ♪ #denkitribe 
+zx spectrum microdrive cartridge ! so tiny tape disk ! i love it :) #retrogeek #collection 
+yeah i still need this one :) and a 8 " floppy too ! 
+this resolution is not usable in a real game , and what about other retro platform with only 16 colors 320x224 ? 
+well ... * almost * at ease ... #lrt #headache 
+i tried but the guys keeps talking every 5 seconds :/ 
+train pour la rgc reservé ! + #sillyventure 2014 poland plane ticket booked ! that will be a kick ass end of year :) 
+floppy and son 
+new version of my atari falcon game / demo system 030 & ct60 + mp2 player in c using vbcc !LINK! 
+psone homebrew " roll boss rush " by isufje , looking at the source code is horrible , but the result is sooo awesome ! ! !LINK! 
+disassembling the gp32 official sdk graphic blitting routines and finding out that it is optimised as i will never be able to do it ... 
+who needs c + + template ? #define ( ) rulez ! 
+i finally decided , my next game will be an rpg , it has been 5 years that i have one in mind , so .. time to do it ! 
+!LINK! 
+i might be on a useless path ... 
+well , let's get fool , trying ima adpcm 16bits 22khz stereo in cinepak ! ! 
+keeping 20 cartridges for another secret release ( soon ) , or for an eventual elansar sold out ;) 
+rpg dev on playstation 1 twitch live game development !LINK! 
+^ - non stop coding machine 
+you should rather take such a photo with a baseball field in the background :) 
+nintendo / sony playstation prototype found ( + history ) by adam koralik !LINK! 
+i'm glad it can help , moar ps1 homebrew \ o / 
+i might end up hacking the cinepak player binary to fulfill my needs , my raw video player 160x120 is a bit ugly :/ 
+ok , i have a piece of code , it's working , i don't know why , but i don't care , because if i try to change one line , it won't work anymore ! ! 
+the 3d demo i always dreamed to do on falcon ct60 is on a good way for sillyventure 2014 ! #sv2014 #atari 
+i might end up with a jagcd version of elansar :D all the jaguar code is there , just switch bpeg to raw cd loading + intro & ending video ! 
+playstation 1 development : rpg project , early dev #ps1 #psx #retrogaming #indiedev #twitch !LINK! 
+i'm tired to read people comparing alice's mom's rescue to nes graphics , please look again at real nes graphics ! 
+the problem when coding on several platform is that people want you to code on their fav console too . sorry , i've too much machines already ! 
+drawing complete info on a 32x32 screen is a real challenge :D 
+50 ready , who want some ? :p 
+yep , it's mine :) i'm a ps1 fan / collector / developer 
+58kbytes of pre-generated 68000 asm code only for horizontal line drawing , is it too much ? never when i get 300 % more speed ! 
+just when i thought i finished , another idea popped in my mind , yopaz for pocketstation ! 
+this is starting to get a bit more usable than " now , edit your map with this dozen of keyboard shortcuts " :p #yeti3d 
+a nice t-shirt i got from #sillyventure ! #savethefloppy 
+mwahahaha people who told me elansar 1 was too easy , get ready for the 2 :] 
+philia for dreamcast : each pov png loading time was 7 seconds , now with one gziped raw 16bits texture it's 4 seconds ! ! #optimization 
+the jaguar is cursed ! i just got the cd reprint of elansar / philia / yopaz , they are defective .. 2nd times ! i guess i'm stopping any jag stuff 
+one of my dreams !LINK! 
+void ecrireparolespour_christine_and_the_queens ( char * paroles , int nmots ) { while ( nmots - - ) strcat ( paroles , dictionnaire [ rand ( ) ] ); } 
+alright , no more falcon , but , i will give the firebee a second chance , don't disappoint me little bee ! 
+my new myst like adventure game philia : the sequel to elansar , available on ios ! !LINK! #iosreviewtime 7 days 
+yopaz icestar #ps1 #homebrew puzzle game still for sale on my website ! !LINK! #puzzlegame #psx #psone 
+" you don't pay with money , you pay with hours of your life " 
+first had one cube , " oh it's running fast ! lets add another one ! o_o still running at the same speed ! ! ! " ph34r t3h 1337c0de ! ! 
+alice's mom's rescue , my new indie pixel 2d platformer available on #dreamcast at !LINK! #retrogaming 
+i use my own asm from scratch , because i want to do mega cd and sgdk don't support cd 
+i have a nice little megacd testing chain , with my custom boot , and a cart based program to test the same code without burning a cd ! 
+finally found some motivation to start yopaz jagcd port 
+if only i had known that the " strtok " function existed ! so much time coding parsing functions wasted > _ < 
+doing some cute little pixel art , i'm getting a bit better at this ! 
+for retro dev beginners , program the megadrive and mega-cd using a powerful basic language ! !LINK! 
+fullscreen tilemap scrolling using blitter on jaguar ( vbl almost full at 60hz , but well , using optimized op list is too harsh for me ) 
+seems like i will finally get something to show at #sillyventure 2014 , starting less than 3 weeks before the party xd #lt 
+it's not written datel on the box , but it is on the boot screen :) 
+thank you :) there should be a jaguar cd version too :) 
+gg , featured ! !LINK! 
+my next game projects are too technical or too huge to be ported on jaguar sorry :/ 
+where do you see 4mbytes or ram on jaguar ? ;) 
+sometimes i just can't understand others ' logic :/ 
+poland , here i come ! #sillyventure #sv2014 
+merci =) 
+what is the purpose of including a 1.3 ghz ! ! ! arm processor in a smartwatch , have programmers become so bad ? 
+genius 3d iso visual tricks makes an awesome game on the graphically limited atari 2600 ! !LINK! 
+philia jagcd : all custom screens from part 2 are working , yoohoo ! need to clean cinepak transition , optimise gameplay for joypad & do a menu 
+hello japan ! #ergheiz #arcadestick #pcengine #ps1 #japan #retrogaming #gameboy 
+45mbytes of cinepak video for philia jagcd :) 
+sending a bin file to the jaguar at > 330kb / s using my new skunkboard , damn ! this is so fast compared to the bjl ! ! 
+my c compiler is funny " warning 175 in function " yopazmain " : this code is weird " #spaghetticode 
+a new beautiful piece in my ps1 collection :) 
+starting the battle module of my rpg ! !LINK! live programming on playstation 1 #livedev 
+my little collection of all kind of retro storage medium ! #retrogeek tape , 5.25 / 3.5 floppy , quickdisk , microdrive 
+well , you probably never excepted it , but here it is , nyancat for the pocketstation ! !LINK! 
+messing around with the raptor source code from reboot , this might save the jaguar port of alice's mom's rescue , finger crossed ! 
+a 400mhz pentium + wifi + bt in an sd card ! ! ! this is just unbelievable ... !LINK! 
+my #pebble lasted 8 days with an initial charge of 70 % #trytobeatdis :) 
+philia on jaguar cd preview -> !LINK! 
+added 2 switch on my #megadrive but some jap mcd game won't run on my pal mcd ( even using jap mcd bios on everdrive ) 
+a public domain ogg vorbis audio file decoder in a single . c file ! !LINK! it will efficiently replace my old ima decoder :) 
+yopaz icestar for ps1 finalized ! 40 levels , pocketstation exclusive minigame + a level editor ! cd release soon :) 
+progressing slowly on my puzzle game port to jaguar cd : yopaz icestar 
+where can i get a tshirt like that ? :) 
+reading from cd is faster than depacking ( even using the risc processor ) 
+i can't get my old jaguar source to compile and work , so , i took the entire day patching hex code by hand , not-so-fun but now it's working ! 
+my ima decoder seems to work on my dsp debugger , now waiting zerosquare's tool to integrate ima into the avi audio chunk to fool jagmod tool 
+online disassembler , support multiple processors with lots of disassembly option ! !LINK! 
+i'm currently timing my cd cpu code using vbl color bar ! i must try polygon drawing from cd cpu and dma copy from wordram to vdp ! 
+i'm torn between designing increasingly hardcore levels , or nice and easy levels , like the game's graphics . ( note : i'm a very bad gamer :p ) 
+alice's mom's rescue canceled for jaguar cd , i can't make it work properly and at a descent speed ... 
+it's funny how a " bcc " can mean < = or > = depending on what you load in lda / cmp , better extensively comment this code for later comprehension 
+getting back to pc engine #retro #coding #mood 
+brainstorming these days to decide which game i'm gonna create next ... 
+i received 200 cds for jaguar of elansar & yopaz , but they are not working ... wrong cd format / layout , 200 frisbees to play with ... 
+elansar the " myst " like adventure game now available on iphone & ipad ! !LINK! 
+i got a nice present in my mailbox today :) #pebble 
+will do a " longrun " of alice's mom's rescue live on !LINK! in about 2min 
+i have already ordered the cd , i couldn't resist :) 
+airaki : highscore 32742 , level 8 ! 
+ava mea - in the end #eargasm !LINK! 
+orion_'s jaguar collection , 15 games and tech demos , 6.5 mbytes of fun packed into a 4meg cartridge ! soon ... 
+200 cds put back in cases , elansar and yopaz for jaguar cd ready to ship soon ! 
+due to recent popular demand ( thanks to ) i will do reprint of my #atarijaguar cd games ! available soon .. 
+25 #elansar for #atarijaguar ready ! 
+i might do reprint but it will be cd-r ( pressed cd needs a minimum of 300 cd produced :/ ) 
+i'm progressing on the jaguar cd port of alice's mom's rescue 
+the problem with explicitly named #define is that you end up with computation code lines that gets out of the screen :/ 
+ok , one last level to create , and i will have 8 + 8 + 8 = 24 levels , seems good :) 
+#nyancat #pocketstation rom download !LINK! 
+can someone explain me why this line gltranslatef ( 0.375 f , 0.375 f , 0.0 f ); magically fix the texture bleeding problem ? ( when scaling up ) 
+already ? ! mail is faster than i thought :) 
+the dreamcast junkyard : atari jaguar indie titles coming to dreamcast ? !LINK! 
+vote all you want . the secret government won ’ t change . !LINK! via 
+check my new platformer game alice's mom's rescue on #pebbletime ! !LINK! also available on android !LINK! 
+this guy create awesome game musics ! !LINK! i feel the need to make an rpg ! 
+on s'eclate % ) !LINK! 
+i would so have wanted a minidisc back in the years 2000 . now i just got one but it's not the same , i have all my mp3 in my smartphone :( 
+it's when you really start to script the story of your rpg , that you realize your script engine have so much flaws ! #indiedev #psxdev 
+yaaayyy wonderland ! 
+i bought an " ipega " gamepad for my smartphone . need bluezime + hid enabler + patience ... but now my platformer game works with gamepad \ o / 
+finally got a fixed point raycaster rendering working ! i really want to use this to make an adventure game like tr ( but without gun :p ) 
+remember neko cat following the mouse cursor ? by chance the graphics are monochrome and in 32x32 , if you know what i mean :] 
+alice's mom's rescue , my new 2d platformer game on android !LINK! and windows !LINK! 
+elansar jagcd on the go ! 
+philia jagcd , master cd burnt & verified , cover & manual design done . will send this tomorow , release hopefully next month \ o / 
+alice's mom's rescue available for #atari #falcon #ct60 & #firebee ! !LINK! 
+oldschool spirit forever ! 
+when working alone , it is not a good idea to start big projects , because , in the meantime , i lose motivation , and want to do something else 
+trying alaw audio compression in cinepak 
+spaghetti ! 
+it takes time to script an rpg , but it's so much fun to see the characters talking and moving by them self on screen :D #indiedev 
+ff7 remake & shenmue 3 , well done sony , very well done ! ! #e32015 i guess i'm getting a ps4 next year 
+you can see my other games on my website : !LINK! 
+eidos , best intro sound ever ! !LINK! 
+valid & working 68k code : moveq # - 1 , d0 dc . w 0 dc . b ' orion _ ' dc . w 0 dc . b ' \ r \ n ' #1337c0de 
+3d divagation on ps1 , it's something #psxdev 
+you choose " shipping to : international " but you live in europe , you should have choose " shipping to : europe " ... now it's too late 
+i'm almost starting to feel at ease with 8bits asm hu6280 , but the code is so tight that any change messes up everything . 
+i screwed myself , i bought a brand new box of 5.25 " floppy , i just missed out that they are single sided ! ! ! damn 2disk for a single demo :( 
+my bjled jaguar becomes less and less reliable , sometimes not booting or going crazy , i hope i can get my hand on a skunkboard from aa 
+even with raptor engine for the jaguar , i'm stuck :/ seems like alice really don't like the jaguar 
+i just finished my atari falcon ct60 demo for sillyventure 2014 , i can't wait to see it on the big screen and hear the crowd cheering . 
+yeah , a shame the jaguar can't do this that easily 
+youuu shall not pass ! ! !LINK! 
+best joystick ever ! 
+i'm working on a platformer game , for smartphone first , then why not jaguar and other consoles :) i have a j-rpg project too . 
+the laser lens of the ps1 can be capricious , especially on old model , does another ps1 game burned on cd-r works on this ps1 ? 
+elansar & philia now playable in a gem window on firebee and ct60 / ctpci / supervidel , enjoy the free update ! !LINK! 
+playstation 1 coding tutorial updated ! !LINK! #psxdev #ps1dev 
+i'm back ! :) 
+the arm cpu inside the floppy emulator i mounted in my atari ste is more than 10 times faster than the 68k cpu in the atari itself :/ 
+15 € usb device -> feeling like an air traffic controller #rtlsdr #adsb 
+hacked the pc engine system card cd bios to read datas from an iso file from my computer , it's almost working ! 
+and our full monochrome ! atari ste demo also released at sv2013 :) !LINK! 
+i didn't even know you could do that kind of distortions on gb ! 
+trying r3000 mips assembly .. i think i will give up soon % ) 
+get my new #pebble watchface : atari st desktop gem clock !LINK! 
+oh nice .. the cd drive of my dreamcast seems to be dead ... 
+brilliant illustration from paweł kuczynski 
+should be in a few weeks at !LINK! :) 
+#devtips the best automation tool ever ! !LINK! 
+i'm trying to air-swim the breaststroke in my room to test the accelerometer of my pebble #lookinglikeanidiot 
+datel superior hacking since 1980 ! 
+ridge racer 4 link play on #ps1 for up to 4 players ! 2 players wipeout 2097 too ! so much fun yesterday #retrogaming 
+la terre en direct , merci iss ! !LINK! 
+2 atari jaguar game ready ! just need to get in touch with rgcd to see how to proceed with the sale . 
+i think i'm playing err ... debugging too much my game . jump timing master ! o_o !LINK! 
+alice's mom's rescue , new platformer game for jaguar cd available ! !LINK! #retrogaming #indiegamedev 
+68k optimisation beauty : rept 8 btst . b d5 , ( a2 ) ; get bit seq . b d0 ; fear t3h 0pt1m ! add . w d0 , d0 endr lsr . w # 8 , d0 ; final byte in lsb :) 
+for our own sanity , it is sometimes necessary to say , no . like : " no i will not code for amiga cd32 even if you offered me one " . 
+50 jaguar cart flashed ! * phew * 19 ojc pack ready to ship , 31 elansar cart will be sold on march :) 
+for my next game , i stop the serious stuff , meme , cute and funny things ftw , omnomnomnomnomnnomnomn ! ! 
+commodore 64 demo transfer via usb xu1541 on brand new 5.25 " floppy ! !LINK! 
+part 2 of philia : sequel to elansar , done ! now i need to improve part 1 , and finish part 3 , translate , finalise then release , hopefully eoy 
+i should not have bought this 1000 pieces jigsaw puzzle , even if it's beautiful , the initial sorting process will take time ... 
+no , megadrive emulator ;) 
+7 years ago , i started to code my own soft rendering 3d engine , today this is the first try at texture rendering \ o / 
+do you still believe that we are alone in the universe ? !LINK! #mindblown 
+best megadrive demo ever ! !LINK! 
+jagcd release early next year i guess :) 
+i'm so tired of people telling me now that they want a elansar cartridge , can't you have told me that before i ordered them ? ? ? ! ! ! 
+philia jagcd : part 1 works from start to end ! reduced audio frequency due to bus overhead caused by op ( large sprites ) , gave me extra ram ! 
+seems like a new sms game : 
+trying an accelerometer controlled alice , well ... nope ! 
+double buffering ? naah let's use 32 screen buffers , now see the rendering buffer position being chased by the viewer buffer position =) 
+i will drop my developer hat for a moment and start making lots of packagings , huge number of people ordered my new game alice for jaguar :) 
+doing games promotion is time consuming 
+i will make a tos desktop watchface for my pebble :) 
+trying pre-generated 68000 asm code to draw fast horizontal lines on megacd cpu , i must find small jump table solution , i dont have much ram 
+when i will receive the cds from the factory ... 
+it's hard to resist starting a new project , which you know is too complicated to finish , and which is almost useless . 
+random crash of my sprite manager + slow ( 30/25 fps ) scrolling due to using blitter instead of op tricks ( to harsh for me ) 
+1982 touchscreen , before it was cool !LINK! 
+it's an actual game i made from several oga gfx !LINK! :) 
+who needs a #retrovgs .. just use a raspberry pi 2 + sd as cartridges , an rpi 2 is at least 10 times the power of a dreamcast for only 40 € ! 
+ported my animated spinning galaxy orion logo on psx , awesomeness overload ! 
+a cute atari st demo at sv2013 !LINK! 
+trying to do things a bit more cleaner this time , beginning a win 32 c editor for the sequel of elansar 
+just imagine this demo !LINK! but with more fps :) i don't have any new 3d content to show .. at least for now ;) 
+no this is 68000 assembly for the atari falcon , i won't make ps1 game anymore , sadly , too few people are interested :( 
+i have the pocketstation frenzy ! ! now working on a save manager ! view save infos + restore & delete on your pocketstation ! ! 
+check my alice platformer and my 2 myst like adventure games elansar and philia on my new itch.io store ! !LINK! 
+when my brain refuses to code , i really can't help it , let's spend time navigating on the internet doing nothing :/ 
+yopaz jagcd : menu ☑ memorytrack ☑ leveleditor ☑ sfx ☑ , game engine code compiling & playing , need to work on the rendering and transitions 
+teaser of my next puzzle game ;) 
+i tried a basic game like supermarioland ( 64k gb classic ) not working :( 
+yopaz icestar new homebrew puzzle game for playstation 1 !LINK! soon :) 
+god bless the electric screwdriver ! 
+black and white screen + flickering = level of grey experiment on pocketstation :] 
+more than 1 hour trying to work on a vga 60hz patch for ocean machine demo , turns out my new vga screen accept 50hz , so no need to patch ... 
+one afternoon of 68k coding , and now my own sega cd boot code and loading is working ! ( need to try on real hardware ) 
+the gameplay of my next game is finished ! i now need to make a nice menu and plug the online highscore system :) 
+my puzzle game yopaz icestar on steam greenlight ! !LINK! #steamgreenlight level editor + online sharing added ! 
+my new platformer game alice's mom's rescue on #pebbletime watch ! get the android version !LINK! 
+got a mac mini for 180 € ! ios ports will start soon :) until then i have fun with my good old psx ! <3 
+4 months of development on my rpg , well , not full time :p but still ! :/ 
+growing megacd collection ! ( my own late christmas presents :p ) 
+could achieve 50 fps in pal mode ( 30fps in ntsc ) , but i need to render 3d at 50fps , that will be hard , is 12.5 mhz enough ? :p 
+mass media manipulation , epic , fail ! 
+!LINK! :) 
+pixel art fighting game backgrounds !LINK! true art 
+no , i coded it myself using the pebble c sdk :) 
+assembling c :\ myprog \ mydemo \ mono \ monochrm . s 3730 lines assembled into 895800 bytes , atari executable relocatable code , took 9.9 seconds 
+flashing some jaguar cart ... :) 
+waiting the approval for pressing cds of philia , my next adventure game for the jaguar cd console ! 
