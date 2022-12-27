@@ -145,7 +145,7 @@ scikit-image==0.13.0
 scikit-learn==0.19.0
 scipy==0.19.1
 seaborn==0.8
-setuptools==36.5.0.post20170921
+setuptools==65.5.1
 simplegeneric==0.8.1
 SimplePool==0.1
 singledispatch==3.4.0.3
